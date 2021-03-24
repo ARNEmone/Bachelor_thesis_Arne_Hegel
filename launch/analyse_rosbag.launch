@@ -1,0 +1,31 @@
+<launch>
+  
+  <arg name="world" default="world5"/>
+  <arg name="saved_graph" default="true"/>
+  
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.0"/>
+  <arg name="phi"   default="0.0"/>
+  
+  <arg name="goal_array" default="0.0,0.0,0.0;3.5,-2.4,-2.0;2.2,-1.6,0.0"/>
+  <!-- world5 default="0.0,0.0,0.0;3.05,-0.5,-0.785;2.0,-3.7,3.14;2.2,-1.6,0.0" -->
+  <!-- world6_1_1 default="0.0,0.0,-0.4;9.3,9.8,1.17;17.2,5.8,-1.97;8.6,-10.8,-1.97;0.5,-6.5,1.17" -->
+  <!-- world6_1_2 default="0.0,0.0,-0.4;9.3,9.8,1.17;17.2,5.8,-1.97;8.6,-10.8,-1.97;0.5,-6.5,1.17;9.3,9.8,1.17;17.2,5.8,-1.97;8.6,-10.8,-1.97;0.5,-6.5,1.17;9.3,9.8,1.17;17.2,5.8,-1.97;8.6,-10.8,-1.97;0.5,-6.5,1.17;0.7,1.5,2.74" -->
+  <!-- world6_3_1 default="0.0,0.0,-0.4;9.3,9.8,1.17;15.0,11.0,-0.4;17.2,5.8,-1.97;8.6,-10.8,-1.97;2.9,-11.8,2.74;0.5,-6.5,1.17;9.3,9.8,1.17;15.0,11.0,-0.4;17.2,5.8,-1.97;8.6,-10.8,-1.97;2.9,-11.8,2.74;0.5,-6.5,1.17;9.3,9.8,1.17;15.0,11.0,-0.4;17.2,5.8,-1.97;8.6,-10.8,-1.97;2.9,-11.8,2.74;0.5,-6.5,1.17;0.7,1.5,2.74" -->
+  <!-- world6_3_2 default="0.0,0.0,-0.4;9.3,9.8,1.17;17.2,5.8,-1.97;8.6,-10.8,-1.97;0.5,-6.5,1.17;9.3,9.8,1.17;17.2,5.8,-1.97;8.6,-10.8,-1.97;0.5,-6.5,1.17;9.3,9.8,1.17;17.2,5.8,-1.97;8.6,-10.8,-1.97;0.5,-6.5,1.17;0.7,1.5,2.74" -->
+  <arg name="node_start_delay" default="50.0" />
+
+  <!-- lauches rosbag with odom topic -->
+  <node pkg="rosbag" type="play" name="play" args="$(find bachelor_thesis)/worlds/$(arg world)/rosbag.bag --topics /odom" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' " /> />
+
+  <!-- lauches analysis node -->
+  <node name="AnalysisPublisher" pkg="bachelor_thesis" type="analyze_drive.py" args="$(arg world) $(arg saved_graph) $(arg x_pos) $(arg y_pos) $(arg phi) $(arg goal_array)" respawn="false"/>
+  
+  <!-- rosbag -->
+  <!-- -->
+  <node pkg="rosbag" type="record" name="record" args="record -a -O $(find bachelor_thesis)/rosbag_analyse/rosbags/record" />
+  
+
+
+</launch>

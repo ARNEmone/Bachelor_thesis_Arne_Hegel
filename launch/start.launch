@@ -1,0 +1,42 @@
+<launch>
+  
+  <!-- select world and graph -->
+  <arg name="world" default="world1"/>
+  <arg name="saved_graph" default="true"/>
+  
+  <!-- start position -->
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.0"/>
+  <arg name="phi"   default="1.57"/>
+  
+  <!-- select the waypoints you need to pass through -->
+  <arg name="goal_array" default="2.0,0.7,-1.0;0.0,-1.3,3.1"/>
+  <!-- world1 example="2.0,0.7,-1.0;0.0,-1.3,3.1" -->
+  <!-- world5 example="3.0,-2.0,-1.57;2.0,-3.9,-3.11" -->
+  
+  <!-- lauches the world file -->
+  <include file="$(find bachelor_thesis)/launch/world.launch" >
+    <arg name="world" value="$(arg world)"/>
+    <arg name="x_pos" value="$(arg x_pos)"/>
+    <arg name="y_pos" value="$(arg y_pos)"/>
+    <arg name="z_pos" value="$(arg z_pos)"/>
+    <arg name="phi"   value="$(arg phi)"/>
+  </include>
+
+
+  <!-- lauches analysis node -->
+  <node name="AnalysisPublisher" pkg="bachelor_thesis" type="analyze_drive.py" args="$(arg world) $(arg saved_graph) $(arg x_pos) $(arg y_pos) $(arg phi) $(arg goal_array)" respawn="false"/>
+  
+  
+  <!-- lauches teleop_key to control the turtlebot -->
+  <include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch" />
+  
+  
+  <!-- rosbag -->
+  <!-- -->
+  <node pkg="rosbag" type="record" name="record" args="record -a -O $(find bachelor_thesis)/rosbag_analyse/rosbags/record" />
+  
+
+
+</launch>
