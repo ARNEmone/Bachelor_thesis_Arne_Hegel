@@ -1,0 +1,113 @@
+\begin{thebibliography}{}
+
+\bibitem[Choi and Choi, 2017]{choi_design_2017}
+Choi, J.-H. and Choi, B.-J. (2017).
+\newblock Design of {Autonomous} {Driving} {Platform} for an {Electric}
+  {Wheelchair}.
+\newblock Technical report, Daegu University, Gyeongsan Gyeongbuk.
+
+\bibitem[Dijkstra, 1959]{dijkstra_note_1959}
+Dijkstra, E.~W. (1959).
+\newblock A note on two problems in connexion with graphs.
+\newblock {\em Numerische Mathematik}, 1(1):269--271.
+
+\bibitem[Hart et~al., 1968]{hart_formal_1968}
+Hart, P.~E., Nilsson, N.~J., and Raphael, B. (1968).
+\newblock A {Formal} {Basis} for the {Heuristic} {Determination} of {Minimum}
+  {Cost} {Paths}.
+\newblock {\em IEEE Transactions on Systems Science and Cybernetics},
+  4(2):100--107.
+\newblock Conference Name: IEEE Transactions on Systems Science and
+  Cybernetics.
+
+\bibitem[Karaman and Frazzoli, 2011]{karaman_sampling-based_2011}
+Karaman, S. and Frazzoli, E. (2011).
+\newblock Sampling-based algorithms for optimal motion planning.
+\newblock {\em The International Journal of Robotics Research}, 30(7):846--894.
+\newblock Publisher: SAGE Publications Ltd STM.
+
+\bibitem[Karaman and Frazzoli, 2013]{karaman_sampling-based_2013}
+Karaman, S. and Frazzoli, E. (2013).
+\newblock Sampling-based optimal motion planning for non-holonomic dynamical
+  systems.
+\newblock In {\em 2013 {IEEE} {International} {Conference} on {Robotics} and
+  {Automation}}, pages 5041--5047.
+\newblock ISSN: 1050-4729.
+
+\bibitem[Karaman et~al., 2011]{karaman_anytime_2011}
+Karaman, S., Walter, M.~R., Perez, A., Frazzoli, E., and Teller, S. (2011).
+\newblock Anytime {Motion} {Planning} using the {RRT}*.
+\newblock In {\em 2011 {IEEE} {International} {Conference} on {Robotics} and
+  {Automation}}, pages 1478--1483.
+\newblock ISSN: 1050-4729.
+
+\bibitem[Kavraki et~al., 1996]{kavraki_probabilistic_1996}
+Kavraki, L.~E., Svestka, P., Latombe, J., and Overmars, M.~H. (1996).
+\newblock Probabilistic roadmaps for path planning in high-dimensional
+  configuration spaces.
+\newblock {\em IEEE Transactions on Robotics and Automation}, 12(4):566--580.
+\newblock Conference Name: IEEE Transactions on Robotics and Automation.
+
+\bibitem[{Kevin M. Lynch} and {Frank C. Park}, 2018]{kevin_m_lynch_graph_2018}
+{Kevin M. Lynch} and {Frank C. Park} (2018).
+\newblock Graph {Search} - {Modern} {Robotics}.
+
+\bibitem[Konolige, 2000]{konolige_gradient_2000}
+Konolige, K. (2000).
+\newblock A gradient method for realtime robot control.
+\newblock In {\em Proceedings. 2000 {IEEE}/{RSJ} {International} {Conference}
+  on {Intelligent} {Robots} and {Systems} ({IROS} 2000) ({Cat}.
+  {No}.{00CH37113})}, volume~1, pages 639--646 vol.1.
+
+\bibitem[Korkmaz and Durdu, 2018]{korkmaz_comparison_2018}
+Korkmaz, M. and Durdu, A. (2018).
+\newblock Comparison of optimal path planning algorithms.
+\newblock In {\em 2018 14th {International} {Conference} on {Advanced} {Trends}
+  in {Radioelecrtronics}, {Telecommunications} and {Computer} {Engineering}
+  ({TCSET})}, pages 255--258.
+
+\bibitem[LaValle, 2006]{lavalle_planning_2006}
+LaValle, S.~M. (2006).
+\newblock {\em Planning {Algorithms}}.
+\newblock Cambridge University Press.
+
+\bibitem[{LaValle, Steven M}, 1998]{lavalle_steven_m_rapidly-exploring_1998}
+{LaValle, Steven M} (1998).
+\newblock Rapidly-exploring random trees: {A} new tool for path planning.
+\newblock {\em Ames, IA 50011 USA}, page~4.
+
+\bibitem[{NumPy}, oD]{numpy_numpy_nodate}
+{NumPy} (o.D.).
+\newblock {NumPy}.
+\newblock https://numpy.org/.
+
+\bibitem[Park, 2016]{park_graceful_2016}
+Park, J.~J. (2016).
+\newblock {\em Graceful {Navigation} for {Mobile} {Robots} in {Dynamic} and
+  {Uncertain} {Environments}}.
+\newblock PhD thesis, University of Michigan.
+
+\bibitem[Park and Kuipers, 2015]{park_feedback_2015}
+Park, J.~J. and Kuipers, B. (2015).
+\newblock Feedback motion planning via non-holonomic {RRT}* for mobile robots.
+\newblock In {\em 2015 {IEEE}/{RSJ} {International} {Conference} on
+  {Intelligent} {Robots} and {Systems} ({IROS})}, pages 4035--4040, Hamburg,
+  Germany. IEEE.
+
+\bibitem[Poncela et~al., 2009]{poncela_new_2009}
+Poncela, A., Urdiales, C., Perez, E.~J., and Sandoval, F. (2009).
+\newblock A {New} {Efficiency}-{Weighted} {Strategy} for {Continuous}
+  {Human}/{Robot} {Cooperation} in {Navigation}.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics - Part A:
+  Systems and Humans}, 39(3):486--500.
+\newblock Conference Name: IEEE Transactions on Systems, Man, and Cybernetics -
+  Part A: Systems and Humans.
+
+\bibitem[Webb and Berg, 2012]{webb_kinodynamic_2012}
+Webb, D.~J. and Berg, J. v.~d. (2012).
+\newblock Kinodynamic {RRT}*: {Optimal} {Motion} {Planning} for {Systems} with
+  {Linear} {Differential} {Constraints}.
+\newblock {\em arXiv:1205.5088 [cs]}.
+\newblock arXiv: 1205.5088.
+
+\end{thebibliography}

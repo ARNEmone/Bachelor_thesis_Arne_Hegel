@@ -1,0 +1,373 @@
+
+@misc{holger_dieterich_evaluation_2020,
+	title = {Evaluation of {Human} {Steering} {Performance} of {Powered} {Wheelchairs}},
+	language = {en},
+	urldate = {2020-11-09},
+	publisher = {Universitaet Heidelberg Institut fuer Technische Informatik},
+	author = {{Holger Dieterich}},
+	year = {2020},
+	file = {Dieterich - Evaluation of Human Steering Performance of Powere.pdf:/home/arne/Zotero/storage/29PENB44/Dieterich - Evaluation of Human Steering Performance of Powere.pdf:application/pdf},
+}
+
+@inproceedings{park_smooth_2011,
+	title = {A smooth control law for graceful motion of differential wheeled mobile robots in {2D} environment},
+	isbn = {978-1-61284-386-5},
+	url = {http://ieeexplore.ieee.org/document/5980167/},
+	doi = {10.1109/ICRA.2011.5980167},
+	abstract = {Although recent progress in 2D mobile robot navigation has been signiﬁcant, the great majority of existing work focuses only on ensuring that the robot reaches its goal. But to make autonomous navigation truly successful, the ‘quality’ of planned motion is important as well. Here, we develop and analyze a pose-following kinematic control law applicable to unicycle-type robots, such that the robot can generate intuitive, fast, smooth, and comfortable trajectories.},
+	language = {en},
+	urldate = {2021-02-17},
+	booktitle = {2011 {IEEE} {International} {Conference} on {Robotics} and {Automation}},
+	publisher = {IEEE},
+	author = {Park, Jong Jin and Kuipers, Benjamin},
+	month = may,
+	year = {2011},
+	pages = {4896--4902},
+	file = {Park und Kuipers - 2011 - A smooth control law for graceful motion of differ.pdf:/home/arne/Zotero/storage/TNKL8B4C/Park und Kuipers - 2011 - A smooth control law for graceful motion of differ.pdf:application/pdf},
+}
+
+@inproceedings{park_feedback_2015,
+	address = {Hamburg, Germany},
+	title = {Feedback motion planning via non-holonomic {RRT}* for mobile robots},
+	isbn = {978-1-4799-9994-1},
+	url = {http://ieeexplore.ieee.org/document/7353946/},
+	doi = {10.1109/IROS.2015.7353946},
+	abstract = {Here we present a non-holonomic distance function for unicycle-type vehicles, and use this distance function to extend the optimal path planner RRT∗ to handle nonholonomic constraints. The critical feature of our proposed distance function is that it is also a control-Lyapunov function. We show that this allows us to construct feedback policies that stabilizes the system to a target pose, and to generate the optimal path that respects the non-holonomic constraints of the system via the non-holonomic RRT∗. The composition of the Lyapunov function that is obtained as a result of this planning process provides stabilizing feedback and the cost-togo to the ﬁnal destination in the neighborhood of the planned path, adding much ﬂexibility and robustness to the plan.},
+	language = {en},
+	urldate = {2021-02-17},
+	booktitle = {2015 {IEEE}/{RSJ} {International} {Conference} on {Intelligent} {Robots} and {Systems} ({IROS})},
+	publisher = {IEEE},
+	author = {Park, Jong Jin and Kuipers, Benjamin},
+	month = sep,
+	year = {2015},
+	pages = {4035--4040},
+	file = {Park und Kuipers - 2015 - Feedback motion planning via non-holonomic RRT fo.pdf:/home/arne/Zotero/storage/JE7PLPI9/Park und Kuipers - 2015 - Feedback motion planning via non-holonomic RRT fo.pdf:application/pdf},
+}
+
+@phdthesis{park_graceful_2016,
+	title = {Graceful {Navigation} for {Mobile} {Robots} in {Dynamic} and {Uncertain} {Environments}},
+	abstract = {The ability to navigate in everyday environments is a fundamental and necessary skill
+for any autonomous mobile agent that is intended to work with human users. The presence
+of pedestrians and other dynamic objects, however, makes the environment inherently dy-
+namic and uncertain. To navigate in such environments, an agent must reason about the
+near future and make an optimal decision at each time step so that it can move safely to-
+ward the goal. Furthermore, for any application intended to carry passengers, it also must
+be able to move smoothly and comfortably, and the robot behavior needs to be customiz-
+able to match the preference of the individual users. Despite decades of progress in the field
+of motion planning and control, this remains a difficult challenge with existing methods.
+Specifically, we require robot navigation in dynamic and uncertain environments to be
+safe, comfortable, and customizable. For safety in dynamic and uncertain environments,
+our algorithm guarantees probabilistic safety, rather than trying to provide absolute colli-
+sion avoidance which quickly becomes impossible in cluttered and crowded environments.
+That is, with our algorithm the robot will (i) continually try to minimize (to near zero) the
+potential cost of collision due to robot motion, (ii) avoid moving when it is already in a col-
+lision state, and (iii) try to maximize the progress toward the goal if and only if there exists
+trajectories that are likely to be feasible. Also, for comfort and customizability, we explic-
+itly consider the quality of motion, but without affecting our probabilistic safety guarantee,
+so that the robot motion matches the preference of the individual users.
+In this dissertation, we show that safe, comfortable, and customizable mobile robot
+navigation in dynamic and uncertain environments can be achieved via stochastic model
+predictive control. We view the problem of navigation in dynamic and uncertain environ-
+ments as a continuous decision making process, where an agent with short-term predictive
+capability reasons about its situation and makes an informed decision at each time step.
+The problem of robot navigation in dynamic and uncertain environments is formulated
+as an on-line, finite-horizon policy and trajectory optimization problem under uncertainty.
+With our formulation, planning and control becomes fully integrated, which allows direct
+optimization of the performance measure. Furthermore, with our approach the problem
+becomes easy to solve, which allows our algorithm to run in real time on a single core of a
+typical laptop with off-the-shelf optimization packages.
+This depends on four specific technical contributions. We define our expected cost so
+that we can directly incorporate the time-varying uncertain constraints and the probabil-
+ity of violating those constraints into the cost function, which tends to create a smooth
+cost surface that is easy to optimize over. The dimensionality reduction of this problem
+critically depends on the policy and closed-loop trajectory parameterization based on a
+Lyapunov-based feedback control law, which we developed for graceful motion of dif-
+ferential wheeled mobile robots. The stability of this stochastic model predictive control
+critically depends on a non-holonomic distance function, which we define as a Control-
+Lyapunov function for unicycle-type vehicles. We also develop a motor and friction dy-
+namics model of the robot for more accurate forward prediction.
+We demonstrate that our method generates graceful (safe, smooth, comfortable, fast,
+and intuitive) and customizable robot behavior in physical environments with pedestrians
+in real time. The work presented in this thesis extends the state-of-the-art in analytic control
+of mobile robots, sampling-based optimal path planning, and stochastic model predictive
+control. We believe that this work is a significant step toward safe and reliable autonomous
+navigation that is acceptable to human users.},
+	language = {en},
+	school = {University of Michigan},
+	author = {Park, Jong Jin},
+	year = {2016},
+	file = {Park - Graceful Navigation for Mobile Robots in Dynamic a.pdf:/home/arne/Zotero/storage/6DT6UJJL/Park - Graceful Navigation for Mobile Robots in Dynamic a.pdf:application/pdf},
+}
+
+@misc{jennifer_shuttleworth_sae_2019,
+	title = {{SAE} {J3016} automated-driving graphic},
+	url = {https://www.sae.org/site/news/2019/01/sae-updates-j3016-automated-driving-graphic},
+	abstract = {SAE J3016 automated-driving graphic update},
+	language = {en},
+	urldate = {2021-02-20},
+	journal = {SAE Standards News: J3016 automated-driving graphic update},
+	author = {{Jennifer Shuttleworth}},
+	month = jan,
+	year = {2019},
+	note = {Last Modified: 2020-05-15T14:03:15-04:00},
+	file = {Snapshot:/home/arne/Zotero/storage/YX8AMQM2/sae-updates-j3016-automated-driving-graphic.html:text/html},
+}
+
+@article{poncela_new_2009,
+	title = {A {New} {Efficiency}-{Weighted} {Strategy} for {Continuous} {Human}/{Robot} {Cooperation} in {Navigation}},
+	volume = {39},
+	issn = {1558-2426},
+	doi = {10.1109/TSMCA.2009.2013191},
+	abstract = {Autonomous robots are capable of navigating on their own. Shared control approaches, however, allow humans to make some navigation decisions. This is typically executed either by overriding the human or the robot control at some specific situations. In this paper, we propose a method to allow cooperation between humans and robots at each point of any given trajectory so that both have some weight in the emergent behavior of the mobile robot. This is achieved by evaluating their efficiencies at each time instant and combining their commands into a single order. In order to achieve a seamless combination, this procedure is integrated into a bottom-up architecture via a reactive layer. We have tested the proposed method using a real robot and several volunteers, and results have been satisfactory both from a quantitative and qualitative point of view.},
+	number = {3},
+	journal = {IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans},
+	author = {Poncela, A. and Urdiales, C. and Perez, E. J. and Sandoval, F.},
+	month = may,
+	year = {2009},
+	note = {Conference Name: IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans},
+	keywords = {autonomous navigation, Autonomous navigation, autonomous robots, behaviors, bottom-up architecture, Collaboration, Communication system control, continuous human-robot cooperation, Delay, efficiency-weighted strategy, Human robot interaction, human-robot interaction, mobile robot, mobile robots, Mobile robots, navigation, Navigation, Path planning, robot, Robot control, shared control, Telecommunication control, Testing},
+	pages = {486--500},
+	file = {IEEE Xplore Abstract Record:/home/arne/Zotero/storage/3XUXHYIM/4785222.html:text/html},
+}
+
+@techreport{choi_design_2017,
+	title = {Design of {Autonomous} {Driving} {Platform} for an {Electric} {Wheelchair}},
+	abstract = {The electric wheelchair is a system developed to assist the elderly or disabled with difficulty in moving by their own power. They are widely used by people with severe handicaps that are difficult to operate with manual wheelchairs. In this paper, we propose the design and test of an electric wheelchair platform with autonomous navigation using QR Code and magnetic band.},
+	language = {en},
+	institution = {Daegu University, Gyeongsan Gyeongbuk},
+	author = {Choi, Jung-Hae and Choi, Byung-Jae},
+	year = {2017},
+	pages = {1},
+	file = {Choi und Choi - Design of Autonomous Driving Platform for an Elect.pdf:/home/arne/Zotero/storage/JHMS5TI8/Choi und Choi - Design of Autonomous Driving Platform for an Elect.pdf:application/pdf},
+}
+
+@inproceedings{konolige_gradient_2000,
+	title = {A gradient method for realtime robot control},
+	volume = {1},
+	doi = {10.1109/IROS.2000.894676},
+	abstract = {Despite many decades of research into mobile robot control, reliable, high-speed motion in complicated, uncertain environments remains an unachieved goal. In this paper we present a solution to realtime motion control that can competently maneuver a robot at optimal speed even as it explores a new region or encounters new obstacles. The method uses a navigation function to generate a gradient field that represents the optimal (lowest-cost) path to the goal at every point in the workspace. Additionally, we present an integrated sensor fusion system that allows incremental construction of an unknown or uncertain environment. Under modest assumptions, the robot is guaranteed to get to the goal in an arbitrary static unexplored environment, as long as such a path exists. We present preliminary experiments to show that the gradient method is better than expert human controllers in both known and unknown environments.},
+	booktitle = {Proceedings. 2000 {IEEE}/{RSJ} {International} {Conference} on {Intelligent} {Robots} and {Systems} ({IROS} 2000) ({Cat}. {No}.{00CH37113})},
+	author = {Konolige, K.},
+	month = oct,
+	year = {2000},
+	keywords = {mobile robots, Mobile robots, navigation, Navigation, Robot control, arbitrary static unexplored environment, Fusion power generation, gradient method, Gradient methods, high-speed motion, incremental construction, integrated sensor fusion system, mobile robot control, motion control, Motion control, Motion planning, navigation function, Orbital robotics, path planning, real time motion control, realtime robot control, Robot sensing systems, sensor fusion, Sensor fusion, uncertain environments},
+	pages = {639--646 vol.1},
+	file = {IEEE Xplore Full Text PDF:/home/arne/Zotero/storage/D7BJBAQV/Konolige - 2000 - A gradient method for realtime robot control.pdf:application/pdf;IEEE Xplore Abstract Record:/home/arne/Zotero/storage/ILIASA4R/894676.html:text/html},
+}
+
+@inproceedings{korkmaz_comparison_2018,
+	title = {Comparison of optimal path planning algorithms},
+	doi = {10.1109/TCSET.2018.8336197},
+	abstract = {This work is concerned with path planning algorithms which have an important place in robotic navigation. Mobile robots must be moved to the relevant task point in order to be able to fulfill the tasks assigned to them. However, the movements planned in a frame or random may affect the duty time and even in some situations, the duty might be failed. When such problems are taken into consideration, it is expected that the robots should go to the task point and complete their tasks within the shortest time and most suitable way. It is aimed to give results about a comparison of some known algorithms. With this thought, a map for a real time environment has been created and the appropriateness of the algorithms are investigated with respect to the described starting/end points. According to the results, the shortest path is found by the A* algorithm. However, it is observed that the time efficiency of this algorithm very low. On the other hand, PRM algorithm is the most suitable method in terms of elapsed time. In addition to this, algorithm path length is closer to the A* algorithm. The results are analyzed and commented according to the statistical analysis methods.},
+	booktitle = {2018 14th {International} {Conference} on {Advanced} {Trends} in {Radioelecrtronics}, {Telecommunications} and {Computer} {Engineering} ({TCSET})},
+	author = {Korkmaz, M. and Durdu, A.},
+	month = feb,
+	year = {2018},
+	keywords = {mobile robots, Path planning, path planning, A* algorithm, algorithm path length, Analysis of variance, duty time, Genetic algorithms, optimal path planning algorithms, path planning methods, Planning, PRM algorithm, robotic navigation, Search problems, shortest path, Simultaneous localization and mapping, SLAM, statistical analysis, time efficiency},
+	pages = {255--258},
+	file = {IEEE Xplore Full Text PDF:/home/arne/Zotero/storage/5KEGKIJC/Korkmaz und Durdu - 2018 - Comparison of optimal path planning algorithms.pdf:application/pdf;IEEE Xplore Abstract Record:/home/arne/Zotero/storage/RUVMJXN3/8336197.html:text/html},
+}
+
+@article{dijkstra_note_1959,
+	title = {A note on two problems in connexion with graphs},
+	volume = {1},
+	issn = {0029-599X, 0945-3245},
+	url = {http://link.springer.com/10.1007/BF01386390},
+	doi = {10.1007/BF01386390},
+	language = {en},
+	number = {1},
+	urldate = {2021-03-01},
+	journal = {Numerische Mathematik},
+	author = {Dijkstra, E. W.},
+	month = dec,
+	year = {1959},
+	pages = {269--271},
+	annote = {Dijkstra Algorithmus},
+	file = {Dijkstra - 1959 - A note on two problems in connexion with graphs.pdf:/home/arne/Zotero/storage/V5LCJIEH/Dijkstra - 1959 - A note on two problems in connexion with graphs.pdf:application/pdf},
+}
+
+@article{hart_formal_1968,
+	title = {A {Formal} {Basis} for the {Heuristic} {Determination} of {Minimum} {Cost} {Paths}},
+	volume = {4},
+	issn = {2168-2887},
+	doi = {10.1109/TSSC.1968.300136},
+	abstract = {Although the problem of determining the minimum cost path through a graph arises naturally in a number of interesting applications, there has been no underlying theory to guide the development of efficient search procedures. Moreover, there is no adequate conceptual framework within which the various ad hoc search strategies proposed to date can be compared. This paper describes how heuristic information from the problem domain can be incorporated into a formal mathematical theory of graph searching and demonstrates an optimality property of a class of search strategies.},
+	number = {2},
+	journal = {IEEE Transactions on Systems Science and Cybernetics},
+	author = {Hart, P. E. and Nilsson, N. J. and Raphael, B.},
+	month = jul,
+	year = {1968},
+	note = {Conference Name: IEEE Transactions on Systems Science and Cybernetics},
+	keywords = {Gradient methods, Automatic control, Automatic programming, Chemical technology, Costs, Functional programming, Instruction sets, Mathematical programming, Minimax techniques, Minimization methods},
+	pages = {100--107},
+	annote = {A*},
+	file = {IEEE Xplore Abstract Record:/home/arne/Zotero/storage/8RECFB6J/4082128.html:text/html;IEEE Xplore Full Text PDF:/home/arne/Zotero/storage/PMJV3S7B/Hart et al. - 1968 - A Formal Basis for the Heuristic Determination of .pdf:application/pdf},
+}
+
+@book{lavalle_planning_2006,
+	title = {Planning {Algorithms}},
+	isbn = {978-1-139-45517-6},
+	abstract = {Planning algorithms are impacting technical disciplines and industries around the world, including robotics, computer-aided design, manufacturing, computer graphics, aerospace applications, drug design, and protein folding. This coherent and comprehensive book unifies material from several sources, including robotics, control theory, artificial intelligence, and algorithms. The treatment is centered on robot motion planning, but integrates material on planning in discrete spaces. A major part of the book is devoted to planning under uncertainty, including decision theory, Markov decision processes, and information spaces, which are the 'configuration spaces' of all sensor-based planning problems. The last part of the book delves into planning under differential constraints that arise when automating the motions of virtually any mechanical system. This text and reference is intended for students, engineers, and researchers in robotics, artificial intelligence, and control theory as well as computer graphics, algorithms, and computational biology.},
+	language = {en},
+	publisher = {Cambridge University Press},
+	author = {LaValle, Steven M.},
+	month = may,
+	year = {2006},
+	keywords = {Computers / Desktop Applications / Design \& Graphics, Computers / General, Computers / Programming / Algorithms, Computers / Software Development \& Engineering / Systems Analysis \& Design},
+	file = {LaValle - 2006 - Planning Algorithms.pdf:/home/arne/Zotero/storage/DD4L94RE/LaValle - 2006 - Planning Algorithms.pdf:application/pdf},
+}
+
+@article{karaman_sampling-based_2011,
+	title = {Sampling-based algorithms for optimal motion planning},
+	volume = {30},
+	issn = {0278-3649},
+	url = {https://doi.org/10.1177/0278364911406761},
+	doi = {10.1177/0278364911406761},
+	abstract = {During the last decade, sampling-based path planning algorithms, such as probabilistic roadmaps (PRM) and rapidly exploring random trees (RRT), have been shown to work well in practice and possess theoretical guarantees such as probabilistic completeness. However, little effort has been devoted to the formal analysis of the quality of the solution returned by such algorithms, e.g. as a function of the number of samples. The purpose of this paper is to fill this gap, by rigorously analyzing the asymptotic behavior of the cost of the solution returned by stochastic sampling-based algorithms as the number of samples increases. A number of negative results are provided, characterizing existing algorithms, e.g. showing that, under mild technical conditions, the cost of the solution returned by broadly used sampling-based algorithms converges almost surely to a non-optimal value. The main contribution of the paper is the introduction of new algorithms, namely, PRM* and RRT*, which are provably asymptotically optimal, i.e. such that the cost of the returned solution converges almost surely to the optimum. Moreover, it is shown that the computational complexity of the new algorithms is within a constant factor of that of their probabilistically complete (but not asymptotically optimal) counterparts. The analysis in this paper hinges on novel connections between stochastic sampling-based path planning algorithms and the theory of random geometric graphs.},
+	language = {en},
+	number = {7},
+	urldate = {2021-03-03},
+	journal = {The International Journal of Robotics Research},
+	author = {Karaman, Sertac and Frazzoli, Emilio},
+	month = jun,
+	year = {2011},
+	note = {Publisher: SAGE Publications Ltd STM},
+	keywords = {Motion planning, optimal path planning, random geometric graphs, sampling-based algorithms},
+	pages = {846--894},
+	annote = {RRT*},
+	file = {Karaman 2011 - Sampling-based algorithms for optimal motion planning.pdf:/home/arne/Dokumente/Bericht/Literatur/Wegfindungsalgorithmen/Karaman 2011 - Sampling-based algorithms for optimal motion planning.pdf:application/pdf},
+}
+
+@inproceedings{karaman_anytime_2011,
+	title = {Anytime {Motion} {Planning} using the {RRT}*},
+	doi = {10.1109/ICRA.2011.5980479},
+	abstract = {The Rapidly-exploring Random Tree (RRT) algorithm, based on incremental sampling, efficiently computes motion plans. Although the RRT algorithm quickly produces candidate feasible solutions, it tends to converge to a solution that is far from optimal. Practical applications favor "anytime" algorithms that quickly identify an initial feasible plan, then, given more computation time available during plan execution, improve the plan toward an optimal solution. This paper describes an anytime algorithm based on the RRT* which (like the RRT) finds an initial feasible solution quickly, but (unlike the RRT) almost surely converges to an optimal solution. We present two key extensions to the RRT\% committed trajectories and branch-and-bound tree adaptation, that together enable the algorithm to make more efficient use of computation time online, resulting in an anytime algorithm for real-time implementation. We evaluate the method using a series of Monte Carlo runs in a high-fidelity simulation environment, and compare the operation of the RRT and RRT* methods. We also demonstrate experimental results for an outdoor wheeled robotic vehicle.},
+	booktitle = {2011 {IEEE} {International} {Conference} on {Robotics} and {Automation}},
+	author = {Karaman, S. and Walter, M. R. and Perez, A. and Frazzoli, E. and Teller, S.},
+	month = may,
+	year = {2011},
+	note = {ISSN: 1050-4729},
+	keywords = {mobile robots, Mobile robots, path planning, Planning, branch-and-bound tree adaptation, Heuristic algorithms, incremental sampling, Monte Carlo method, Monte Carlo methods, motion planning, outdoor wheeled robotic vehicle, rapidly-exploring random tree algorithm, real-time systems, RRT algorithm, Trajectory, tree data structures, tree searching, Vehicle dynamics, Vehicles},
+	pages = {1478--1483},
+	annote = {RRT*},
+	file = {IEEE Xplore Full Text PDF:/home/arne/Zotero/storage/4TNSZJTC/Karaman et al. - 2011 - Anytime Motion Planning using the RRT.pdf:application/pdf;IEEE Xplore Abstract Record:/home/arne/Zotero/storage/3SYT3JRN/5980479.html:text/html},
+}
+
+@misc{kevin_m_lynch_graph_2018,
+	title = {Graph {Search} - {Modern} {Robotics}},
+	url = {https://modernrobotics.northwestern.edu/nu-gm-book-resource/10-2-4-graph-search/#department},
+	abstract = {This video describes A* graph search, one of the most popular and efficient methods for finding optimal paths in a graph.},
+	language = {en},
+	urldate = {2021-03-04},
+	journal = {Northwestern University},
+	author = {{Kevin M. Lynch} and {Frank C. Park}},
+	month = mar,
+	year = {2018},
+	annote = {A*},
+	file = {10.2.4. Graph Search – Modern Robotics:/home/arne/Zotero/storage/LLNNKDGR/10-2-4-graph-search.html:text/html},
+}
+
+@article{lavalle_steven_m_rapidly-exploring_1998,
+	title = {Rapidly-exploring random trees: {A} new tool for path planning},
+	language = {en},
+	journal = {Ames, IA 50011 USA},
+	author = {{LaValle, Steven M}},
+	year = {1998},
+	pages = {4},
+	annote = {RRT*},
+	file = {LaValle und others - 1998 - Rapidly-exploring random trees A new tool for pat.pdf:/home/arne/Zotero/storage/2GBEKGVV/LaValle und others - 1998 - Rapidly-exploring random trees A new tool for pat.pdf:application/pdf},
+}
+
+@article{kavraki_probabilistic_1996,
+	title = {Probabilistic roadmaps for path planning in high-dimensional configuration spaces},
+	volume = {12},
+	issn = {2374-958X},
+	doi = {10.1109/70.508439},
+	abstract = {A new motion planning method for robots in static workspaces is presented. This method proceeds in two phases: a learning phase and a query phase. In the learning phase, a probabilistic roadmap is constructed and stored as a graph whose nodes correspond to collision-free configurations and whose edges correspond to feasible paths between these configurations. These paths are computed using a simple and fast local planner. In the query phase, any given start and goal configurations of the robot are connected to two nodes of the roadmap; the roadmap is then searched for a path joining these two nodes. The method is general and easy to implement. It can be applied to virtually any type of holonomic robot. It requires selecting certain parameters (e.g., the duration of the learning phase) whose values depend on the scene, that is the robot and its workspace. But these values turn out to be relatively easy to choose, Increased efficiency can also be achieved by tailoring some components of the method (e.g., the local planner) to the considered robots. In this paper the method is applied to planar articulated robots with many degrees of freedom. Experimental results show that path planning can be done in a fraction of a second on a contemporary workstation (/spl ap/150 MIPS), after learning for relatively short periods of time (a few dozen seconds).},
+	number = {4},
+	journal = {IEEE Transactions on Robotics and Automation},
+	author = {Kavraki, L. E. and Svestka, P. and Latombe, J.- and Overmars, M. H.},
+	month = aug,
+	year = {1996},
+	note = {Conference Name: IEEE Transactions on Robotics and Automation},
+	keywords = {mobile robots, Path planning, Motion planning, Orbital robotics, path planning, motion planning, collision-free configurations, Computer science, goal configurations, graph, graph theory, high-dimensional configuration spaces, holonomic robot, Joining processes, Laboratories, Layout, learning (artificial intelligence), learning phase, local planner, multi-DOF planar articulated robots, probabilistic roadmaps, probability, query phase, robots, Robots, start configurations, static workspaces, Workstations},
+	pages = {566--580},
+	annote = {PRM},
+	file = {IEEE Xplore Full Text PDF:/home/arne/Zotero/storage/2UFZBQE9/Kavraki et al. - 1996 - Probabilistic roadmaps for path planning in high-d.pdf:application/pdf;IEEE Xplore Abstract Record:/home/arne/Zotero/storage/D53F5YIF/508439.html:text/html},
+}
+
+@article{lapierre_nonsingular_2006,
+	title = {Nonsingular path following control of a unicycle in the presence of parametric modelling uncertainties},
+	volume = {16},
+	copyright = {Copyright © 2006 John Wiley \& Sons, Ltd.},
+	issn = {1099-1239},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/rnc.1075},
+	doi = {https://doi.org/10.1002/rnc.1075},
+	abstract = {A new type of control law is derived to steer the dynamic model of a wheeled robot of unicycle type along a desired path. The methodology adopted for path following control deals explicitly with vehicle dynamics and plant parameter uncertainty. Furthermore, it overcomes stringent initial condition constraints that are present in a number of path following control strategies described in the literature. This is done by controlling explicitly the rate of progression of a ‘virtual target’ to be tracked along the path, thus bypassing the problems that arise when the position of the virtual target is simply defined by the projection of the actual vehicle on that path. In the paper, a nonlinear adaptive control law is derived that yields convergence of the (closed-loop system) path following error trajectories to zero. Controller design relies on Lyapunov theory and backstepping techniques. Simulation results illustrate the performance of the control system proposed. Copyright © 2006 John Wiley \& Sons, Ltd.},
+	language = {en},
+	number = {10},
+	urldate = {2021-03-06},
+	journal = {International Journal of Robust and Nonlinear Control},
+	author = {Lapierre, L. and Soetanto, D. and Pascoal, A.},
+	year = {2006},
+	note = {\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/rnc.1075},
+	keywords = {adaptive control, backstepping, path following, wheeled robots},
+	pages = {485--503},
+	file = {Full Text PDF:/home/arne/Zotero/storage/D598XVKN/Lapierre et al. - 2006 - Nonsingular path following control of a unicycle i.pdf:application/pdf;Snapshot:/home/arne/Zotero/storage/X3EJLAX8/rnc.html:text/html},
+}
+
+@inproceedings{karaman_sampling-based_2013,
+	title = {Sampling-based optimal motion planning for non-holonomic dynamical systems},
+	doi = {10.1109/ICRA.2013.6631297},
+	abstract = {Sampling-based motion planning algorithms, such as the Probabilistic RoadMap (PRM) and the Rapidly-exploring Random Tree (RRT), have received a large and growing amount of attention during the past decade. Most recently, sampling-based algorithms, such as the PRM* and RRT*, that guarantee asymptotic optimality, i.e., almost-sure convergence towards optimal solutions, have been proposed. Despite the experimental success of asymptotically-optimal sampling-based algorithms, their extensions to handle complex non-holonomic dynamical systems remains largely an open problem. In this paper, with the help of results from differential geometry, we extend the RRT* algorithm to handle a large class of non-holonomic dynamical systems. We demonstrate the performance of the algorithm in computational experiments involving the Dubins' car dynamics.},
+	booktitle = {2013 {IEEE} {International} {Conference} on {Robotics} and {Automation}},
+	author = {Karaman, S. and Frazzoli, E.},
+	month = may,
+	year = {2013},
+	note = {ISSN: 1050-4729},
+	keywords = {path planning, Planning, PRM algorithm, Monte Carlo methods, rapidly-exploring random tree algorithm, RRT algorithm, asymptotically-optimal sampling-based algorithms, differential geometry, Dubins car dynamics, nonholonomic dynamical systems, PRM* algorithm, probabilistic roadmap algorithm, RRT* algorithm, sampling methods, sampling-based optimal motion planning, trees (mathematics)},
+	pages = {5041--5047},
+	annote = {Eine RRT* Distanzfunktion},
+	file = {IEEE Xplore Abstract Record:/home/arne/Zotero/storage/NDMTMHPL/6631297.html:text/html;Karaman und Frazzoli - 2013 - Sampling-based optimal motion planning for non-hol.pdf:/home/arne/Zotero/storage/V3NAQXXX/Karaman und Frazzoli - 2013 - Sampling-based optimal motion planning for non-hol.pdf:application/pdf},
+}
+
+@article{webb_kinodynamic_2012,
+	title = {Kinodynamic {RRT}*: {Optimal} {Motion} {Planning} for {Systems} with {Linear} {Differential} {Constraints}},
+	shorttitle = {Kinodynamic {RRT}*},
+	url = {http://arxiv.org/abs/1205.5088},
+	abstract = {We present Kinodynamic RRT*, an incremental sampling-based approach for asymptotically optimal motion planning for robots with linear differential constraints. Our approach extends RRT*, which was introduced for holonomic robots (Karaman et al. 2011), by using a fixed-final-state-free-final-time controller that exactly and optimally connects any pair of states, where the cost function is expressed as a trade-off between the duration of a trajectory and the expended control effort. Our approach generalizes earlier work on extending RRT* to kinodynamic systems, as it guarantees asymptotic optimality for any system with controllable linear dynamics, in state spaces of any dimension. Our approach can be applied to non-linear dynamics as well by using their first-order Taylor approximations. In addition, we show that for the rich subclass of systems with a nilpotent dynamics matrix, closed-form solutions for optimal trajectories can be derived, which keeps the computational overhead of our algorithm compared to traditional RRT* at a minimum. We demonstrate the potential of our approach by computing asymptotically optimal trajectories in three challenging motion planning scenarios: (i) a planar robot with a 4-D state space and double integrator dynamics, (ii) an aerial vehicle with a 10-D state space and linearized quadrotor dynamics, and (iii) a car-like robot with a 5-D state space and non-linear dynamics.},
+	urldate = {2021-03-08},
+	journal = {arXiv:1205.5088 [cs]},
+	author = {Webb, Dustin J. and Berg, Jur van den},
+	month = may,
+	year = {2012},
+	note = {arXiv: 1205.5088},
+	keywords = {Computer Science - Data Structures and Algorithms, Computer Science - Robotics},
+	annote = {Comment: 8 pages, 7 figures, 1 table, slated for submission to ICRA 2013},
+	annote = {Eine RRT* Distanzfunktion},
+	file = {arXiv Fulltext PDF:/home/arne/Zotero/storage/S3DP4S3K/Webb und Berg - 2012 - Kinodynamic RRT Optimal Motion Planning for Syst.pdf:application/pdf;arXiv.org Snapshot:/home/arne/Zotero/storage/IZQJ6LAP/1205.html:text/html},
+}
+
+@misc{numpy_numpy_nodate,
+	title = {{NumPy}},
+	url = {https://numpy.org/},
+	abstract = {https://numpy.org/},
+	language = {en},
+	urldate = {2021-03-11},
+	author = {{NumPy}},
+	year = {o.D.},
+	note = {https://numpy.org/},
+	file = {NumPy:/home/arne/Zotero/storage/9FVYBPYQ/numpy.org.html:text/html},
+}
+
+@misc{numpylinalgnorm_-_numpy_v120_manual_numpylinalgnorm_2021,
+	title = {numpy.linalg.norm - {NumPy} v1.20 {Manual}},
+	url = {https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm},
+	abstract = {https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm},
+	urldate = {2021-03-11},
+	author = {{numpy.linalg.norm - NumPy v1.20 Manual}},
+	month = jan,
+	year = {2021},
+	note = {https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm},
+	file = {numpy.linalg.norm — NumPy v1.20 Manual:/home/arne/Zotero/storage/HFWBP4ZV/numpy.linalg.norm.html:text/html},
+}
