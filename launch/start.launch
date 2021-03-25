@@ -13,7 +13,6 @@
   <!-- select the waypoints you need to pass through -->
   <arg name="goal_array" default="2.0,0.7,-1.0;0.0,-1.3,3.1"/>
   <!-- world1 example="2.0,0.7,-1.0;0.0,-1.3,3.1" -->
-  <!-- world5 example="3.0,-2.0,-1.57;2.0,-3.9,-3.11" -->
   
   <!-- lauches the world file -->
   <include file="$(find bachelor_thesis)/launch/world.launch" >
@@ -33,9 +32,16 @@
   <include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch" />
   
   
+  <!-- throttle recorded topics -->
+  <node name="dist_2_goal_throttler" type="throttle" pkg="topic_tools" args="messages /dist_2_goal 30 /dist_2_goal_throttled" />
+  <node name="theta_throttler" type="throttle" pkg="topic_tools" args="messages /theta 30 /theta_throttled" />
+  <node name="odom_throttler" type="throttle" pkg="topic_tools" args="messages /odom 30 /odom_throttled" />
+  <node name="trace_throttler" type="throttle" pkg="topic_tools" args="messages /trace 30 /trace_throttled" />
+  <node name="partition_goal_xyp_throttler" type="throttle" pkg="topic_tools" args="messages /partition_goal_xyp 30 /partition_goal_xyp_throttled" />
+  
   <!-- rosbag -->
   <!-- -->
-  <node pkg="rosbag" type="record" name="record" args="record -a -O $(find bachelor_thesis)/rosbag_analyse/rosbags/record" />
+  <node pkg="rosbag" type="record" name="record" args="record -O $(find bachelor_thesis)/rosbag_analyse/rosbags/record /dist_2_goal_throttled /theta_throttled /odom_throttled /trace_throttled /partition_goal_xyp_throttled" />
   
 
 

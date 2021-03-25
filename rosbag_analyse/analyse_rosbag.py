@@ -128,7 +128,7 @@ bag = rosbag.Bag(to_analyse) #loads rosbag
 #dist
 dist = []
 dist_time=[]
-for topic, msg, t in bag.read_messages(topics=['/dist_2_goal']):
+for topic, msg, t in bag.read_messages(topics=['/dist_2_goal_throttled']):
     dist.append(msg.data)
     dist_time.append(rospy.Time.to_sec(t))
 
@@ -142,7 +142,7 @@ for topic, msg, t in bag.read_messages(topics=['/partition_dist_2_goal']):
 #theta
 theta = []
 theta_time=[]
-for topic, msg, t in bag.read_messages(topics=['/theta']):
+for topic, msg, t in bag.read_messages(topics=['/theta_throttled']):
     theta.append(msg.data)
     theta_time.append(rospy.Time.to_sec(t))
     
@@ -150,7 +150,7 @@ for topic, msg, t in bag.read_messages(topics=['/theta']):
 odom_x = []
 odom_y = []
 odom_time = []
-for topic, msg, t in bag.read_messages(topics=['/odom']):
+for topic, msg, t in bag.read_messages(topics=['/odom_throttled']):
     odom_x.append(msg.pose.pose.position.x)
     odom_y.append(msg.pose.pose.position.y)
     odom_time.append(rospy.Time.to_sec(t))
@@ -158,7 +158,7 @@ for topic, msg, t in bag.read_messages(topics=['/odom']):
 #trace
 trace = []
 get_trace = []
-for topic, msg, t in bag.read_messages(topics=['/trace']):
+for topic, msg, t in bag.read_messages(topics=['/trace_throttled']):
     get_trace = msg.data
 for i in range(0, len(get_trace), 3):
     trace.append([get_trace[i], get_trace[i+1], get_trace[i+2]])
@@ -169,7 +169,7 @@ print("trace: ", trace)
 i_goal = []
 i_goal_time = []
 partition_goal = []
-for topic, msg, t in bag.read_messages(topics=['/partition_goal_xyp']):
+for topic, msg, t in bag.read_messages(topics=['/partition_goal_xyp_throttled']):
     partition_goal.append(msg.data)
     i_goal_time.append(rospy.Time.to_sec(t))
 i = 0
