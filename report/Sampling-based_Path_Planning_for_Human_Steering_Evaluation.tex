@@ -162,44 +162,44 @@ Abgabedatum: 30. März 2021
 
 %Worum geht es? Beispiel(e)! Illustrationen sind hier meist sinnvoll zum Verständnis. Warum ist das Thema wichtig? In welchem Kontext?
 
-Aufgrund von verbessertem sozialen Umfeld und voranschreitender Medizin, wird unsere Gesellschaft immer älter. Aufgrund dessen ist es von Nöten die Selbstständigkeit dieser Gruppe, welche häufig unter eingeschränkten Fähigkeiten leidet, zu erhalten. Elektrische Rollstühle werden in vielen Bereichen von dieser Gruppe genutzt. Da diese jedoch eine präzise Kontrolle des Fahrers benötigen, welche der Fahrer unter Umständen nicht leisten kann, sollen ihn Assistenzfunktionen unterstützen. \cite{choi_design_2017}
+Aufgrund von verbessertem sozialen Umfeld und voranschreitender Medizin wird unsere Gesellschaft immer älter. Daher ist es notwendig die Selbstständigkeit dieser Gruppe, welche häufig unter eingeschränkter Mobilität leidet, zu erhalten. Elektrische Rollstühle werden in vielen Bereichen von dieser Gruppe genutzt. Da diese jedoch eine präzise Kontrolle des Fahrers benötigen, welche der Fahrer unter Umständen nicht leisten kann, sollen ihn Assistenzfunktionen unterstützen. \cite{choi_design_2017}
 
 %TODO Sondersteuerung
 
-Üblicherweise werden Steuereingaben in Form von Linear- und Rotationsgeschwindigkeit übermittelt, wie beispielsweise bei elektrischer Rollstühlen über einen Joystick. Um die automatisierten Hilfsfunktionen an den Fahrer anzupassen, muss sein Fahrverhalten während der Fahrt analysiert und ausgewertet werden. Zur Auswertung werden bei existierenden Ansätzen, neben den vom Fahrer initiierten Geschwindigkeiten, auch lokale Maße wie die Position des Fahrzeugs relativ zu einem Ziel oder zu Hindernissen verwendet \cite{poncela_new_2009}. Neben den genannten lokalen Maßen sind auch globale Maße (wie beispielsweise der Fortschritt zum Ziel) geeignet, um die Eingangssignale des Fahrers zu bewerten. Soll auch die Distanz zum Ziel evaluiert werden, muss diese durch eine Wegplanung fortlaufend ermittelt werden. Bei der Berechnung der Distanz zum Ziel muss jedoch berücksichtigt werden, dass herkömmliche Rollstühle sich nicht entlang der Querachse der Antriebsräder bewegen können.
+Üblicherweise werden Steuereingaben in Form von Linear- und Rotationsgeschwindigkeit übermittelt, wie beispielsweise bei elektrischen Rollstühlen über einen Joystick. Um die automatisierten Hilfsfunktionen an den Fahrer anzupassen, muss sein Fahrverhalten während der Fahrt analysiert und ausgewertet werden. Zur Auswertung werden bei existierenden Ansätzen, neben den vom Fahrer initiierten Geschwindigkeiten, auch lokale Maße wie die Position des Fahrzeugs relativ zu einem Ziel oder zu Hindernissen verwendet \cite{poncela_new_2009}. Neben den genannten lokalen Maßen sind auch globale Maße (wie beispielsweise der Fortschritt zum Ziel) geeignet, um die Eingangssignale des Fahrers zu bewerten. Soll auch die Distanz zum Ziel evaluiert werden, muss diese durch eine Wegplanung fortlaufend ermittelt werden. Bei der Berechnung der Distanz zum Ziel muss jedoch berücksichtigt werden, dass herkömmliche Rollstühle sich nicht entlang der Querachse der Antriebsräder bewegen können.
 
 \section{Ziele der Arbeit}
 \label{sec:ziel_der_arbeit}
 
 %In diesem Abschnitt sollen neben den Herausforderungen und der Problemstellung insbesondere die Ziele der Arbeit beschrieben werden. 
 
-Im Labor des Instituts für Technische Informatik der Universität Heidelberg wurde ein elektronischer Rollstuhl mit Sensoren ausgestattet, sodass dessen 3D-Position $ (x, y, \varphi) $\ beim Fahren ermittelt werden kann. Zusätzlich können durch Laserscanner und Ultraschall - Sensoren die Abstände zu Objekten in der Umgebung gemessen werden. Die Variablen $ (x, y) $\ beschreiben hierbei die Koordinaten, an dem sich der Rollstuhl befindet und $ \varphi $\ dessen Orientierung. Linear- und Rotationsgeschwindigkeit können in Form von $ (v, \omega) $\ über einen Joystick vom Nutzer eingegeben werden. Die Sensor- und Eingabedaten können während des Fahrens sowohl online als auch offline verarbeitet und gespeichert werden. Mit Hilfe der Sensordaten kann so eine Umgebung abgefahren, erfasst und gespeichert werden, wobei hierbei nur statische Objekte erfasst werden sollten, um später mit der Karte in dieser statischen Umgebung navigieren zu können.
+Im Labor des Instituts für Technische Informatik der Universität Heidelberg wurde ein elektronischer Rollstuhl mit Sensoren ausgestattet, sodass dessen 3D-Position $ (x, y, \varphi) $\ beim Fahren ermittelt werden kann. Zusätzlich können durch Laserscanner und Ultraschall - Sensoren die Abstände zu Objekten in der Umgebung gemessen werden. Die Variablen $ (x, y) $\ beschreiben hierbei den Schnittpunkt der Koordinaten, an dem sich der Rollstuhl befindet und $ \varphi $\ dessen Orientierung. Linear- und Rotationsgeschwindigkeit können in Form von $ (v, \omega) $\ über einen Joystick vom Nutzer eingegeben werden. Die Sensor- und Eingabedaten können während des Fahrens sowohl online als auch offline verarbeitet und gespeichert werden. Mit Hilfe der Sensordaten kann so eine Umgebung abgefahren, erfasst und gespeichert werden, wobei hierbei nur statische Objekte erfasst werden sollten, um später mit der Karte in dieser statischen Umgebung navigieren zu können.
 
 Während der Rollstuhl zu einer Zielposition gesteuert wird, kann also seine 3D-Position ermittelt werden. Ist das Ziel bekannt, können die Fortschritte des Fahrers fortlaufend evaluiert werden.
 
-Ziel der Arbeit ist es, unter Verwendung einer Start- und einer Zielposition, automatisch einen Weg mit Zwischenzielen zu berechnen, welche dann alle nacheinander auf einem kollisionsfreien Pfad abgefahren werden. Die Pfade zwischen den Zwischenzielen sollen zudem unter der Annahme berechnet werden, dass der Rollstuhl, welcher den Pfad abfahren soll, ein nicht-holonomes System ist. 
+Ziel der Arbeit ist es, unter Verwendung einer Start- und einer Zielposition automatisch einen Weg mit Zwischenzielen zu berechnen, welche dann alle nacheinander auf einem kollisionsfreien Pfad abgefahren werden. Die Pfade zwischen den Zwischenzielen sollen zudem unter der Annahme berechnet werden, dass der Rollstuhl, welcher den Pfad abfahren soll, ein nicht-holonomes System ist. 
 
 Aufgrund der Eigenschaften eines nicht-holonomen Systems (z.B. Unfähigkeit von Rollstühlen seitwärts zu fahren) muss ein Distanzmaß verwendet werden, welches diese Eigenschaften berücksichtigt und die Distanz des zuvor erwähnten berechneten Pfades widerspiegelt. Da sich der Rollstuhl kontinuierlich fortbewegt, und sich somit die Navigationsaufgabe mit jeder neuen Position fortlaufend ändert, muss die verbleibende Distanz zur Zielposition kontinuierlich aktualisiert werden. Die Distanz von der aktuellen Position des Rollstuhls bis zur Zielposition berechnet sich hierbei so, dass die Distanz von der Rollstuhlposition zum nächsten Zwischenziel berechnet wird und auf diese die Distanzen zwischen den folgenden Zwischenzielen bis zum endgültigen Ziel aufaddiert werden.
 
-Zur Bewertung des Fahrverhaltens wird das nicht-holonome Distanzmaß verwendet, welches sich bei korrektem Fahrverhalten mit konstanter Geschwindigkeit linear bis zu einer Distanz von null verringert. Bei unpassenden Eingaben bezüglich des Navigationsfortschritts, soll das System eine verringerte Reduzierung bis zu einem Anstieg der Restdistanz erkennen.
+Zur Bewertung des Fahrverhaltens wird das nicht-holonome Distanzmaß verwendet, welches sich bei korrektem Fahrverhalten mit konstanter Geschwindigkeit linear bis zu einer Distanz von null verringert. Bei unpassenden Eingaben bezüglich des Navigationsfortschritts soll das System eine verringerte Reduzierung bis zu einem Anstieg der Restdistanz erkennen.
 
 \section{Problemstellung}
 \label{sec:problemstellung}
 
-Das Problem kann in zwei Teile unterteilt werden. Zunächst muss, unter Zuhilfenahme einer \textit{occupancy grid map}\footnote{Dies stellt eine 2-D-Rasterkarte dar, in der jede Zelle die Belegungswahrscheinlichkeit darstellt.} innerhalb einer statischen Umgebung, ein Weg von einer gegebenen Startposition zu einer gegebenen Zielposition berechnet werden. Dieser Weg soll aus Zwischenzielen bestehen, welche nacheinander auf kurzen und intuitiven Pfaden erreicht werden können. Die Bezeichnung kurz bezieht sich hier auf ein nicht-holonome Distanzmaß zwischen zwei 3D-Positionen $(x, y, \varphi)$, welches in Gleichung (\ref{eq:distanzfunktion_xyp}) beschrieben ist \cite{park_feedback_2015}.
+Das Problem kann in zwei Teile unterteilt werden. Zunächst muss, unter Zuhilfenahme einer \textit{occupancy grid map}\footnote{Dies stellt eine 2-D-Rasterkarte dar, in der jede Zelle die Belegungswahrscheinlichkeit darstellt.} innerhalb einer statischen Umgebung, ein Weg von einer gegebenen Startposition zu einer gegebenen Zielposition berechnet werden. Dieser Weg soll aus Zwischenzielen bestehen, welche nacheinander auf kurzen und intuitiven Pfaden erreicht werden können. Die Bezeichnung kurz bezieht sich hier auf ein nicht-holonomes Distanzmaß zwischen zwei 3D-Positionen $(x, y, \varphi)$, welches in Gleichung (\ref{eq:distanzfunktion_xyp}) beschrieben ist \cite{park_feedback_2015}.
 
-Der zweite Teil des Problems besteht darin, unter Verwendung des zuvor berechneten Weges mit Zwischenzielen, eine Methode zu erarbeiten, welche es ermöglicht das Fahrverhalten eines Rollstuhlfahrers auf diesem Weg zu evaluieren. Die Bewertung kann mit Hilfe einer nicht-holonomen Distanzfunktion geschehen, welche die Distanz der aktuellen Position zum nächsten Zwischenziel und zwischen allen folgenden Zwischenzielen berechnen kann. Die Summe dieser Teildistanzen ergibt eine Gesamtdistanz, welche zur Bewertung verwendet werden kann.
+Der zweite Teil des Problems besteht darin, unter Verwendung des zuvor berechneten Weges mit Zwischenzielen, eine Methode zu erarbeiten, die es ermöglicht, das Fahrverhalten eines Rollstuhlfahrers auf diesem Weg zu evaluieren. Die Bewertung kann mit Hilfe einer nicht-holonomen Distanzfunktion geschehen, welche die Distanz der aktuellen Position zum nächsten Zwischenziel und zwischen allen folgenden Zwischenzielen berechnen kann. Die Summe dieser Teildistanzen ergibt eine Gesamtdistanz, die zur Bewertung verwendet werden kann.
 
 \section{Lösungsansatz}
 \label{sec:loesungsansatz}
 
-Um einen Weg zwischen einer Start- und einer Zielposition zu berechnen, wird zunächst ein Wegfindungsalgorithmus benötigt. Diverse Wegfindungsalgorithmen, welche eine Distanz über einen navigierbaren Bereich mit nicht-holonomen Navigationsbeschränkungen berechnen, wurden schon früher untersucht \cite{konolige_gradient_2000}, \cite{park_feedback_2015}. Da für unser Distanzmaß Zwischenziele benötigt werden, bietet sich ein stichprobenbasierter Wegfindungsalgorithmus besonders an. Der optimierte stichprobenbasierte Wegfindungsalgorithmus des \textit{Rapidly Exploring Random Tree} \textit{RRT*} ist hierfür besonders gut geeignet, da er sich mit steigender Anzahl der Stichproben asymptotisch dem optimalen Pfad annähert \cite{park_feedback_2015}. Zudem haben \cite{park_feedback_2015} eine Möglichkeit gefunden Zwischenziele mit nicht-holonomen Pfaden in einen RRT* einzufügen, indem sie eine Distanzfunktion für zwei 3D-Positionen $ (x, y, \varphi) $\ definierten, welche die Distanz unter nicht-holonomen Zwangsbedingungen korrekt wiedergibt. Ein Beispielergebnis des RRT* von \cite{park_feedback_2015} ist in Abbildung \ref{fig:nicht-holonomer_RRT_star_von_park_2015} zu sehen. Auf Grundlage dieses Graphen ist eine wiederholte Neuplanung für alle Positionen möglich, um die Gesamtdistanz zu aktualisieren. Indem die berechneten Distanzwerte nach jeder Berechnung gespeichert und verglichen werden, ist eine Bewertung des Fahrtfortschritts möglich.
+Um einen Weg zwischen einer Start- und einer Zielposition zu berechnen, wird zunächst ein Wegfindungsalgorithmus benötigt. Diverse Wegfindungsalgorithmen, welche eine Distanz über einen navigierbaren Bereich mit nicht-holonomen Navigationsbeschränkungen berechnen, wurden schon früher untersucht \cite{konolige_gradient_2000}, \cite{park_feedback_2015}. Da für unser Distanzmaß Zwischenziele benötigt werden, bietet sich ein stichprobenbasierter Wegfindungsalgorithmus besonders an. Der optimierte stichprobenbasierte Wegfindungsalgorithmus des \textit{Rapidly Exploring Random Tree} \textit{RRT*} ist hierfür besonders gut geeignet, da er sich mit steigender Anzahl der Stichproben asymptotisch dem optimalen Pfad annähert \cite{park_feedback_2015}. Zudem haben \cite{park_feedback_2015} eine Möglichkeit gefunden, Zwischenziele mit nicht-holonomen Pfaden in einen RRT* einzufügen, indem sie eine Distanzfunktion für zwei 3D-Positionen $ (x, y, \varphi) $\ definierten, welche die Distanz unter nicht-holonomen Zwangsbedingungen korrekt wiedergibt. Ein Beispielergebnis des RRT* von \cite{park_feedback_2015} ist in Abbildung \ref{fig:nicht-holonomer_RRT_star_von_park_2015} zu sehen. Auf Grundlage dieses Graphens ist eine wiederholte Neuplanung für alle Positionen möglich, um die Gesamtdistanz zu aktualisieren. Indem die berechneten Distanzwerte nach jeder Berechnung gespeichert und verglichen werden, ist eine Bewertung des Fahrtfortschritts möglich.
 
 % Abbildung: nicht-holonomer RRT* von park_2015
 \begin{figure}[h]
    \centering
    \includegraphics[width=0.8\textwidth]{Bilder/nicht-holonomer_RRT_star_Park_2015.png}
-   \caption{Nicht-holonomer Pfad mit minimaler Distanz durch RRT* berechnet \cite{park_feedback_2015} \\(Start: rotes Dreieck, Ziel: blaues Dreieck, Berechneter Pfad mit Zwischenzielen: magenta, Weitere Berechnete Pfade: grau)}
+   \caption{Nicht-holonomer Pfad mit minimaler Distanz durch RRT* berechnet \cite{park_feedback_2015} \\(Start: rotes Dreieck, Ziel: blaues Dreieck, Berechneter Pfad mit Zwischenzielen: magenta, Weitere berechnete Pfade: grau)}
    \label{fig:nicht-holonomer_RRT_star_von_park_2015}
 \end{figure}
 
@@ -210,7 +210,7 @@ Der Pfad von der Startposition zur Zielposition wird als eine Liste von Zwischen
 
 %Dieser Abschnitt wird meist recht kurz gehalten und beschreibt im Prinzip nur den Aufbau des Rests der Arbeit. Zum Beispiel: In Kapitel \ref{chap:grundlagen} geben wir einen Überblick über die  Grundlagen zu der Arbeit sowie über verwandte Arbeiten. In Kapitel \ref{chap:hauptteil} stellen wir dann \ldots vor. \ldots etc.
 
-Für Programme mit der Aufgabe das Fahrverhalten von Rollstuhlfahrer:innen mit einem Distanzmaß zu bewerten, ist es notwendig einen navigierbaren Weg zu berechnen, welcher einem sicheren, schnellen und intuitiven Fahrverhalten entspricht.
+Für Programme mit der Aufgabe, das Fahrverhalten von Rollstuhlfahrern mit einem Distanzmaß zu bewerten, ist es notwendig einen navigierbaren Weg zu berechnen, welcher einem sicheren, schnellen und intuitiven Fahrverhalten entspricht.
 
 In dieser Arbeit wird gezeigt, dass ein Weg mit entsprechenden Eigenschaften berechnet werden kann und auf dessen Grundlage eine Bewertung des Fahrverhaltens stattfinden kann. Zudem wird gezeigt, dass diese Bewertung während der Fahrt stattfinden kann.
 
@@ -218,13 +218,13 @@ Im Folgenden werden die Beiträge dieser Arbeit für die entsprechenden Kapitel ku
 
 \begin{itemize} %Punkte
 	\item{Implementierung des nicht-holonomen RRT* (Kapitel \ref{sec:implementierung_RRT_star}) \\ 
-	Es wird die Implementierung eines RRT* Algorithmus mit nicht-holonomer Distanzfunktion beschrieben, welcher einen Pfad für nicht-holonome Systeme berechnet. Dabei wird der Pfad kollisionsfrei, schnell, intuitiv und navigierbar sein \cite{park_graceful_2016}. Ob der Pfad kollisionsfrei ist, wird hierbei sichergestellt, indem der berechnete Pfad an bestimmten Punkten in regelmäßigen Abständen auf eine Mindestentfernung zu allen Objekten überprüft. }
+	Es wird die Implementierung eines RRT* Algorithmus mit nicht-holonomer Distanzfunktion beschrieben, welcher einen Pfad für nicht-holonome Systeme berechnet. Dabei wird der Pfad kollisionsfrei, schnell, intuitiv und navigierbar sein \cite{park_graceful_2016}. Dass der Pfad kollisionsfrei ist, wird hierbei sichergestellt, indem der berechnete Pfad an bestimmten Punkten in regelmäßigen Abständen auf eine Mindestentfernung zu allen Objekten überprüft wird. }
 	
 	\item{Bewertung menschlichen Steuerverhaltens (Kapitel \ref{sec:bewertung_steuerverhalten}) \\
-	Das menschliche Steuerverhalten wird mithilfe der Distanz zu einem vorher definierten Ziel bewertet. Die Distanz wird hier mit dem in Kapitel \ref{sec:implementierung_RRT_star} entworfenen Algorithmus und dessen ausgegebenen Pfad berechnet. Nach Aktualisierungen der Position des Rollstuhls wird die Distanz auf Grundlage des zuvor schon berechneten Pfades aktualisiert und gespeichert. Daraufhin ist ein Vergleich mit zuvor gemessenen Distanzen möglich, welcher eine Auskunft über das Steuerverhalten des Fahrers gibt. }
+	Das menschliche Steuerverhalten wird mithilfe der Distanz zu einem vorher definierten Ziel bewertet. Die Distanz berechnet man hier mit dem in Kapitel \ref{sec:implementierung_RRT_star} entworfenen Algorithmus und dessen ausgegebenen Pfad berechnet. Nach Aktualisierungen der Position des Rollstuhls wird die Distanz auf Grundlage des zuvor schon berechneten Pfades aktualisiert und gespeichert. Daraufhin ist ein Vergleich mit zuvor gemessenen Distanzen möglich, der eine Auskunft über das Steuerverhalten des Fahrers gibt. }
 	
 	\item{Experimentelle Evaluation (Kapitel \ref{chap:eval}) \\ 
-	Es wird sowohl das menschliche Steuerverhalten an einem ferngesteuerten Roboter als auch am zuvor erwähnten Elektrischen Rollstuhls bewertet. Bei beiden Experimenten werden sowohl die Distanz zum Ziel als auch die Position des Gefährts kontinuierlich aufgezeichnet und anschließend analysiert. Dies soll eine Auskunft darüber geben, wie gut eine Bewertung des Steuerverhaltens auf Grundlage der Distanz zum Ziel funktioniert. }
+	Es wird sowohl das menschliche Steuerverhalten an einem ferngesteuerten Roboter als auch am zuvor erwähnten elektrischen Rollstuhl bewertet. Bei beiden Experimenten werden sowohl die Distanz zum Ziel als auch die Position des Gefährts kontinuierlich aufgezeichnet und anschließend analysiert. Dies soll eine Auskunft darüber geben, wie gut eine Bewertung des Steuerverhaltens auf Grundlage der Distanz zum Ziel funktioniert. }
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -244,12 +244,12 @@ Als \textit{Agent} wird im Folgenden eine Person oder ein Roboter bezeichnet, we
 \section{Wegfindungsalgorithmen}
 \label{sec:wegfindungsalgorithmen}
 
-Die Wegfindung ist definiert als das Problem einen kollisionsfreien Weg mit Start- und Endpunkt zu finden, welchen ein Agent mit möglichst geringen Kosten abfahren kann. Zur Berechnung des Weges ist im Regelfall die komplette geometrische Struktur der Umgebung in Form einer Karte gegeben. Die Kosten berechnen sich je nachdem, welchen Beschränkungen und Bedingungen, wie beispielsweise der minimalen Distanz oder der kürzesten Zeit, der Weg unterliegen soll. Es können jedoch auch Anforderungen an die Berechnungszeit oder Komplexität des Algorithmus gesetzt werden. So können beispielsweise zu lange Berechnungszeiten ein wiederholtes Anwenden des Algorithmus erschweren. In klassischen Anwendungen werden die kinematischen Zwangsbeschränkungen des Agenten meist vernachlässigt, weswegen zum Abfahren des Weges eine separate Steuerung benötigt wird. Dieses Problem wird in Kapitel \ref{sec:positionsregelung} weiter behandelt. \cite{park_graceful_2016} \cite{korkmaz_comparison_2018}
+Die Wegfindung ist definiert als das Problem, einen kollisionsfreien Weg mit Start- und Endpunkt zu finden, den ein Agent mit möglichst geringen Kosten abfahren kann. Zur Berechnung des Weges ist im Regelfall die komplette geometrische Struktur der Umgebung in Form einer Karte gegeben. Die Kosten berechnen sich je nachdem, welchen Beschränkungen und Bedingungen, wie beispielsweise der minimalen Distanz oder der kürzesten Zeit, der Weg unterliegen soll. Es können jedoch auch Anforderungen an die Berechnungszeit oder Komplexität des Algorithmus gesetzt werden. So können beispielsweise zu lange Berechnungszeiten ein wiederholtes Anwenden des Algorithmus erschweren. In klassischen Anwendungen werden die kinematischen Zwangsbeschränkungen des Agenten meist vernachlässigt, weshalb zum Abfahren des Weges eine separate Steuerung benötigt wird. Dieses Problem wird in Kapitel \ref{sec:positionsregelung} weiter behandelt. \cite{park_graceful_2016} \cite{korkmaz_comparison_2018}
 
 \subsection{Wegfindung auf einem gegebenen Graphen}
 \label{subsec:pfadplanung_mit_graph}
 
-Die Wegfindungsalgorithmen von Dijkstra \cite{dijkstra_note_1959} und der A* Algorithmus \cite{hart_formal_1968} sind gut etabliert und finden auf einen gegebenen Graphen immer den optimalen Weg. Dabei gehören sie zu der Gruppe der Suchalgorithmen. Der A* Algorithmus geht nach dem Prinzip vor immer das vielversprechendste Teilziel weiter zu erkunden. Dadurch ist er besonders schnell beim Durchsuchen von großen Graphen. Anzumerken ist hierbei, dass A* eine Erweiterung des Algorithmus von Dijkstra ist, welche versucht die Anzahl der Knoten, die auf dem Graph untersucht werden müssen, zu reduzieren. Dies geschieht, indem der Algorithmus eine heuristische Schätzung der Kosten einbezieht, um von einem gegebenen Knoten zum Ziel zu gelangen. \cite{lavalle_planning_2006} \cite{park_graceful_2016} 
+Die Wegfindungsalgorithmen von Dijkstra \cite{dijkstra_note_1959} und der A* Algorithmus \cite{hart_formal_1968} sind gut etabliert und finden auf einem gegebenen Graphen immer den optimalen Weg. Dabei gehören sie zu der Gruppe der Suchalgorithmen. Der A* Algorithmus geht nach dem Prinzip vor, immer das vielversprechendste Teilziel weiter zu erkunden. Dadurch ist er besonders schnell beim Durchsuchen von großen Graphen. Anzumerken ist hierbei, dass der A* Algorithmus eine Erweiterung des Algorithmus von Dijkstra ist, welcher versucht, die Anzahl der Knoten, die auf dem Graph untersucht werden müssen, zu reduzieren. Dies geschieht, indem der Algorithmus eine heuristische Schätzung der Kosten einbezieht, um von einem gegebenen Knoten zum Ziel zu gelangen. \cite{lavalle_planning_2006} \cite{park_graceful_2016} 
 
 Der A* Algorithmus, welcher in Algorithmus \ref{alg:A_star} zu sehen ist, arbeitet auf einem Graphen $G$ mit Knoten $v \in V$ und Kanten $e \in E$. Dabei sind die Kanten mit nicht negativen Kosten $cost(e)$ verbunden. Die Kosten einer Kante können auch durch $cost(v_1, v_2)$ beschrieben werden, wobei $v_1 \in V$ den Startknoten und $v_2 \in V$ den Zielknoten einer direkten Verbindung beschreibt. Die $Gesamtkosten$ des Weges von einem Startknoten zu einem Zielknoten sind die aufsummierten Kosten über alle abgegangenen Knoten. \cite{lavalle_planning_2006}
 
@@ -288,28 +288,28 @@ Zu Beginn werden die geschätzten Kosten $h$ aller Knoten zum Ziel berechnet, wob
 \label{eq:calc_all_h}
 \end{align}
 
-Zudem wird der Startknoten, welcher mit dem Zielknoten an den Algorithmus übergeben wurde, initialisiert und in die $openlist$ hinzugefügt, welche die als nächstes zu untersuchenden Knoten beinhaltet. Vollständig untersuchte Knoten werden hingegen in die $closedlist$ hinzugefügt. Bei der Initialisierung des Startknoten werden dessen Kosten $g$ vom Startknoten zum aktuell betrachteten Knoten über alle abgegangenen Knoten berechnet. Da sich der A* Algorithmus vom Startknoten aus kontinuierlich ausbreitet, sind die Kosten über alle abgegangenen Knoten bis zum Vorgänger $parent$ gespeichert und erleichtern somit die Berechnung von $g$.
+Zudem wird der Startknoten, welcher mit dem Zielknoten an den Algorithmus übergeben wurde, initialisiert und in die $openlist$ eingefügt, welche die als nächstes zu untersuchenden Knoten beinhaltet. Vollständig untersuchte Knoten werden hingegen in die $closedlist$ eingefügt. Bei der Initialisierung des Startknotens werden dessen Kosten $g$ vom Startknoten zum aktuell betrachteten Knoten über alle abgegangenen Knoten berechnet. Da sich der A* Algorithmus vom Startknoten aus kontinuierlich ausbreitet, sind die Kosten über alle abgegangenen Knoten bis zum Vorgänger $parent$ gespeichert und erleichtern somit die Berechnung von $g$.
 
 \begin{align}
 g : V \times V \rightarrow \R, g(v, parent) = v.parent.g + cost(v.parent, v)
 \label{eq:calc_g}
 \end{align}
 
-Bei der Initialisierung des Startknoten sind Startknoten und betrachteter Knoten derselbe, weswegen die Kosten $start.g = 0$ sind. Die Kosten $f$ setzen sich aus den berechneten Kosten $g$ vom Startknoten zum aktuell betrachteten Knoten und den geschätzten Kosten $h$ bis zum Ziel zusammen.
+Bei der Initialisierung des Startknotens sind Startknoten und betrachteter Knoten derselbe, weswegen die Kosten $start.g = 0$ sind. Die Kosten $f$ setzen sich aus den berechneten Kosten $g$ vom Startknoten zum aktuell betrachteten Knoten und den geschätzten Kosten $h$ bis zum Ziel zusammen.
 
 \begin{align}
 f : V \rightarrow \R, f(v) = v.g + v.h
 \label{eq:calc_f}
 \end{align}
 
-Bei der Initialisierung des Startknoten wird somit $start.f = start.h$ gesetzt. Dieser Wert gibt einen Anhaltspunkt, wie empfehlenswert es ist ihn als nächstes zu untersuchen. Diese Komponente des A* Algorithmus ist auch die entscheidende Ergänzung zum Dijkstra Algorithmus. Nach der Initialisierung wird nun so lange der Graph durchsucht, bis entweder das Ziel erreicht wurde oder alle Knoten untersucht wurden. Dabei wird in jedem Schritt zunächst der vielversprechendste Knoten $v_{current} \in openlist$ genommen.
+Bei der Initialisierung des Startknotens wird somit $start.f = start.h$ gesetzt. Dieser Wert gibt einen Anhaltspunkt, wie empfehlenswert es ist, ihn als nächstes zu untersuchen. Diese Komponente des A* Algorithmus ist auch die entscheidende Ergänzung zum Dijkstra Algorithmus. Nach der Initialisierung wird nun so lange der Graph durchsucht, bis entweder das Ziel erreicht wurde oder alle Knoten untersucht wurden. Dabei wird in jedem Schritt zunächst der vielversprechendste Knoten $v_{current} \in openlist$ genommen.
 
 \begin{align}
 removeMin(openlist) \equiv \{v_1 \in openlist : \forall v_2 \in openlist : v_1.f \leq v_2.f \}
 \label{eq:openlist_removeMin}
 \end{align}
 
-Falls $v_{current}$ nicht der Zielknoten ist, wird er in die $closedlist$ hinzugefügt und die $openlist$ wird um seine Nachbarn $v_{current}.neighbors$ erweitert. In Algorithmus \ref{alg:expandNode} ist beschrieben, wie die $openlist$ durch die Nachbarn von $v_{current}$ erweitert wird.
+Falls $v_{current}$ nicht der Zielknoten ist, wird er in die $closedlist$ eingefügt und die $openlist$ wird um seine Nachbarn $v_{current}.neighbors$ erweitert. In Algorithmus \ref{alg:expandNode} ist beschrieben, wie die $openlist$ durch die Nachbarn von $v_{current}$ erweitert wird.
 
 % expandNode(openlist, closedlist, currentNode)
 \begin{algorithm}
@@ -335,16 +335,16 @@ Falls $v_{current}$ nicht der Zielknoten ist, wird er in die $closedlist$ hinzug
 \end{algorithmic}
 \end{algorithm}
 
-Hierbei werden alle Nachbarn von $v_{current}$, welche noch nicht in der $closedlist$ sind nacheinander betrachtet. Zunächst werden vorläufig die Kosten $tmpG$ für den betrachteten Nachbarn $neighbor$ über den Vorgänger $v_{current}$ mit der Gleichung (\ref{eq:calc_g}) berechnet. Falls $neighbor$ entweder noch nicht in $openlist$ vorhanden ist oder falls doch und $tmpG < neighbor.g$, dann werden die Werte von $neighbor$ aktualisiert. Ist dieser nicht in $openlist$ vorhanden, so wird er dieser hinzugefügt. Nach vollständigem Durchlaufen der Nachbarn wird die aktualisierte $openlist$ Liste zurückgegeben.
+Hierbei werden alle Nachbarn von $v_{current}$, welche noch nicht in der $closedlist$ sind, nacheinander betrachtet. Zunächst berechnet man vorläufig die Kosten $tmpG$ für den betrachteten Nachbarn $neighbor$ über den Vorgänger $v_{current}$ mit der Gleichung (\ref{eq:calc_g}). Falls $neighbor$ entweder noch nicht in $openlist$ vorhanden ist oder falls doch und $tmpG < neighbor.g$, dann werden die Werte von $neighbor$ aktualisiert. Ist dieser nicht in $openlist$ vorhanden, so wird er diese eingefügt. Nach vollständigem Durchlaufen der Nachbarn wird die aktualisierte $openlist$ Liste zurückgegeben.
 
-Der Weg vom Startknoten zum Zielknoten kann nun beim Rückgabewert $TRUE$ des Algorithmus \ref{alg:A_star} ausgelesen weder. Dies geschieht, indem vom Zielknoten aus immer $v.parent$ ausgelesen wird, bis man den Startknoten erreicht hat.
+Der Weg vom Startknoten zum Zielknoten kann nun beim Rückgabewert $TRUE$ des Algorithmus \ref{alg:A_star} ausgelesen werden. Dies geschieht, indem vom Zielknoten aus immer $v.parent$ ausgelesen wird, bis man den Startknoten erreicht hat.
 
 \subsection{Nicht-holonome stichprobenbasierte Wegfindung}
 \label{subsec:pfadplanung_stickprobenbasierte}
 
 Eine weitere Art der Wegfindung basiert auf Stichproben, wobei stichprobenartig Koordinaten auf einer vorhandenen Karte ausgewählt werden können, welche als Knoten im Graphen dienen sollen. So wird zu Beginn kein Graph benötigt, jedoch genaue Kenntnisse über die Karte, auf welcher der Algorithmus angewandt werden soll.
 
-Die Algorithmen \textit{Rapidly-Exploring Random Tree} (RRT) \cite{lavalle_steven_m_rapidly-exploring_1998} und \textit{probabilistic roadmap} (PRM) \cite{kavraki_probabilistic_1996} gehören der Klasse der stichprobenbasierten Wegfindungsalgorithmen an und sind dort sehr gut etabliert. Sie können in hochdimensionalen zusammenhängenden Räumen arbeiten und können dabei unterschiedlichste Bedingungen, wie auch die Abmessungen des Agenten, in die Problemformulierung mit einbeziehen. Dabei berechnen sie einen Weg, welcher vom Agenten, unter allen gegebenen Bedingungen, begangen werden kann. Diese gelingt ihnen, indem sie einen topologischen Graphen generieren, welcher einen Startknoten und einen Zielknoten mit beliebig vielen Zwischenzielen verbindet. Jeder Knoten ist auf dem Weg zwischen Start und Ziel mit mindestens einem Nachbarknoten verbunden, wobei die Kanten jeweils ein navigierbares Wegsegment im freien Raum beschreiben. Aufgrund der stichprobenbasierten Generierung von Knoten, ist der gefundenen Wege jedoch oft nicht optimal. Beim optimierten RRT Algorithmus RRT* \cite{karaman_sampling-based_2011} wurde dieses Problem behoben, wodurch er sich asymptotisch mit steigender Stichprobenanzahl dem optimalen Weg annähert. Dies wird durch die Neuverknüpfung von Knoten, nach dem Einfügen eines neuen Knoten, ermöglicht \cite{park_graceful_2016}.
+Die Algorithmen \textit{Rapidly-Exploring Random Tree} (RRT) \cite{lavalle_steven_m_rapidly-exploring_1998} und \textit{probabilistic roadmap} (PRM) \cite{kavraki_probabilistic_1996} gehören der Klasse der stichprobenbasierten Wegfindungsalgorithmen an und sind dort sehr gut etabliert. Sie können in hochdimensionalen zusammenhängenden Räumen arbeiten und können dabei unterschiedlichste Bedingungen, wie auch die Abmessungen des Agenten, in die Problemformulierung mit einbeziehen. Dabei berechnen sie einen Weg, welcher vom Agenten unter allen gegebenen Bedingungen begangen werden kann. Das gelingt ihnen, indem sie einen topologischen Graphen generieren, welcher einen Startknoten und einen Zielknoten mit beliebig vielen Zwischenzielen verbindet. Jeder Knoten ist auf dem Weg zwischen Start und Ziel mit mindestens einem Nachbarknoten verbunden, wobei die Kanten jeweils ein navigierbares Wegsegment im freien Raum beschreiben. Aufgrund der stichprobenbasierten Generierung von Knoten ist der gefundenen Wege jedoch oft nicht optimal. Beim optimierten RRT Algorithmus RRT* \cite{karaman_sampling-based_2011} wurde dieses Problem behoben, wodurch er sich asymptotisch mit steigender Stichprobenanzahl dem optimalen Weg annähert. Dies wird durch die Neuverknüpfung von Knoten, nach dem Einfügen eines neuen Knoten, ermöglicht \cite{park_graceful_2016}.
 
 Die folgende Beschreibung des RRT* Algorithmus orientiert sich hauptsächlich an \cite{karaman_anytime_2011} und \cite{park_graceful_2016}.
 
@@ -378,7 +378,7 @@ Die folgende Beschreibung des RRT* Algorithmus orientiert sich hauptsächlich an 
 \end{algorithm}
 
 
-Der RRT* Algorithmus, welcher in Algorithmus \ref{alg:RRT_star} zu sehen ist, beginnt mit der Initialisierung des Verzeichnis $parents$, welches den Graphen repräsentiert und den Vorgänger eines jeden Knoten speichert, und des Verzeichnis $cost$, welches die Gesamtkosten vom Startknoten bis zum aktuell betrachteten Knoten speichert. Der an den Algorithmus übergebene Startknoten wird daraufhin in die Verzeichnisse eingetragen. Im Folgenden wird der Graph so lange erweitert, bis er die gewünschte Anzahl an Knoten besitzt. Die Erweiterung des Graphen geschieht dabei, indem ein zufälliger valider Knoten $v_{new}$ auf der Karte generiert wird. Dieser bekommt, falls möglich, den nächstgelegenen Konten $v_{nearest}$ als Vorgänger, 
+Der RRT* Algorithmus, welcher in Algorithmus \ref{alg:RRT_star} zu sehen ist, beginnt mit der Initialisierung des Verzeichnisses $parents$, welches den Graphen repräsentiert und den Vorgänger eines jeden Knoten speichert, und des Verzeichnisses $cost$, welches die Gesamtkosten vom Startknoten bis zum aktuell betrachteten Knoten speichert. Der an den Algorithmus übergebene Startknoten wird daraufhin in die Verzeichnisse eingetragen. Im Folgenden wird der Graph so lange erweitert, bis er die gewünschte Anzahl an Knoten besitzt. Die Erweiterung des Graphen geschieht dabei, indem ein zufälliger valider Knoten $v_{new}$ auf der Karte generiert wird. Dieser bekommt, falls möglich, den nächstgelegenen Knoten $v_{nearest}$ als Vorgänger, 
 
 \begin{align}
 \begin{autobreak}
@@ -408,7 +408,7 @@ cost[v_2] + dist(v_2, v_{new})\}
 \label{eq:chooseParent}
 \end{align}
 
-Hierbei muss jedoch jeder Knoten in $neighbor$ eine valide Verbindung von $v_{new}$ aus besitzen. Der Knoten $v_{new}$ wird mit $v_{min}$ als Vorgänger in den Graphen hinzugefügt und aktuelle Verbindungen werden, falls nötig neu über $v_{new}$ verbunden. Dazu werden zuvor alle Nachbarn $neighbors$, welche vom $v_{new}$ aus erreicht werden können, 
+Hierbei muss jedoch jeder Knoten in $neighbor$ eine valide Verbindung von $v_{new}$ aus besitzen. Der Knoten $v_{new}$ wird mit $v_{min}$ als Vorgänger in den Graphen eingefügt und aktuelle Verbindungen werden, falls nötig, neu über $v_{new}$ verbunden. Dazu werden zuvor alle Nachbarn $neighbors$, welche vom $v_{new}$ aus erreicht werden können, 
 
 \begin{align}
 nearFrom(v_{new}, parents) \equiv \{ v \in parents : dist(v_{new}, v) \leq radius\}
@@ -471,7 +471,7 @@ Nachdem der Graph vollständig aufgebaut wurde, kann die Zielposition falls mögli
 
 Das Ansteuern einer Position auf einer ebenen Fläche ist ein fundamentales Problem bei autonom fahrenden Agenten \cite{park_graceful_2016}. Die Qualität des Weges, welcher zum Erreichen der Position gewählt wird, ist hierbei von großer Bedeutung, insbesondere beim Transport von Objekten oder Lebewesen. Bei einer Fortbewegung unter nicht-holonomen Zwangsbeschränkungen ist die Berechnung eines Weges von hoher Qualität, aufgrund der zusätzlichen Beschränkungen, besonders kompliziert.
 
-\cite{park_graceful_2016} hat ein Regelgesetz entworfen, welches einem einrädrigen Fahrzeug ermöglicht von seiner aktuellen Position eine gewünschte Zielposition anzufahren. Dies geschieht dabei so, dass die Bewegung sicher, komfortable, schnell und intuitiv ist. Das Regelgesetz wurde als Einrad modelliert, da normale Autos oder auch Rollstühle als dies vereinfacht werden können \cite{lavalle_planning_2006}. Das Fahren in eine vollkommen beliebige Richtung ist hierbei nicht möglich. \cite{park_graceful_2016}
+\cite{park_graceful_2016} hat ein Regelgesetz entworfen, welches einem einrädrigen Fahrzeug ermöglicht von seiner aktuellen Position eine gewünschte Zielposition anzufahren. Dies geschieht dabei so, dass die Bewegung sicher, komfortabel, schnell und intuitiv ist. Das Regelgesetz wurde als Einrad modelliert, da normale Autos oder auch Rollstühle als Solche vereinfacht werden können \cite{lavalle_planning_2006}. Das Fahren in eine vollkommen beliebige Richtung ist hierbei nicht möglich. \cite{park_graceful_2016}
 
 Um die Kinematik des Fahrzeugs besser beschreiben zu können, wird von \cite{park_graceful_2016} ein Polarkoordinatensystem verwendet, welches in Abbildung \ref{fig:egozentrische_polarkoordinaten} zu sehen ist. Dadurch ist es möglich die Sichtweise aus der Fahrerposition besser nachzuvollziehen und ein natürliches Steuerverhalten zu generieren. 
 
@@ -479,11 +479,11 @@ Um die Kinematik des Fahrzeugs besser beschreiben zu können, wird von \cite{park
 \begin{figure}[h]
    \centering
    \includegraphics[width=0.8\textwidth]{Bilder/polarkoordinaten_fahrzeug_park_2016.png}
-   \caption{Egozentrische Polarkoordinaten \cite{park_graceful_2016} \\ Der Agent $p$ möchte hier die Position $p_0$ in Entfernung $r$ ansteuern. Die Orientierung wird in Relation zur Luftlinie entlang von $r$ beschrieben, wobei die des Agenten durch $\delta$ und die der Zielposition durch $\phi$ beschrieben wird. In der Abbildung haben sowohl $\delta$ als auch $\phi$ negative Werte. Im Fall, dass $r = 0$ ist, wird die Luftlinie entlang der Ausrichtung von $p_0$ gelegt, wodurch $\phi = 0$ ist, und $\delta$ in Relation zur Ausrichtung von $p_0$ gemessen wird. Die Werte $v$ und $\omega$ beschrieben die Linear- und Rotationsgeschwindigkeit.}
+   \caption{Egozentrische Polarkoordinaten \cite{park_graceful_2016} \\ Der Agent $p$ möchte hier die Position $p_0$ in Entfernung $r$ ansteuern. Die Orientierung wird in Relation zur Luftlinie entlang von $r$ beschrieben, wobei die des Agenten durch $\delta$ und die der Zielposition durch $\phi$ beschrieben wird. In der Abbildung haben sowohl $\delta$ als auch $\phi$ negative Werte. Im Fall, dass $r = 0$ ist, wird die Luftlinie entlang der Ausrichtung von $p_0$ gelegt, wodurch $\phi = 0$ ist, und $\delta$ in Relation zur Ausrichtung von $p_0$ gemessen wird. Die Werte $v$ und $\omega$ beschreiben die Linear- und Rotationsgeschwindigkeit.}
    \label{fig:egozentrische_polarkoordinaten}
 \end{figure}
 
-Dabei wird angenommen, dass der Fahrer sich an Position $p$ befindet und eine Zielposition $p_0$ in Entfernung $r$ relativ zu seiner Position betrachtet. Die Orientierungen werden in Relation zur Luftlinie entlang von $r$ beschrieben, wobei die des Agenten durch $\delta$ und die der Zielposition durch $\phi$ beschrieben wird. Die Orientierungen werden hierbei auf dem Intervall $\delta, \phi \in (\pi, \pi]$ definiert. Die Werte $v$ und $\omega$ beschrieben die Linear- und Rotationsgeschwindigkeit des Agenten. \cite{park_graceful_2016}
+Dabei wird angenommen, dass der Fahrer sich an Position $p$ befindet und eine Zielposition $p_0$ in Entfernung $r$ relativ zu seiner Position betrachtet. Die Orientierungen werden in Relation zur Luftlinie entlang von $r$ beschrieben, wobei die des Agenten durch $\delta$ und die der Zielposition durch $\phi$ beschrieben wird. Die Orientierungen werden hierbei auf dem Intervall $\delta, \phi \in (\pi, \pi]$ definiert. Die Werte $v$ und $\omega$ beschreiben die Linear- und Rotationsgeschwindigkeit des Agenten. \cite{park_graceful_2016}
 
 Die Kinematik kann somit durch Gleichung (\ref{eq:polar_update}) beschrieben werden. \cite{park_graceful_2016}
 
@@ -522,7 +522,7 @@ Aufbauend auf Gleichung (\ref{eq:polar_update}) wurde ein Regelgesetz entwickelt
 \label{eq:polar_update_fast_subsystem}
 \end{align}
 
-Dabei beschreibt die Gleichung (\ref{eq:polar_update_slow_subsystem}) die Dynamik des Positionsunterraums, welches das langsamere Untersystem ist, und die Gleichung (\ref{eq:polar_update_fast_subsystem}) die Dynamik des Steuerungsunterraum, welches das schnellere Untersystem ist. Die Orientierung $\delta$ ist hierbei die virtuelle Regelung im langsameren Untersystems, welches das Untersystem zur Zielposition steuert, und $\omega$ die reale Regelung im schnelleren Untersystem, welches $\delta$ hinreichend schnell zur gewünschten Regelung stabilisiert.\footnote{Für eine ausführlichere Beschreibung siehe \cite{park_graceful_2016}.} \cite{park_graceful_2016}
+Dabei beschreibt die Gleichung (\ref{eq:polar_update_slow_subsystem}) die Dynamik des Positionsunterraums, welcher das langsamere Untersystem ist, und die Gleichung (\ref{eq:polar_update_fast_subsystem}) die Dynamik des Steuerungsunterraum, welcher das schnellere Untersystem ist. Die Orientierung $\delta$ ist hierbei die virtuelle Regelung im langsameren Untersystem, welches das Untersystem zur Zielposition steuert, und $\omega$ die reale Regelung im schnelleren Untersystem, welches $\delta$ hinreichend schnell zur gewünschten Regelung stabilisiert.\footnote{Für eine ausführlichere Beschreibung siehe \cite{park_graceful_2016}.} \cite{park_graceful_2016}
 
 Es ist anzumerken, dass diese Regelung analog zum menschlichen Steuerverhalten ist, wobei die Steuerung eines Lenkrads das schnellere Untersystem und die Ausrichtung des Fahrzeugs zu einem gewünschten Ziel das langsamere Untersystem ist. \cite{park_graceful_2016}
 
@@ -557,17 +557,17 @@ In Abhängigkeit von $k_{\phi}$ und $k_{\delta}$ kann die Form des Pfades verände
 \section{Distanzberechnung unter kinematischen Zwangsbeschränkungen}
 \label{sec:distanzberechnung}
 
-Zum effizienten Navigieren eines Agenten ist es notwendig die Distanz von einer Startposition zu einer Zielposition berechnen oder einschätzen zu können. Eine einfache Funktion hierfür wäre die Euklidische Distanz. Unter nicht-holonomen Zwangsbeschränkungen, wie der Unfähigkeit sich seitlich zu bewegen, ist dieses Maß unter Umständen nicht geeignet, da es die tatsächlichen Kosten zur Zielposition nicht widerspiegelt. Beispielhaft ist dies in Abbildung \ref{fig:nicht_holonome_zwangsbeschraenkungen_park_2015} zu sehen. \cite{park_feedback_2015}
+Zum effizienten Navigieren eines Agenten ist es notwendig, die Distanz von einer Startposition zu einer Zielposition berechnen oder einschätzen zu können. Eine einfache Funktion hierfür wäre die Euklidische Distanz. Unter nicht-holonomen Zwangsbeschränkungen, wie der Unfähigkeit sich seitlich zu bewegen, ist dieses Maß unter Umständen nicht geeignet, da es die tatsächlichen Kosten zur Zielposition nicht widerspiegelt. Beispielhaft ist dies in Abbildung \ref{fig:nicht_holonome_zwangsbeschraenkungen_park_2015} zu sehen. \cite{park_feedback_2015}
 
 % Abbildung: nicht_holonome_zwangsbeschraenkungen_park_2015
 \begin{figure} [h]
    \centering
    \includegraphics[width=0.5\textwidth]{Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.png}
-   \caption{Es sind zwei Zielpositionen $p_0, p_1$ als Koordinaten $(x, y, \varphi)$ gegeben. Obwohl die Euklidische Distanz zu $p_1$ geringer als zu $p_0$ ist, ist die tatsächliche Distanz zu $p_1$ größer. Dies ist bedingt durch die nicht-holonomen Zwangsbeschränkungen, welche ein seitwärts bewegen des Agenten unterbinden, jedoch nicht ein geradeaus Bewegen. \cite{park_feedback_2015}}
+   \caption{Es sind zwei Zielpositionen $p_0, p_1$ als Koordinaten $(x, y, \varphi)$ gegeben. Obwohl die Euklidische Distanz zu $p_1$ geringer als zu $p_0$ ist, ist die tatsächliche Distanz zu $p_1$ größer. Dies ist bedingt durch die nicht-holonomen Zwangsbeschränkungen, welche ein seitwärts Bewegen des Agenten unterbinden, jedoch nicht ein geradeaus Bewegen. \cite{park_feedback_2015}}
    \label{fig:nicht_holonome_zwangsbeschraenkungen_park_2015}
 \end{figure}
 
-Um Algorithmen wie den RRT* effizient erweitern zu können, ist auch eine Distanzfunktion nötig, welche die tatsächlichen Kosten zwischen zwei Positionen berechnet. Nur mit solch einer Distanzfunktion ist es dem RRT* Algorithmus möglich sich asymptotisch dem optimalen Weg anzunähern \cite{park_feedback_2015}. Dieses Problem wurde schon von anderen wie \cite{karaman_sampling-based_2013}, \cite{webb_kinodynamic_2012} und \cite{park_feedback_2015} behandelt.
+Um Algorithmen wie den RRT* effizient erweitern zu können, ist auch eine Distanzfunktion nötig, welche die tatsächlichen Kosten zwischen zwei Positionen berechnet. Nur mit solch einer Distanzfunktion ist es dem RRT* Algorithmus möglich, sich asymptotisch dem optimalen Weg anzunähern \cite{park_feedback_2015}. Dieses Problem wurde schon von anderen wie \cite{karaman_sampling-based_2013}, \cite{webb_kinodynamic_2012} und \cite{park_feedback_2015} behandelt.
 
 Die Distanzfunktion von \cite{park_feedback_2015}, welche auch in \cite{park_graceful_2016} auf einem RRT* Algorithmus angewandt wurde, besteht dabei aus zwei Komponenten. Die dabei verwendeten Variablen entspringen dem Polarkoordinatensystem, welche in Kapitel \ref{sec:positionsregelung} genauer erklärt wurden und auch in Abbildung \ref{fig:egozentrische_polarkoordinaten} nochmal sehr übersichtlich dargestellt sind. 
 
@@ -597,7 +597,7 @@ Die zweite Komponente aus Gleichung (\ref{eq:distanzfunktion_2_komponente}) spie
 
 Die Gleichung \ref{eq:distanzfunktion_2_komponente} beschreibt die Abweichung zwischen der Orientierung $\delta$ und der gewünschten Orientierung $\arctan(-k_{\phi} \phi)$. Mit Gleichung (\ref{eq:distanzfunktion_2_komponente}) ist es also möglich, ungünstige Ausrichtungen des Agenten mit höheren Kosten zu belegen. 
 
-Zusammengefügt gibt die Funktion die Distanz von der Position eines Agenten zu einer Zielpositionen wieder. \cite{park_feedback_2015}
+Zusammengefügt gibt die Funktion die Distanz von der Position eines Agenten zu einer Zielposition wieder. \cite{park_feedback_2015}
 
 \begin{align}
 l (r, \phi, \delta) = l^-(r, \phi) + k_{\delta} \delta_e (r, \phi, \delta)
@@ -631,13 +631,13 @@ dist(p_0, p_1) = l(\mathcal{P}_{p_1}(p_0))
 
 % Dieses Kapitel stellt meist den Hauptteil der Arbeit dar. Vor dem ersten Abschnitt sollte ein kurzer Überblick (ein paar wenige Sätze mit Verweise auf nachfolgende Abschnitte) gegeben werden. Beispiel: Im nachfolgenden Abschnitt xyz wird ein Überblick über die Anforderungen an das Modell gegeben.
 
-Diese Kapitel beschreibt die konkrete Implementierung der in Kapitel \ref{chap:grundlagen} erläuterten Konzepte. Auftretende Probleme und Designentscheidungen werden diskutiert.
+Dieses Kapitel beschreibt die konkrete Implementierung der in Kapitel \ref{chap:grundlagen} erläuterten Konzepte. Auftretende Probleme und Designentscheidungen werden diskutiert.
 
 Es wird erläutert, wie eine effiziente Evaluierung des menschlichen Steuerverhaltens möglich ist. Das Steuerverhalten wird dabei auf einem von einem Menschen gesteuerten elektrischen Rollstuhl evaluiert. Die Bewertung wird hierbei auf der Grundlage der Distanz des Fahrers zu einer Zielposition geschehen. Diese soll fortlaufend berechnet und mit den bereits berechneten Distanzen verglichen werden. Somit kann abhängig von der Veränderung der Distanz ein gutes oder inadäquates Steuerverhalten erkannt werden. Hierbei entstehen zwei Teilprobleme. 
 
 Das erste Teilproblem besteht darin, die Distanz des Fahrers zu einer Zielposition möglichst schnell und genau zu berechnen. Dieses Problem wird in Kapitel \ref{sec:implementierung_RRT_star} behandelt.
 
-Das zweite Teilproblem besteht zunächst darin, die Methode der Distanzberechnung aus dem ersten Teilproblem so zu verwenden, dass sie schnell genug ist die Distanz fortlaufen zu berechnen. Daraufhin kann ein Vergleich der Distanzen und eine entsprechende Bewertung der Steuerverhaltens geschehen. Dieses Problem wird in Kapitel \ref{sec:bewertung_steuerverhalten} behandelt. 
+Das zweite Teilproblem besteht zunächst darin, die Methode der Distanzberechnung aus dem ersten Teilproblem so zu verwenden, dass sie schnell genug ist, die Distanz fortlaufend zu berechnen. Daraufhin kann ein Vergleich der Distanzen und eine entsprechende Bewertung des Steuerverhaltens geschehen. Dieses Problem wird in Kapitel \ref{sec:bewertung_steuerverhalten} behandelt. 
 
 \section{Nicht-holonomer RRT*}
 \label{sec:implementierung_RRT_star}
@@ -646,7 +646,7 @@ Das zweite Teilproblem besteht zunächst darin, die Methode der Distanzberechnung
 
 %TODO Anhand von karte grundlegend erklären (zb suchradien)
 
-Die Ansprüche für die in diesem Kapitel behandelten Problem bestehen darin, die Distanz des Fahrers zu einer Zielposition, unter nicht-holonomen Zwangsbeschränkungen, möglichst schnell und genau zu berechnen. Der in Kapitel \ref{subsec:pfadplanung_stickprobenbasierte} vorgestellte RRT* Algorithmus bietet hierfür einen guten Anhaltspunkt. Die folgenden Analysen und Grafiken wurden auf der Karte aus Abbildung \ref{fig:world4_map} angefertigt.
+Die Ansprüche für die in diesem Kapitel behandelten Problemen bestehen darin, die Distanz des Fahrers zu einer Zielposition unter nicht-holonomen Zwangsbeschränkungen möglichst schnell und genau zu berechnen. Der in Kapitel \ref{subsec:pfadplanung_stickprobenbasierte} vorgestellte RRT* Algorithmus bietet hierfür einen guten Anhaltspunkt. Die folgenden Analysen und Grafiken wurden auf der Karte aus Abbildung \ref{fig:world4_map} angefertigt.
 
 % Abbildung: world4_map
 \begin{figure} [h]
@@ -664,9 +664,9 @@ Die Ansprüche für die in diesem Kapitel behandelten Problem bestehen darin, die 
    \label{fig:world4_analysis_cost}
 \end{figure}
 
-Der RRT* Algorithmus benötigt zur Wegfindung keinen vorher generierten Graphen und der ermittelte Weg nährt sich dem optimalen Weg, mit steigender Anzahl der Stichproben, asymptotisch an \cite{park_graceful_2016}. Dies ist besonders gut in Abbildung \ref{fig:world4_analysis_cost} zu sehen. 
+Der RRT* Algorithmus benötigt zur Wegfindung keinen vorher generierten Graphen und der ermittelte Weg nähert sich dem optimalen Weg mit steigender Anzahl der Stichproben asymptotisch an \cite{park_graceful_2016}. Dies ist besonders gut in Abbildung \ref{fig:world4_analysis_cost} zu sehen. 
 
-Hierbei wurden für verschiedene Suchradien der Funktion aus Gleichung (\ref{eq:nearTo}) und (\ref{eq:nearFrom}) (nearTo und nearFrom) Graphen berechnet. Auf der x-Achse sind dabei die Anzahl der Knoten und auf der y-Achse die Kosten zu einer Zielposition aufgetragen. Die teilweise ansteigenden Kosten bei steigender Knotenanzahl sind dabei durch die Neuberechnungen der Graphen, und damit einhergehenden zufälligen Stichproben, bedingt. Im Durchschnitt ist jedoch eine asymptotische Annäherung an einen optimalen niedrigen Wert zu betrachten. Zudem ist auch ersichtlich, dass ein höherer Suchradius die Kosten schneller gegen einen optimalen Wert konvergieren lässt.
+Hierbei wurden für verschiedene Suchradien der Funktionen aus Gleichung (\ref{eq:nearTo}) und (\ref{eq:nearFrom}) (nearTo und nearFrom) Graphen berechnet. Auf der x-Achse sind dabei die Anzahl der Knoten und auf der y-Achse die Kosten zu einer Zielposition aufgetragen. Die teilweise ansteigenden Kosten bei steigender Knotenanzahl sind dabei durch die Neuberechnungen der Graphen und damit einhergehenden zufälligen Stichproben bedingt. Im Durchschnitt ist jedoch eine asymptotische Annäherung an einen optimalen niedrigen Wert zu betrachten. Zudem ist auch ersichtlich, dass ein höherer Suchradius die Kosten schneller gegen einen optimalen Wert konvergieren lässt.
 
 Ein großer Nachteil des RRT* Algorithmus ist jedoch, dass er relativ viel Berechnungszeit benötigt, um einen näherungsweise optimalen Pfad und dessen Distanz zu bestimmen. Dies ist in Abbildung \ref{fig:world4_analysis_time_graph} nochmal deutlicher zu erkennen.
 
@@ -674,22 +674,22 @@ Ein großer Nachteil des RRT* Algorithmus ist jedoch, dass er relativ viel Berech
 \begin{figure} [h]
    \centering
    \includegraphics[width=0.7\textwidth]{Bilder/world4_analysis_time_graph.png}
-   \caption{Größe des RRT* Graphen gegenüber der Berechnungszeit des Graphen bei verschiedenen Suchradien der Funktionen \ref{eq:nearTo} und \ref{eq:nearFrom} (nearTo und nearfrom). Zu bemerken ist, dass die Berechnungszeiten, für steigende Anzahl an Knoten, exponentiell Ansteigen. Dabei führt ein größerer Suchradius zu einem schnelleren Anstieg der Berechnungszeit. }
+   \caption{Größe des RRT* Graphen gegenüber der Berechnungszeit des Graphen bei verschiedenen Suchradien der Funktionen \ref{eq:nearTo} und \ref{eq:nearFrom} (nearTo und nearfrom). Zu bemerken ist, dass die Berechnungszeiten für steigende Anzahl an Knoten exponentiell ansteigen. Dabei führt ein größerer Suchradius zu einem schnelleren Anstieg der Berechnungszeit. }
    \label{fig:world4_analysis_time_graph}
 \end{figure}
 
-In Abbildung \ref{fig:world4_analysis_time_graph} wurden erneut für verschiedene Suchradien der Funktion (\ref{eq:nearTo}) und (\ref{eq:nearFrom}) (nearTo und nearfrom) Graphen berechnet. Auf der x-Achse sind dabei die Anzahl der Knoten und auf der y-Achse die Berechnungszeiten aufgetragen. Die Berechnungszeiten steigen dabei exponentiell mit steigender Anzahl an Knoten an, wobei ein größerer Suchradius zu einem verstärkten Wachstum der Berechnungszeiten führt. 
+In Abbildung \ref{fig:world4_analysis_time_graph} wurden erneut für verschiedene Suchradien der Funktionen (\ref{eq:nearTo}) und (\ref{eq:nearFrom}) (nearTo und nearfrom) Graphen berechnet. Auf der x-Achse sind dabei die Anzahl der Knoten und auf der y-Achse die Berechnungszeiten aufgetragen. Die Berechnungszeiten steigen dabei exponentiell mit steigender Anzahl an Knoten an, wobei ein größerer Suchradius zu einem verstärkten Wachstum der Berechnungszeiten führt. 
 
-Auf Abbildung \ref{fig:world4_analysis_cost} ist zu erkennen, dass der Suchradius mit vier Metern am schnellsten gegen einen optimalen Wert konvergiert und ab schätzungsweise 1000 in den Graphen eingefügten Knoten sich nicht mehr erheblich verändert. In Abbildung \ref{fig:world4_analysis_time_graph} hat der Graph für einen Suchradius von vier Metern jedoch eine Berechnungszeit von ungefähr 35 Sekunden. Dies ist eine zu lange Berechnungszeit, um auf den berechneten Distanzen eine angemessene Bewertung des Fahrverhaltens durchzuführen, da mit einem Rollstuhl innerhalb von nur wenigen Sekunden schon mehrere Meter zurückgelegt werden könne.
+Auf Abbildung \ref{fig:world4_analysis_cost} ist zu erkennen, dass der Suchradius mit vier Metern am schnellsten gegen einen optimalen Wert konvergiert und ab schätzungsweise 1000 in den Graphen eingefügten Knoten sich nicht mehr erheblich verändert. In Abbildung \ref{fig:world4_analysis_time_graph} hat der Graph für einen Suchradius von vier Metern jedoch eine Berechnungszeit von ungefähr 35 Sekunden. Dies ist eine zu lange Berechnungszeit, um auf den berechneten Distanzen eine angemessene Bewertung des Fahrverhaltens durchzuführen, da mit einem Rollstuhl innerhalb von nur wenigen Sekunden schon mehrere Meter zurückgelegt werden können.
 
-Eine schnellere Berechnungszeit der Distanz ist durch den A* Algorithmus möglich, da er zunächst keinen eigenen Graphen generieren muss. Jedoch muss diesem Algorithmus zu Beginn ein Graph bereitgestellt werden. Da sowohl in dem Ansatz mit RRT* als auch mit A* eine vorher generierte Karte benötigt wird, wurde die Implementierung so geändert, dass für eine Karte auch ein entsprechender Graph generiert wird. Im Folgenden wird eine Methode zur Generierung eines gerichteten Graphen unter Abwandlung des RRT* Algorithmus vorgestellt, auf welchem der A* Algorithmus angewandt wird.
+Eine schnellere Berechnungszeit der Distanz ist durch den A* Algorithmus möglich, da er zunächst keinen eigenen Graphen generieren muss. Jedoch muss diesem Algorithmus zu Beginn ein Graph bereitgestellt werden. Da sowohl in dem Ansatz mit RRT* als auch mit A* eine vorher generierte Karte benötigt wird, wurde die Implementierung so geändert, dass für eine Karte auch ein entsprechender Graph generiert wird. Im Folgenden wird eine Methode zur Generierung eines gerichteten Graphens unter Abwandlung des RRT* Algorithmus vorgestellt, auf welchem der A* Algorithmus angewandt wird.
 
-\subsection{Graphen Generierung}
+\subsection{Generierung der Graphen}
 \label{subsec:graphen_generierung}
 
 Der generierte Graph soll gerichtet sein und die Knoten sollen auf dem navigierbaren Raum der Karte gleich verteilt sein. Die Kosten der Kanten werden durch die Distanzfunktion (\ref{eq:distanzfunktion_xyp}) repräsentiert, welche die nicht-holonomen Zwangsbeschränkungen eines Rollstuhls berücksichtigt.
 
-Der Algorithmus zur Generierung des Graphen ist eine Abwandlung des RRT* Algorithmus, welcher in Kapitel \ref{subsec:pfadplanung_stickprobenbasierte} beschrieben ist, und ist in Algorithmus \ref{alg:RRT_graph} beschrieben. 
+Der Algorithmus zur Generierung des Graphens ist eine Abwandlung des RRT* Algorithmus, welcher in Kapitel \ref{subsec:pfadplanung_stickprobenbasierte} beschrieben ist. Dieser abgewandelte Algorithmus ist in Algorithmus \ref{alg:RRT_graph} beschrieben. 
 
 % RRT graph
 \begin{algorithm}
@@ -715,16 +715,16 @@ Der Algorithmus zur Generierung des Graphen ist eine Abwandlung des RRT* Algorit
 \end{algorithmic}
 \end{algorithm}
 
-Der Algorithmus hat sich dahingehend verändert, dass nicht mehr der Vorgängerknoten eines Knoten in $parent$ gespeichert wird, sondern alle Nachbarn eines Knoten, welche von dem betrachteten Knoten aus erreicht werden können. Hierfür werden zunächst alle Nachbarn $neighbors$ eines neu generierten Knoten $v_{new}$ herausgesucht.
+Der Algorithmus hat sich dahingehend verändert, dass nicht mehr der Vorgängerknoten eines Knotens in $parent$ gespeichert wird, sondern alle Nachbarn eines Knotens, welche von dem betrachteten Knoten aus erreicht werden können. Hierfür werden zunächst alle Nachbarn $neighbors$ eines neu generierten Knotens $v_{new}$ herausgesucht.
 
 \begin{align}
 getNeighbors(v_{new}, graph) \equiv \{ v \in graph : euclDist(v, v_{new}) \leq radius\}
 \label{eq:getNeighbors}
 \end{align}
 
-Die verwendete Distanzfunktion ist nicht mehr die Distanzfunktion von Gleichung \ref{eq:distanzfunktion_xyp}, sondern die euklidische Distanz $euclDist$, welche den Abstand zwischen zwei Koordinaten bestimmt. Dadurch ist eine Verwendung der in NumPy\footnote{Die Programmierbibliothek NumPy der Programmiersprache Python ist auf wissenschaftliches Rechnen spezialisiert. \cite{numpy_numpy_nodate}} enthaltenen Funktion $numpy.linalg.norm$, welche eine schnellere Distanzberechnung, auf Grundlage der euklidischen Distanz, ermöglicht. Zudem muss nur noch einmal pro Schleifenschritt $neighbors$ berechnet werden.
+Die verwendete Distanzfunktion ist nicht mehr die Distanzfunktion von Gleichung \ref{eq:distanzfunktion_xyp}, sondern die euklidische Distanz $euclDist$, welche den Abstand zwischen zwei Koordinaten bestimmt. Dadurch ist eine Verwendung der in NumPy\footnote{Die Programmierbibliothek NumPy der Programmiersprache Python ist auf wissenschaftliches Rechnen spezialisiert. \cite{numpy_numpy_nodate}} enthaltenen Funktion $numpy.linalg.norm$ möglich, welche eine schnellere Distanzberechnung auf Grundlage der euklidischen Distanz ermöglicht. Zudem muss nur noch einmal pro Schleifenschritt $neighbors$ berechnet werden.
 
-Die Funktion $linkNeigbors$ wird verwendet, um die Nachbarn von $v_{new}$ mit $v_{new}$ zu verbinden. Sie fügt alle $neighbor \in neighbors$ in  $v_{new}.neighbors$ hinzu, sofern eine valide Verbindung von $v_{new}$ zu $neighbor$ existiert. Um den Knoten $v_{new}$ auch erreichen zu können, werden auch alle Verbindungen von $neighbor$ zu $v_{new}$ überprüft und entsprechend $v_{new}$ in $neighbor.neighbors$ hinzugefügt. Die Überprüfung einer Verbindung auf Validität geschieht hierbei durch die Funktion $validLink(v_{from}, v_{to})$.
+Die Funktion $linkNeigbors$ wird verwendet, um die Nachbarn von $v_{new}$ mit $v_{new}$ zu verbinden. Sie fügt alle $neighbor \in neighbors$ in  $v_{new}.neighbors$ hinzu, sofern eine valide Verbindung von $v_{new}$ zu $neighbor$ existiert. Um den Knoten $v_{new}$ auch erreichen zu können, werden auch alle Verbindungen von $neighbor$ zu $v_{new}$ überprüft und entsprechend $v_{new}$ in $neighbor.neighbors$ eingefügt. Die Überprüfung einer Verbindung auf Validität geschieht hierbei durch die Funktion $validLink(v_{from}, v_{to})$.
 
 Die Überprüfung der Verbindung durch die Funktion $validLink$ geschieht dabei wie folgt und ist in Abbildung \ref{fig:kin_update_example} beispielhaft dargestellt. 
 
@@ -738,12 +738,12 @@ Die Überprüfung der Verbindung durch die Funktion $validLink$ geschieht dabei wi
 
 Der Startknoten $v_1$ und der Zielknoten $v_2$, der zu überprüfenden Verbindung, werden mithilfe der Funktion (\ref{eq:xyp_to_rpd}) in das Polarkoordinatensystem $(r, \phi, \delta)$ aus Abbildung \ref{fig:egozentrische_polarkoordinaten} überführt. Nehmen wir nun eine konstant positive Lineargeschwindigkeit $v$ größer null an, so kann mithilfe der Gleichung \ref{eq:regelung_omega} die Rotationsgeschwindigkeit $\omega$ berechnet werden. Unter Verwendung dieser beiden Geschwindigkeiten und der Updatefunktion (\ref{eq:polar_update}) kann durch wiederholte Berechnung von $\omega$ eine simulierte Bewegung von $v_1$ in Richtung $v_2$ durchgeführt werden. Nach jedem Schritt in Richtung $v_2$ wird die Position von $v_1$ auf Kollisionen mit Objekten der Karte überprüft. Ist jede simulierte Position von $v_1$ auf dem Weg zu $v_2$ kollisionsfrei, so wird die Verbindung von $v_1$ zu $v_2$ als kollisionsfrei und somit valide angesehen. Die Schrittweite bei jedem Simulationsschritt wurde in der gesamten Arbeit als konstant angesehen.
 
-Nachdem der Graph erfolgreich aufgebaut wurde, kann dieser verwendet werden um auf ihm mit dem A* Algorithmus ein Weg von einer beliebigen Startposition zu ein beliebigen Zielposition zu finden.
+Nachdem der Graph erfolgreich aufgebaut wurde, kann dieser verwendet werden, um auf ihm mit dem A* Algorithmus ein Weg von einer beliebigen Startposition zu ein beliebigen Zielposition zu finden.
 
 \subsection{Anwendung des A* Algorithmus}
 \label{subsec:A_star_auf_RRT_star_graph}
 
-Eine schnelle und genaue Distanzberechnung von einer Startposition zu einer Zielposition ist im ersten Teilproblem besonders wichtig. Der A* Algorithmus ermöglicht es den optimalen Weg auf einem gegebenen Graphen im Regelfall sehr schnell zu finden \cite{lavalle_planning_2006} \cite{park_graceful_2016}. Im Folgenden wird aufgezeigt, dass diese schnelle Wegfindung auf dem Graphen aus Kapitel \ref{subsec:graphen_generierung} möglich ist.
+Eine schnelle und genaue Distanzberechnung von einer Startposition zu einer Zielposition ist im ersten Teilproblem besonders wichtig. Der A* Algorithmus ermöglicht es, den optimalen Weg auf einem gegebenen Graphen im Regelfall sehr schnell zu finden \cite{lavalle_planning_2006} \cite{park_graceful_2016}. Im Folgenden wird aufgezeigt, dass diese schnelle Wegfindung auf dem Graphen aus Kapitel \ref{subsec:graphen_generierung} möglich ist.
 
 % Abbildung: world4_analyse_trace_r_s_40
 \begin{figure} [h]
@@ -753,7 +753,7 @@ Eine schnelle und genaue Distanzberechnung von einer Startposition zu einer Ziel
    \label{fig:world4_analyse_trace}
 \end{figure}
 
-Die Wegfindung auf dem generierten Graphen aus Kapitel \ref{subsec:graphen_generierung} geschieht mit Hilfe des A* Algorithmus, welcher in Kapitel \ref{subsec:pfadplanung_mit_graph} beschrieben ist. Hierfür wird zunächst der Startknoten und der Zielknoten mit den Funktionen $getNeighbors$ und $linkNeigbors$ (beschrieben in Kapitel \ref{subsec:graphen_generierung}) in den Graphen eingefügt. Anschließend ist eine Anwendung des A* Algorithmus auf dem Graphen wie beschrieben möglich.
+Die Wegfindung auf dem generierten Graphen aus Kapitel \ref{subsec:graphen_generierung} geschieht mit Hilfe des A* Algorithmus, welcher in Kapitel \ref{subsec:pfadplanung_mit_graph} beschrieben ist. Hierfür werden zunächst der Startknoten und der Zielknoten mit den Funktionen $getNeighbors$ und $linkNeigbors$ (beschrieben in Kapitel \ref{subsec:graphen_generierung}) in den Graphen eingefügt. Anschließend ist eine Anwendung des A* Algorithmus auf dem Graphen wie beschrieben möglich.
 
 Die Berechnungszeiten des A* Algorithmus für verschiedene Graphen bei unterschiedlichen Wegen ist in Abbildung \ref{fig:world4_analyse_trace} zu sehen. Die dazugehörige Karte mit den entsprechenden Start- und Zielpositionen ist in Abbildung \ref{fig:world4_map_with_goals} abgebildet.
 
@@ -776,7 +776,7 @@ Die schnelle und genaue Berechnung eines Weges ist also für kürzere Wege durchau
 
 Nachdem in Kapitel \ref{sec:implementierung_RRT_star} eine Methode zur schnellen Berechnung der Distanz vorgestellt wurde, wird in diesem Kapitel die wiederholte Berechnung der Distanz und die Bewertung des Steuerverhaltens behandelt. 
 
-Zur Vereinfachung nehmen wir zunächst an, dass der Fahrer im groben den zuvor berechneten Weg wählt. Somit kann vor dem Antritt der Fahrt ein oder mehrere aufeinander aufbauende Wege mit dem A* Algorithmus auf dem gegebenen Graphen berechnet werden. Diese Wege müssen dann aufgrund der Vereinfachung nicht mehr neu berechnet werden. Vor der Fahrt sind Zwischenziele und Distanzen zwischen den Zwischenzielen gegeben. Die Gesamtdistanz berechnet sich durch die Summe der Distanz zum ersten Zwischenziel und der Distanzen zwischen den noch kommenden Zwischenzielen bis zum endgültigen Ziel.
+Zur Vereinfachung nehmen wir zunächst an, dass der Fahrer im Groben den zuvor berechneten Weg wählt. Somit können vor dem Antritt der Fahrt ein oder mehrere aufeinander aufbauende Wege mit dem A* Algorithmus auf dem gegebenen Graphen berechnet werden. Diese Wege müssen dann aufgrund der Vereinfachung nicht mehr neu berechnet werden. Vor der Fahrt sind Zwischenziele und Distanzen zwischen den Zwischenzielen gegeben. Die Gesamtdistanz berechnet sich durch die Summe der Distanz zum ersten Zwischenziel und der Distanzen zwischen den noch kommenden Zwischenzielen bis zum endgültigen Ziel.
 
 \begin{align}
 Dist_G = dist(p, ig_{next}) + \sum_{i=next+1}^{goal} dist(ig_{i-1}, ig_i)
@@ -796,7 +796,7 @@ Dist_G = \theta \cdot dist(p, ig_{secondnext}) +
 \label{eq:gesamtdistanz}
 \end{align}
 
-Die Gewichtung $\theta \in [0, 1]$ soll auf der Teilstrecke zwischen dem zuletzt erreichten Zwischenziel und dem nächsten Zwischenziel kontinuierlich mit dem Vorankommen des Fahrers zunehmen. Sofern der Fahrer auf dem direkten Weg, entlang der Luftlinie, zwischen den beiden Punkten fährt, kann $\theta$ wie folgt berechnet werden.
+Die Gewichtung $\theta \in [0, 1]$ soll auf der Teilstrecke zwischen dem zuletzt erreichten Zwischenziel und dem nächsten Zwischenziel kontinuierlich mit dem Vorankommen des Fahrers zunehmen. Sofern der Fahrer auf dem direkten Weg entlang der Luftlinie zwischen den beiden Punkten fährt, kann $\theta$ wie folgt berechnet werden.
 
 \begin{align}
 \theta = \frac{euclDist(ig_{previous}, p)^2}{euclDist(ig_{previous}, p)^2 + euclDist(p, ig_{next})^2}
@@ -835,7 +835,7 @@ c_2 = c - c_1
 \label{eq:calc_c_2}
 \end{align}
 
-Für die Anwendung von $\theta$ in Gleichung (\ref{eq:gesamtdistanz}) muss $\theta \in [0, 1]$ sein. Dies ist mit der zuvor beschriebenen Methode der Projektion nur gegeben, wenn die Winkel $\alpha, \beta \leq \frac{\pi}{2}$ sind. Es bietet sich demnach beim Erreichen von $\alpha = \frac{\pi}{2}$ an auf das nächste Zwischenziel umzuschalten, wodurch das Verfehlen eines Zwischenziels auch nahezu unmöglich wird.
+Für die Anwendung von $\theta$ in Gleichung (\ref{eq:gesamtdistanz}) muss $\theta \in [0, 1]$ sein. Dies ist mit der zuvor beschriebenen Methode der Projektion nur gegeben, wenn die Winkel $\alpha, \beta \leq \frac{\pi}{2}$ sind. Es bietet sich demnach beim Erreichen von $\alpha = \frac{\pi}{2}$ an, auf das nächste Zwischenziel umzuschalten, wodurch das Verfehlen eines Zwischenziels auch nahezu unmöglich wird.
 
 Es existiert ein Übergangsbereich in der Nähe der Zwischenziele, was einen glatteres Umschalten zum nächsten Zwischenziel ermöglicht. Hierfür werden die Zwischenziele $ig_{previous}$ und $ig_{next}$ um eine Distanz der Länge $r$ in Richtung des entsprechend anderen Zwischenziels verschoben.
 
@@ -862,7 +862,7 @@ Der Winkel $\alpha$ beschreibt den Winkel zwischen dem Vektor $\vv{ig_0ig_1}$ un
    \label{fig:start_stop_theta}
 \end{figure}
 
-Die Bewertung des Steuerverhaltens geschieht dann wie folgt. Die während der Fahrt mit der Gleichung (\ref{eq:gesamtdistanz}) berechneten Distanzen werden mit ihren vorangegangenen Distanzen verglichen. Eine negative Bewertung geschieht dann, wenn die betrachtete Distanz im Vergleich zu ihren Vorgängern über eine gewählte Zeit angestiegen ist. In diesen Bereichen wurde somit nicht der kürzeste Weg gewählt, wodurch die Distanz zum Ziel durchgängig über einen gewissen Zeitraum vergrößert hat.
+Die Bewertung des Steuerverhaltens geschieht dann wie folgt. Die während der Fahrt mit der Gleichung (\ref{eq:gesamtdistanz}) berechneten Distanzen werden mit ihren vorangegangenen Distanzen verglichen. Eine negative Bewertung geschieht dann, wenn die betrachtete Distanz im Vergleich zu ihren Vorgängern über eine gewählte Zeit angestiegen ist. In diesen Bereichen wurde somit nicht der kürzeste Weg gewählt, wodurch sich die Distanz zum Ziel durchgängig über einen gewissen Zeitraum vergrößert hat.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimentelle Evaluation}
@@ -872,16 +872,16 @@ Die Bewertung des Steuerverhaltens geschieht dann wie folgt. Die während der Fah
 
 %Dieses Kapitel kann auch mit einer Beschreibung der Realisierung eines Systems beginnen (kein Quellcode, maximal Klassendiagramme!).
 
-In diesem Kapitel wird die in Kapitel \ref{chap:hauptteil} vorgestellte Methode zur Bewertung des menschlichen Steuerverhalten an einem ferngesteuerten Roboter und einem elektrischen Rollstuhl evaluiert. Beide Evaluationen wurden in einer physikalischen Umgebung durchgeführt. In Kapitel \ref{sec:evaluation_ferngesteuerter_roboter} wird ein mit einer Tastatur ferngesteuerter Roboter auf einer $6m \cdot 7m$ großen Karte evaluiert. Es wurden zudem relativ viele zu passierende Wegpunkte vorgegeben, um die Aufgabe weiter zu vereinfachen. In Kapitel \ref{sec:evaluation_rollstuhl} hingegen wurde ein elektrischer Rollstuhl mithilfe eines Joysticks durch einen langen Flur gefahren, wobei der Rollstuhl nicht wie in Kapitel \ref{sec:evaluation_ferngesteuerter_roboter} ferngesteuert wurde, sondern der Fahrer während der Fahrt auf dem Rollstuhl saß und somit aus der Egoperspektive navigieren konnte. Hierbei wurden nur wenige zu passierende Wegpunkte vorgegeben, sodass verglichen mit zuvor längere Wege berechnet werden mussten.
+In diesem Kapitel wird die in Kapitel \ref{chap:hauptteil} vorgestellte Methode zur Bewertung des menschlichen Steuerverhalten an einem ferngesteuerten Roboter und einem elektrischen Rollstuhl evaluiert. Beide Evaluationen wurden in einer physikalischen Umgebung durchgeführt. In Kapitel \ref{sec:evaluation_ferngesteuerter_roboter} wird ein mit einer Tastatur ferngesteuerter Roboter auf einer $6m \cdot 7m$ großen Karte evaluiert. Es wurden zudem relativ viele zu passierende Wegpunkte vorgegeben, um die Aufgabe weiter zu vereinfachen. Im Experiment, das in Kapitel \ref{sec:evaluation_rollstuhl} beschrieben wird, wurde hingegen ein elektrischer Rollstuhl mithilfe eines Joysticks durch einen langen Flur gefahren, wobei der Rollstuhl nicht wie in Kapitel \ref{sec:evaluation_ferngesteuerter_roboter} ferngesteuert wurde, sondern der Fahrer während der Fahrt auf dem Rollstuhl saß und somit aus der Egoperspektive navigieren konnte. Hierbei wurden nur wenige zu passierende Wegpunkte vorgegeben, sodass, verglichen mit den Wegen zuvor, längere Wege berechnet werden mussten.
 
-Wie in den Beispielen zu erkennen ist, werden Zwischenziele so generiert, dass sie nacheinander auf dem Weg von der Startposition zur Zielposition mit sicheren, schnellen und intuitiven Bewegungen abgefahren werden können. Anhand dieses Weges aus Zwischenzielen und der Distanz zum Ziel wird daraufhin eine Bewertung des Steuerverhalten vorgenommen.
+Wie in den Beispielen zu erkennen ist, werden Zwischenziele so generiert, dass sie nacheinander auf dem Weg von der Startposition zur Zielposition mit sicheren, schnellen und intuitiven Bewegungen abgefahren werden können. Anhand dieses Weges aus Zwischenzielen und der Distanz zum Ziel wird daraufhin eine Bewertung des Steuerverhaltens vorgenommen.
 
-Zu bemerken ist, dass die generierten Wege teilweise dem Zufall überlassen sind und diese sich mit steigender Komplexität des Graphen dem optimalen Weg nur annähern. Sofern der Graph nicht unendlich groß ist und somit der Weg nicht optimal wird, besteht immer die Möglichkeit einer Fehlinterpretation des Steuerverhaltens.
+Zu bemerken ist, dass die generierten Wege teilweise dem Zufall überlassen sind und sich mit steigender Komplexität des Graphens dem optimalen Weg nur annähern. Sofern der Graph nicht unendlich groß ist und somit der Weg nicht optimal wird, besteht immer die Möglichkeit einer Fehlinterpretation des Steuerverhaltens.
 
 \section{Evaluation eines ferngesteuerten Roboters}
 \label{sec:evaluation_ferngesteuerter_roboter}
 
-Das Bewertungsverfahren wird in diesem Kapitel an einem ferngesteuerten Roboter getestet. Hierfür wurde ein abgegrenzter Bereich geschaffen, auf welchem im Folgenden gefahren werden soll. Um eine Karte von diesem Bereich zu erstellen, wurde mit dem Roboter der gesamte navigierbare Bereich abgefahren. Mit Hilfe seiner Sensordaten konnte die Struktur der Umgebung erkannt und in eine Karte exportiert werden. Die Wände der Karte wurden herausgefiltert und in Objekte umgewandelt, welche im folgenden Wegfindungsprozess verwendet werden konnten. In Abbildung \ref{fig:world5_map} ist dargestellt, wie diese Karte in umgewandelter Form aussieht.
+In diesem Kapitel wird gezeigt, wie das Bewertungsverfahren an einem ferngesteuerten Roboter getestet wurde. Hierfür wurde ein abgegrenzter Bereich geschaffen. Um eine Karte von diesem Bereich zu erstellen, wurde mit dem Roboter der gesamte navigierbare Bereich abgefahren. Mit Hilfe seiner Sensordaten konnte die Struktur der Umgebung erkannt und in eine Karte exportiert werden. Die Wände der Karte wurden herausgefiltert und in Objekte umgewandelt, welche im folgenden Wegfindungsprozess verwendet werden konnten. In Abbildung \ref{fig:world5_map} ist dargestellt, wie diese Karte in umgewandelter Form aussieht.
 
 % Abbildung: world5_map
 \begin{figure} [h]
@@ -897,41 +897,41 @@ Nach dem Erfassen der Karte wurde auf dieser ein Graph mit 2000 Knoten generiert
 
 Die Aufgabe des Fahrers wurde so definiert, dass er an der Position $(0,0,0)$ starten und nacheinander die Wegpunkte $(3.05,-0.5,-0.785),(2,-3.7,3.14),(2.2,-1.6,0)$ abfahren muss. Zu Beginn der Fahrt wurden vom A* Algorithmus Wege zwischen den Wegpunkten berechnet, welche zu einer langen Abfolge von Zwischenzielen aneinandergereiht wurden. Die Wegpunkte wurden nacheinander abgefahren, wodurch sich der in Abbildung \ref{fig:world5_trace_2000_4_k_delta_1} dargestellte gefahrene Pfad ergab.
 
-Während der Fahrt wurde das Steuerverhalten des Fahrers fortlaufend analysiert, wobei für die Analyse die Konstante auf $k_{\delta} = 1$ geändert wurde. Diese ist in Abbildung \ref{fig:world5_dist_2000_4_k_delta_1} dargestellt.
-
 % Abbildung: world5_trace_2000_4_k_delta_1
 \begin{figure} [h]
    \centering
    \includegraphics[width=0.8\textwidth]{Bilder/world5_trace_2000_4_k_delta_1.png}
-   \caption{Der vom Fahrer gefahrene Weg beim Abfahren aller Wegpunkte. Auf schwarz markierten Streckenabschnitten wurden so gefahren, dass sich die Distanz zum Ziel erhöhte. Eine genauere Analyse ist in Abbildung \ref{fig:world5_dist_2000_4_k_delta_1} zu betrachten.}
+   \caption{Der vom Fahrer gefahrene Weg beim Abfahren aller Wegpunkte. Auf schwarz markierten Streckenabschnitten wurde so gefahren, dass sich die Distanz zum Ziel erhöhte. Eine genauere Analyse ist in Abbildung \ref{fig:world5_dist_2000_4_k_delta_1} zu betrachten.}
    \label{fig:world5_trace_2000_4_k_delta_1}
 \end{figure}
+
+Während der Fahrt wurde das Steuerverhalten des Fahrers fortlaufend analysiert, wobei für die Analyse die Konstante auf $k_{\delta} = 1$ geändert wurde. Diese ist in Abbildung \ref{fig:world5_dist_2000_4_k_delta_1} dargestellt.
 
 % Abbildung: world5_dist_2000_4_k_delta_1
 \begin{figure} [h]
    \centering
    \includegraphics[width=0.8\textwidth]{Bilder/world5_dist_2000_4_k_delta_1.png}
-   \caption{Die Veränderung der Distanz im Verlauf der Fahrt. Die konstanten der Distanzfunktion \ref{eq:distanzfunktion_xyp} wurden hierbei mit $k_{\phi} = 1.2$ und $k_{\delta} = 1$ gewählt. Solange sich die Distanz nie länger als 0.5 Sekunden erhöhte, wurde der gefahrene Streckenabschnitt als gut bewertet, andernfalls als inadäquat. Die vertikalen Linien markieren die Zeiten, an denen ein Zwischenziel erreicht wurde.}
+   \caption{Die Veränderung der Distanz im Verlauf der Fahrt. Die Konstanten der Distanzfunktion (\ref{eq:distanzfunktion_xyp}) wurden hierbei mit $k_{\phi} = 1.2$ und $k_{\delta} = 1$ gewählt. Solange sich die Distanz nie länger als 0.5 Sekunden erhöhte, wurde der gefahrene Streckenabschnitt als gut bewertet, andernfalls als inadäquat. Die vertikalen Linien markieren die Zeiten, an denen ein Zwischenziel erreicht wurde.}
    \label{fig:world5_dist_2000_4_k_delta_1}
 \end{figure}
 
-Inadäquat gefahrene Streckenabschnitte wurden in beiden Abbildungen schwarz markiert. Als inadäquat gefahren wird ein Streckenabschnitt dann bezeichnet, wenn sich die Distanz zum Ziel über mehr als 0.5 Sekunden erhöht hat. Andernfalls wird eine positive Bewertung vorgenommen. Je schneller die Distanz auf einem Streckenabschnitt abfällt, desto besser wurde dieser abgefahren.
+Inadäquat gefahrene Streckenabschnitte wurden in beiden Abbildungen schwarz markiert. Als inadäquat gefahren wird ein Streckenabschnitt dann bezeichnet, wenn sich die Distanz zum Ziel über mehr als 0.5 Sekunden erhöht hat. Andernfalls wird eine positive Bewertung vorgenommen. Je schneller die Distanz in Abbildung \ref{fig:world5_dist_2000_4_k_delta_1} abfällt, desto besser wurde der entsprechende Streckenabschnitt abgefahren.
 
 Das Analyseprogramm wurde beendet, nachdem der Fahrer dem Ziel näher als 0.5 Meter gekommen ist. Eine weitere Analyse auf solch kurze Distanz wäre für den Fahrer nicht mehr hilfreich, da die Distanz sich nur weiter verringert, wenn die Zielposition exakt angesteuert wird. Sobald der Fahrer neben das Ziel oder über es hinausfahren würde, würde die Distanz zum Ziel wieder ansteigen. Verbildlicht wurde dies zuvor in Abbildung \ref{fig:vektorfelder_l_minus}.
 
 %\subsection{Diskussion}
 %\label{subsec:diskussion_roboter}
 
-Es ist zu erkennen, dass der Fahrer meist gut gefahren ist. So wurde in den ersten zwei Dritteln der Fahrt kein einziger gravierender Fehler begangen. Zwischen dem ersten und dem zweiten Zwischenziel ist zudem der schnellste Abfall der Distanz verzeichnet worden, weswegen dies der der bestgefahrene Streckenabschnitt ist.
+Es ist zu erkennen, dass der Fahrer meist gut gefahren ist. So wurde in den ersten zwei Dritteln der Fahrt kein einziger gravierender Fehler begangen. Zwischen dem ersten und dem zweiten Zwischenziel ist zudem der schnellste Abfall der Distanz verzeichnet worden, weshalb dies der bestgefahrene Streckenabschnitt ist.
 
-Im letzten Drittel der Fahrt, kurz nach dem dritten Zwischenziel, wurden jedoch einige größere Fehler begangen. Sie wurden jedoch schnell vom Fahrer erkannt und korrigiert, was an der kurzen Dauer der Fehlverhalten zu erkennen ist.
+Im letzten Drittel der Fahrt, kurz nach dem dritten Zwischenziel, wurden jedoch einige größere Fehler begangen. Sie wurden jedoch schnell vom Fahrer erkannt und korrigiert, was an der kurzen Dauer des jeweiligen Fehlverhaltens zu erkennen ist.
 
 Der erste Fehler wurde zwischen dem dritten und vierten Zwischenziel begangen. Es ist zu vermuten, dass zu lange geradeaus gefahren wurde, wodurch sich eine größere zu fahrende Kurve abbildete, welche die Distanz erhöhte. Der gleiche Fehler wiederholte sich dann vermutlich beim zweiten und dritten inadäquat gefahrenen Streckenabschnitt.
 
 \section{Evaluation einer Rollstuhlfahrt}
 \label{sec:evaluation_rollstuhl}
 
-In diesem Kapitel wird das Bewertungsverfahren während der Fahrt auf einem elektrischen Rollstuhl getestet. Die Fahrt wurde im Flur eines Bürogebäudes durchgeführt. Wie in Kapitel \ref{sec:evaluation_ferngesteuerter_roboter} wurde der Flur beim Abfahren mit den Sensoren des Rollstuhls erfasst und eine Karte wurde in abgewandelter Form erzeugt. Diese Karte ist in Abbildung \ref{fig:world6_map} zu sehen.
+In diesem Kapitel wird beschrieben, wie das Bewertungsverfahren während der Fahrt auf einem elektrischen Rollstuhl getestet wurde. Die Fahrt wurde im Flur eines Bürogebäudes durchgeführt. Wie in Kapitel \ref{sec:evaluation_ferngesteuerter_roboter} wurde der Flur beim Abfahren mit den Sensoren des Rollstuhls erfasst und eine Karte wurde in abgewandelter Form erzeugt. Diese Karte ist in Abbildung \ref{fig:world6_map} zu sehen.
 
 % Abbildung: world6_map
 \begin{figure}
@@ -943,7 +943,7 @@ In diesem Kapitel wird das Bewertungsverfahren während der Fahrt auf einem elekt
 
 Für diese Karte wurde ein Graph mit 5000 Knoten generiert. Hierbei wurden die wählbaren Konstanten mit $k_{\phi} = 1.2$, $k_{\delta} = 10$ und für Funktion \ref{eq:getNeighbors} der $Suchradius = 6m$ gewählt.
 
-Die Aufgabe des Fahrers für diese Karte änderte sich dahingehen, dass die Wegpunkte $(9.3,9.8,1.17)$, $(17.2,5.8,-1.97)$, $(8.6,-10.8,-1.97)$ und $(0.5,-6.5,1.17)$ abgefahren werden mussten und der Startpunkt bei der Position $(0.0,0.0,-0.4)$ lag.
+Die Aufgabe des Fahrers für diese Karte änderte sich dahingehend, dass die Wegpunkte $(9.3,9.8,1.17)$, $(17.2,5.8,-1.97)$, $(8.6,-10.8,-1.97)$ und $(0.5,-6.5,1.17)$ abgefahren werden mussten und der Startpunkt bei der Position $(0.0,0.0,-0.4)$ lag.
 
 Während der Fahrt wurde eine Analyse des Steuerverhaltens durchgeführt. Bei dieser Analyse wurde die Konstante $k_{\delta} = 1$ zur Distanzberechnung während der Analyse gewählt. Die Konstante $k_{\phi} = 1.2$ blieb unverändert. %Diese wird in Kapitel \ref{subsec:analyse_1} genauer behandelt. In der zweiten Analyse, welche in Kapitel \ref{subsec:analyse_2} beschrieben ist, wurden keine Wege berechnet, sondern alle Zwischenziele händisch platziert. Wie zuvor wurde die Konstante $k_{\delta} = 3$ gewählt.
 
@@ -975,13 +975,13 @@ Inadäquat gefahrene Streckenabschnitte wurden in beiden Abbildungen schwarz mark
 
 Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_map} zeigt, dass der Fahrer gut gefahren ist. Dies spiegelt sich auch größtenteils in der Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_dist} durch einen konstanten Abfall der Distanz wider, jedoch nicht am Anfang der Fahrt. Die Markierungen bis kurz vor dem ersten Zwischenziel sind hierbei jedoch zu ignorieren, da der Rollstuhl in dieser Zeit stillstand, was auch an der konstanten Distanz in diesem Abschnitt zu erkennen ist. Nachdem der Fahrer losgefahren ist, sind jedoch zwei Streckenabschnitte inadäquat abgefahren worden. 
 
-In Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_map} ist zu sehen, dass beim erste von diesen inadäquat abgefahrenen Streckenabschnitten eine Linkskurve erwartet wurde, welche Aufgrund der Wand vom Fahrer nicht so früh durchgeführt werden konnte. Zudem ist die Orientierung des ersten Zwischenziels in die Richtung einer Wand. Diese nicht intuitive Wahl des Zwischenziels ist durch die Eigenarten der Regelung aus Kapitel \ref{sec:positionsregelung} bedingt. Diese führte wahrscheinlich zu der Fehlinterpretation des Steuerverhaltens. Es ist nur zu vermuten, dass eine höhere Anzahl an Knoten im Graphen zu einem intuitiveren Weg geführt hätte. Wie dieser Streckenabschnitt theoretisch gefahren werden sollte, wurde in Abbildung \ref{fig:world6_calced_trace_partition} dargestellt.
+In Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_map} ist zu sehen, dass beim ersten von diesen inadäquat abgefahrenen Streckenabschnitten eine Linkskurve erwartet wurde, welche aufgrund der Wand vom Fahrer nicht so früh durchgeführt werden konnte. Zudem ist die Orientierung des ersten Zwischenziels in die Richtung einer Wand. Diese nicht intuitive Wahl des Zwischenziels ist durch die Eigenarten der Regelung aus Kapitel \ref{sec:positionsregelung} bedingt. Diese führte wahrscheinlich zu der Fehlinterpretation des Steuerverhaltens. Es ist nur zu vermuten, dass eine höhere Anzahl an Knoten im Graphen zu einem intuitiveren Weg geführt hätte. Wie dieser Streckenabschnitt theoretisch gefahren werden sollte, wurde in Abbildung \ref{fig:world6_calced_trace_partition} dargestellt.
 
 % Abbildung: world6_calced_trace_partition
 \begin{figure} [h]
    \centering
    \includegraphics[width=0.8\textwidth]{Bilder/world6_calced_trace_partition.png}
-   \caption{Analyse des ersten inadäquat gefahrenen Streckenabschnitts aus Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_dist}. In blau sind die Startposition und die ersten beiden Zwischenziele abgebildet. In Gelb sind die berechneten Wege zwischen den Zwischenzielen dargestellt. Die schwarzen Vierecke symbolisieren nicht passierbare Objekte der Karte. Es ist zu erkennen, dass der berechnete Weg nicht besonders intuitiv, navigierbar ist.}
+   \caption{Analyse des ersten inadäquat gefahrenen Streckenabschnitts aus Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_dist}. In blau sind die Startposition und die ersten beiden Zwischenziele abgebildet. In Gelb sind die berechneten Wege zwischen den Zwischenzielen dargestellt. Die schwarzen Vierecke symbolisieren nicht passierbare Objekte der Karte. Es ist zu erkennen, dass der berechnete Weg nicht besonders intuitiv navigierbar ist.}
    \label{fig:world6_calced_trace_partition}
 \end{figure}
 
@@ -1001,14 +1001,14 @@ Im weiteren Verlauf der Fahrt wurde kein weiteres Fehlverhalten festgestellt. Ge
 \section{Zusammenfassung}
 \label{sec:zusammenfassung}
 
-Die Aufrechterhaltung der Selbstständigkeit einer immer älter werdenden Gesellschaft gewinnt zunehmend an Relevanz. Ein elektrischer Rollstuhl mit Assistenzfunktionen kann dies in gewissen Bereichen ermöglichen. In dieser Arbeit wurde eine Methode zur Bewertung des menschlichen Steuerverhaltens entwickelt und deren Anwendung unter anderem auf einem elektrischen Rollstuhl getestet. Die Bewertung geschieht dabei auf Grundlage der berechneten Distanz vom Fahrer zum Ziel unter nicht-holonomen Zwangsbeschränkungen. Die Distanz wird dabei auf einem zuvor generierten Graphen über den A* Algorithmus berechnet und wird während der Fahrt fortlaufend aktualisiert. Hierbei basiert der generierte Graph auf einer zufälligen Stichprobe an Knoten auf dem navigierbaren Raum und besitzt Kanten, welche unter nicht-holonomen Zwangsbeschränkungen abgefahren werden können. Anzumerken ist hierbei, dass auch über sehr lange Distanzen eine fortlaufend schnelle und genaue Distanzberechnung möglich ist.
+Die Aufrechterhaltung der Selbstständigkeit einer immer älter werdenden Gesellschaft gewinnt zunehmend an Relevanz. Ein elektrischer Rollstuhl mit Assistenzfunktionen kann dies im Bereich der Mobilität ermöglichen. In dieser Arbeit wurde eine Methode zur Bewertung des menschlichen Steuerverhaltens entwickelt und deren Anwendung unter anderem auf einem elektrischen Rollstuhl getestet. Die Bewertung geschieht dabei auf Grundlage der berechneten Distanz vom Fahrer zum Ziel unter nicht-holonomen Zwangsbeschränkungen. Die Distanz wird dabei auf einem zuvor generierten Graphen über den A* Algorithmus berechnet und wird während der Fahrt fortlaufend aktualisiert. Hierbei basiert der generierte Graph auf einer zufälligen Stichprobe an Knoten auf dem navigierbaren Raum und besitzt Kanten, welche unter nicht-holonomen Zwangsbeschränkungen abgefahren werden können. Anzumerken ist hierbei, dass auch über sehr lange Distanzen eine fortlaufend schnelle und genaue Distanzberechnung möglich ist.
 
-Dies liegt besonders an folgenden Umständen. Der verwendete Graph wird unmittelbar nach dem Erfassen der Karte generiert, da dieser an die Karte gebunden ist und somit wieder verwendet werden kann. Eine Generierung des Graphen während der Fahrt ist somit nicht notwendig. Der A* Algorithmus zur Bestimmung des optimalen Weges muss nur zu Beginn der Fahrt einmalig aufgerufen werden und fällt somit durch seine Berechnungszeit nur kurzweilig ins Gewicht. Alle weiteren Distanzberechnungen werden auf der Grundlage des zuvor berechneten Weges durchgeführt und benötigen somit nur noch minimale Berechnungszeit.
+Dies liegt besonders an folgenden Umständen. Der verwendete Graph wird unmittelbar nach dem Erfassen der Karte generiert, da dieser an die Karte gebunden ist und somit wieder verwendet werden kann. Eine Generierung des Graphens während der Fahrt ist somit nicht notwendig. Der A* Algorithmus zur Bestimmung des optimalen Weges muss nur zu Beginn der Fahrt einmalig aufgerufen werden und fällt somit durch seine Berechnungszeit nur kurzweilig ins Gewicht. Alle weiteren Distanzberechnungen werden auf der Grundlage des zuvor berechneten Weges durchgeführt und benötigen somit nur noch minimale Berechnungszeit.
 
 \section{Weitere Arbeiten}
 \label{sec:weitere_arbeiten}
 
-Es gibt einige weitere Möglichkeiten, um das Bewertungsverfahren zu verbessern. So ist es derzeit nur möglich eine Angabe darüber zu machen wann inadäquat gefahren wurde, jedoch nicht wieso. Eine Weiterentwicklung wäre somit dahingehen möglich vom System eine Empfehlung an den Fahrer zu geben, wie ein besseres Steuerverhalten in der aktuellen Situation aussehen könnte. Weitergehend werden beim Berechnen des Weges vereinzelt Streckenabschnitte berechnet, welche nicht sonderlich intuitiv sind. So wäre eine Verbesserung der Berechnung des Weges durch zusätzliche Überprüfungen und Angleichungen des berechneten Weges möglich.
+Es gibt einige weitere Punkte, in denen das Bewertungsverfahren verbessert werden sollte. So ist es derzeit nur möglich, eine Angabe darüber zu machen, wann inadäquat gefahren wurde, jedoch nicht, wieso. Eine Weiterentwicklung wäre somit dahingehend wünschenswert vom System eine Empfehlung an den Fahrer zu geben, wie ein besseres Steuerverhalten in der aktuellen Situation aussehen könnte. Weitergehend werden beim Berechnen des Weges vereinzelt Streckenabschnitte berechnet, welche nicht sonderlich intuitiv sind. So wäre eine Verbesserung der Berechnung des Weges durch zusätzliche Überprüfungen und Angleichungen des berechneten Weges in Betracht zu ziehen.
 
 %Zurzeit nur Angabe möglich wann schlecht gefahren wurde. Bei inadäquatem Fahren angeben wie richtig gefahren werden muss, indem schritte simuliert werden und die besten dem Fahrer vorgeschlagen werden. 
 

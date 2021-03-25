@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.17)  24 MAR 2021 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.17)  25 MAR 2021 17:37
 entering extended mode
 **./Sampling-based_Path_Planning_for_Human_Steering_Evaluation.tex
 (Sampling-based_Path_Planning_for_Human_Steering_Evaluation.tex
@@ -720,7 +720,7 @@ Class scrreprt Warning: \float@addtolists detected!
 
 
 ] [2]
-<Bilder/nicht-holonomer_RRT_star_Park_2015.png, id=112, 1161.33875pt x 727.7187
+<Bilder/nicht-holonomer_RRT_star_Park_2015.png, id=111, 1161.33875pt x 727.7187
 5pt>
 File: Bilder/nicht-holonomer_RRT_star_Park_2015.png Graphic file (type png)
 <use Bilder/nicht-holonomer_RRT_star_Park_2015.png>
@@ -836,70 +836,87 @@ Class scrreprt Info: Workaround for not recommended usage of \\ or
 Class scrreprt Info: Workaround for not recommended usage of \\ or
 (scrreprt)           \newlinein caption text  on input line 752.
 
-[24 <./Bilder/world4_analyse_trace_r_s_40.png>]
-<Bilder/world4_map_with_goals.png, id=488, 1339.1631pt x 716.1957pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Bilder/world4_map_with_goals.png, id=481, 1339.1631pt x 716.1957pt>
 File: Bilder/world4_map_with_goals.png Graphic file (type png)
 <use Bilder/world4_map_with_goals.png>
 Package pdftex.def Info: Bilder/world4_map_with_goals.png  used on input line 7
 63.
 (pdftex.def)             Requested size: 447.11482pt x 239.12108pt.
- [25 <./Bilder/world4_map_with_goals.png>] [26]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24] [25 <./Bilder/world4_analyse_trace_r_s_40.png>] [26 <./Bilder/world4_map_w
+ith_goals.png>]
 <Bilder/theta.png, id=512, 462.528pt x 346.896pt>
 File: Bilder/theta.png Graphic file (type png)
 <use Bilder/theta.png>
 Package pdftex.def Info: Bilder/theta.png  used on input line 811.
 (pdftex.def)             Requested size: 312.979pt x 234.74281pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <Bilder/dreieck_theta.png, id=514, 734.745pt x 283.65974pt>
 File: Bilder/dreieck_theta.png Graphic file (type png)
 <use Bilder/dreieck_theta.png>
 Package pdftex.def Info: Bilder/dreieck_theta.png  used on input line 822.
 (pdftex.def)             Requested size: 357.69322pt x 138.0942pt.
- [27 <./Bilder/theta.png>] [28 <./Bilder/dreieck_theta.png>]
-<Bilder/start_stop_theta.png, id=537, 830.50275pt x 221.02576pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27]
+<Bilder/start_stop_theta.png, id=532, 830.50275pt x 221.02576pt>
 File: Bilder/start_stop_theta.png Graphic file (type png)
 <use Bilder/start_stop_theta.png>
 Package pdftex.def Info: Bilder/start_stop_theta.png  used on input line 860.
 (pdftex.def)             Requested size: 357.69322pt x 95.19435pt.
 
-[29 <./Bilder/start_stop_theta.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28 <./Bilder/theta.png>] [29 <./Bilder/dreieck_theta.png> <./Bilder/start_stop
+_theta.png>]
 chapter 4.
-<Bilder/world5_map.png, id=551, 462.528pt x 346.896pt>
+[30
+
+]
+<Bilder/world5_map.png, id=555, 462.528pt x 346.896pt>
 File: Bilder/world5_map.png Graphic file (type png)
 <use Bilder/world5_map.png>
 Package pdftex.def Info: Bilder/world5_map.png  used on input line 889.
 (pdftex.def)             Requested size: 357.69322pt x 268.28053pt.
-[30
-
-]
-<Bilder/world5_trace_2000_4_k_delta_1.png, id=560, 648.2619pt x 562.9833pt>
+<Bilder/world5_trace_2000_4_k_delta_1.png, id=558, 648.2619pt x 562.9833pt>
 File: Bilder/world5_trace_2000_4_k_delta_1.png Graphic file (type png)
 <use Bilder/world5_trace_2000_4_k_delta_1.png>
 Package pdftex.def Info: Bilder/world5_trace_2000_4_k_delta_1.png  used on inpu
-t line 905.
+t line 903.
 (pdftex.def)             Requested size: 357.69322pt x 310.63826pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Bilder/world5_dist_2000_4_k_delta_1.png, id=563, 514.5624pt x 299.1978pt>
+<Bilder/world5_dist_2000_4_k_delta_1.png, id=562, 514.5624pt x 299.1978pt>
 File: Bilder/world5_dist_2000_4_k_delta_1.png Graphic file (type png)
 <use Bilder/world5_dist_2000_4_k_delta_1.png>
 Package pdftex.def Info: Bilder/world5_dist_2000_4_k_delta_1.png  used on input
  line 913.
 (pdftex.def)             Requested size: 357.69322pt x 207.99435pt.
+[31 <./Bilder/world5_map.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[31 <./Bilder/world5_map.png>] [32 <./Bilder/world5_trace_2000_4_k_delta_1.png>
-]
-<Bilder/world6_map.png, id=582, 551.4201pt x 666.3294pt>
+[32 <./Bilder/world5_trace_2000_4_k_delta_1.png>]
+<Bilder/world6_map.png, id=583, 551.4201pt x 666.3294pt>
 File: Bilder/world6_map.png Graphic file (type png)
 <use Bilder/world6_map.png>
 Package pdftex.def Info: Bilder/world6_map.png  used on input line 939.
 (pdftex.def)             Requested size: 357.69322pt x 432.23459pt.
  [33 <./Bilder/world5_dist_2000_4_k_delta_1.png>] [34 <./Bilder/world6_map.png>
 ]
-<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png, id=597, 645.3711
+<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png, id=598, 645.3711
 pt x 320.1561pt>
 File: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png Graphic file
  (type png)
@@ -907,7 +924,7 @@ File: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png Graphic file
 Package pdftex.def Info: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_di
 st.png  used on input line 960.
 (pdftex.def)             Requested size: 357.69322pt x 177.44936pt.
-<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png, id=600, 512.3943p
+<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png, id=601, 512.3943p
 t x 583.2189pt>
 File: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png Graphic file 
 (type png)
@@ -915,9 +932,9 @@ File: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png Graphic file
 Package pdftex.def Info: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_ma
 p.png  used on input line 969.
 (pdftex.def)             Requested size: 357.69322pt x 407.14696pt.
- [35 <./Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png>]
-[36 <./Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png>]
-<Bilder/world6_calced_trace_partition.png, id=621, 582.175pt x 419.5675pt>
+ [35 <./Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png>] [36 <./B
+ilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png>]
+<Bilder/world6_calced_trace_partition.png, id=622, 582.175pt x 419.5675pt>
 File: Bilder/world6_calced_trace_partition.png Graphic file (type png)
 <use Bilder/world6_calced_trace_partition.png>
 Package pdftex.def Info: Bilder/world6_calced_trace_partition.png  used on inpu
@@ -944,14 +961,17 @@ LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
 (LaTeX3)     1028.
 
  (Sampling-based_Path_Planning_for_Human_Steering_Evaluation.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Sampling-based_Path_Planning_for_Human_Steer
 ing_Evaluation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  14169 strings out of 479617
- 237713 string characters out of 2872145
- 684592 words of memory out of 3000000
+ 237903 string characters out of 2872145
+ 684603 words of memory out of 3000000
  30851 multiletter control sequences out of 15000+200000
  425304 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -983,9 +1003,9 @@ e/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/share/miktex
 type1/public/amsfonts/symbols/msbm10.pfb></home/arne/.miktex/texmfs/install/fon
 ts/type1/public/esvect/vect10.pfb>
 Output written on Sampling-based_Path_Planning_for_Human_Steering_Evaluation.pd
-f (46 pages, 1557347 bytes).
+f (46 pages, 1557358 bytes).
 PDF statistics:
- 1335 PDF objects out of 1440 (max. 8388607)
+ 1336 PDF objects out of 1440 (max. 8388607)
  217 named destinations out of 1000 (max. 500000)
  290 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -13,9 +13,9 @@
 \contentsline {section}{\numberline {2.3}Distanzberechnung unter kinematischen Zwangsbeschr\"ankungen}{16}{section.91}%
 \contentsline {chapter}{\numberline {3}Implementierung}{19}{chapter.99}%
 \contentsline {section}{\numberline {3.1}Nicht-holonomer RRT*}{19}{section.100}%
-\contentsline {subsection}{\numberline {3.1.1}Graphen Generierung}{21}{subsection.104}%
+\contentsline {subsection}{\numberline {3.1.1}Generierung der Graphen}{22}{subsection.104}%
 \contentsline {subsection}{\numberline {3.1.2}Anwendung des A* Algorithmus}{24}{subsection.125}%
-\contentsline {section}{\numberline {3.2}Bewertung menschlichen Steuerverhaltens}{26}{section.128}%
+\contentsline {section}{\numberline {3.2}Bewertung menschlichen Steuerverhaltens}{25}{section.128}%
 \contentsline {chapter}{\numberline {4}Experimentelle Evaluation}{30}{chapter.140}%
 \contentsline {section}{\numberline {4.1}Evaluation eines ferngesteuerten Roboters}{30}{section.141}%
 \contentsline {section}{\numberline {4.2}Evaluation einer Rollstuhlfahrt}{33}{section.145}%
