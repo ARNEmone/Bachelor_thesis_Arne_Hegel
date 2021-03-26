@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.17)  25 MAR 2021 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.17)  26 MAR 2021 15:47
 entering extended mode
 **./Sampling-based_Path_Planning_for_Human_Steering_Evaluation.tex
 (Sampling-based_Path_Planning_for_Human_Steering_Evaluation.tex
@@ -720,7 +720,7 @@ Class scrreprt Warning: \float@addtolists detected!
 
 
 ] [2]
-<Bilder/nicht-holonomer_RRT_star_Park_2015.png, id=111, 1161.33875pt x 727.7187
+<Bilder/nicht-holonomer_RRT_star_Park_2015.png, id=113, 1161.33875pt x 727.7187
 5pt>
 File: Bilder/nicht-holonomer_RRT_star_Park_2015.png Graphic file (type png)
 <use Bilder/nicht-holonomer_RRT_star_Park_2015.png>
@@ -741,7 +741,7 @@ chapter 2.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 261.
  [7] [8] [9] [10] [11]
-<Bilder/polarkoordinaten_fahrzeug_park_2016.png, id=273, 708.6475pt x 442.65375
+<Bilder/polarkoordinaten_fahrzeug_park_2016.png, id=275, 708.6475pt x 442.65375
 pt>
 File: Bilder/polarkoordinaten_fahrzeug_park_2016.png Graphic file (type png)
 <use Bilder/polarkoordinaten_fahrzeug_park_2016.png>
@@ -755,7 +755,7 @@ Class scrreprt Info: Workaround for not recommended usage of \\ or
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12] [13 <./Bilder/polarkoordinaten_fahrzeug_park_2016.png>]
-<Bilder/graceful_motion_examples_park_2016.png, id=304, 1088.065pt x 1891.065pt
+<Bilder/graceful_motion_examples_park_2016.png, id=306, 1088.065pt x 1891.065pt
 >
 File: Bilder/graceful_motion_examples_park_2016.png Graphic file (type png)
 <use Bilder/graceful_motion_examples_park_2016.png>
@@ -765,7 +765,7 @@ Package pdftex.def Info: Bilder/graceful_motion_examples_park_2016.png  used on
 Class scrreprt Info: Workaround for not recommended usage of \\ or
 (scrreprt)           \newlinein caption text  on input line 549.
  [14] [15 <./Bilder/graceful_motion_examples_park_2016.png>]
-<Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.png, id=325, 418.56375pt
+<Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.png, id=327, 418.56375pt
  x 217.81375pt>
 File: Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.png Graphic file (t
 ype png)
@@ -774,7 +774,7 @@ Package pdftex.def Info: Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.
 png  used on input line 565.
 (pdftex.def)             Requested size: 223.5574pt x 116.33476pt.
  [16 <./Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.png>]
-<Bilder/vektorfelder_l_minus_park_2016.png, id=349, 416.55624pt x 382.42876pt>
+<Bilder/vektorfelder_l_minus_park_2016.png, id=351, 416.55624pt x 382.42876pt>
 File: Bilder/vektorfelder_l_minus_park_2016.png Graphic file (type png)
 <use Bilder/vektorfelder_l_minus_park_2016.png>
 Package pdftex.def Info: Bilder/vektorfelder_l_minus_park_2016.png  used on inp
@@ -784,7 +784,7 @@ Class scrreprt Info: Workaround for not recommended usage of \\ or
 (scrreprt)           \newlinein caption text  on input line 587.
  [17 <./Bilder/vektorfelder_l_minus_park_2016.png>] [18]
 chapter 3.
-<Bilder/world4_map.png, id=382, 1339.1631pt x 716.1957pt>
+<Bilder/world4_map.png, id=384, 1339.1631pt x 716.1957pt>
 File: Bilder/world4_map.png Graphic file (type png)
 <use Bilder/world4_map.png>
 Package pdftex.def Info: Bilder/world4_map.png  used on input line 654.
@@ -792,7 +792,7 @@ Package pdftex.def Info: Bilder/world4_map.png  used on input line 654.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Bilder/world4_analysis_cost.png, id=383, 530.4618pt x 299.9205pt>
+<Bilder/world4_analysis_cost.png, id=385, 530.4618pt x 299.9205pt>
 File: Bilder/world4_analysis_cost.png Graphic file (type png)
 <use Bilder/world4_analysis_cost.png>
 Package pdftex.def Info: Bilder/world4_analysis_cost.png  used on input line 66
@@ -804,7 +804,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [19
 
 ]
-<Bilder/world4_analysis_time_graph.png, id=401, 530.4618pt x 297.0297pt>
+<Bilder/world4_analysis_time_graph.png, id=403, 530.4618pt x 297.0297pt>
 File: Bilder/world4_analysis_time_graph.png Graphic file (type png)
 <use Bilder/world4_analysis_time_graph.png>
 Package pdftex.def Info: Bilder/world4_analysis_time_graph.png  used on input l
@@ -816,7 +816,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [20 <./Bilder/world4_map.png> <./Bilder/world4_analysis_cost.png>] [21 <./Bilde
 r/world4_analysis_time_graph.png>] [22]
-<Bilder/kin_update_example.png, id=455, 462.528pt x 346.896pt>
+<Bilder/kin_update_example.png, id=457, 462.528pt x 346.896pt>
 File: Bilder/kin_update_example.png Graphic file (type png)
 <use Bilder/kin_update_example.png>
 Package pdftex.def Info: Bilder/kin_update_example.png  used on input line 734.
@@ -825,7 +825,7 @@ Package pdftex.def Info: Bilder/kin_update_example.png  used on input line 734.
 Class scrreprt Info: Workaround for not recommended usage of \\ or
 (scrreprt)           \newlinein caption text  on input line 735.
  [23 <./Bilder/kin_update_example.png>]
-<Bilder/world4_analyse_trace_r_s_40.png, id=471, 1339.1631pt x 716.1957pt>
+<Bilder/world4_analyse_trace_r_s_40.png, id=473, 1339.1631pt x 716.1957pt>
 File: Bilder/world4_analyse_trace_r_s_40.png Graphic file (type png)
 <use Bilder/world4_analyse_trace_r_s_40.png>
 Package pdftex.def Info: Bilder/world4_analyse_trace_r_s_40.png  used on input 
@@ -839,7 +839,7 @@ Class scrreprt Info: Workaround for not recommended usage of \\ or
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Bilder/world4_map_with_goals.png, id=481, 1339.1631pt x 716.1957pt>
+<Bilder/world4_map_with_goals.png, id=483, 1339.1631pt x 716.1957pt>
 File: Bilder/world4_map_with_goals.png Graphic file (type png)
 <use Bilder/world4_map_with_goals.png>
 Package pdftex.def Info: Bilder/world4_map_with_goals.png  used on input line 7
@@ -850,7 +850,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [24] [25 <./Bilder/world4_analyse_trace_r_s_40.png>] [26 <./Bilder/world4_map_w
 ith_goals.png>]
-<Bilder/theta.png, id=512, 462.528pt x 346.896pt>
+<Bilder/theta.png, id=514, 462.528pt x 346.896pt>
 File: Bilder/theta.png Graphic file (type png)
 <use Bilder/theta.png>
 Package pdftex.def Info: Bilder/theta.png  used on input line 811.
@@ -859,7 +859,7 @@ Package pdftex.def Info: Bilder/theta.png  used on input line 811.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Bilder/dreieck_theta.png, id=514, 734.745pt x 283.65974pt>
+<Bilder/dreieck_theta.png, id=516, 734.745pt x 283.65974pt>
 File: Bilder/dreieck_theta.png Graphic file (type png)
 <use Bilder/dreieck_theta.png>
 Package pdftex.def Info: Bilder/dreieck_theta.png  used on input line 822.
@@ -868,7 +868,7 @@ Package pdftex.def Info: Bilder/dreieck_theta.png  used on input line 822.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [27]
-<Bilder/start_stop_theta.png, id=532, 830.50275pt x 221.02576pt>
+<Bilder/start_stop_theta.png, id=534, 830.50275pt x 221.02576pt>
 File: Bilder/start_stop_theta.png Graphic file (type png)
 <use Bilder/start_stop_theta.png>
 Package pdftex.def Info: Bilder/start_stop_theta.png  used on input line 860.
@@ -883,12 +883,12 @@ chapter 4.
 [30
 
 ]
-<Bilder/world5_map.png, id=555, 462.528pt x 346.896pt>
+<Bilder/world5_map.png, id=557, 462.528pt x 346.896pt>
 File: Bilder/world5_map.png Graphic file (type png)
 <use Bilder/world5_map.png>
 Package pdftex.def Info: Bilder/world5_map.png  used on input line 889.
 (pdftex.def)             Requested size: 357.69322pt x 268.28053pt.
-<Bilder/world5_trace_2000_4_k_delta_1.png, id=558, 648.2619pt x 562.9833pt>
+<Bilder/world5_trace_2000_4_k_delta_1.png, id=560, 648.2619pt x 562.9833pt>
 File: Bilder/world5_trace_2000_4_k_delta_1.png Graphic file (type png)
 <use Bilder/world5_trace_2000_4_k_delta_1.png>
 Package pdftex.def Info: Bilder/world5_trace_2000_4_k_delta_1.png  used on inpu
@@ -898,7 +898,7 @@ t line 903.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Bilder/world5_dist_2000_4_k_delta_1.png, id=562, 514.5624pt x 299.1978pt>
+<Bilder/world5_dist_2000_4_k_delta_1.png, id=564, 514.5624pt x 299.1978pt>
 File: Bilder/world5_dist_2000_4_k_delta_1.png Graphic file (type png)
 <use Bilder/world5_dist_2000_4_k_delta_1.png>
 Package pdftex.def Info: Bilder/world5_dist_2000_4_k_delta_1.png  used on input
@@ -909,14 +909,14 @@ Package pdftex.def Info: Bilder/world5_dist_2000_4_k_delta_1.png  used on input
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [32 <./Bilder/world5_trace_2000_4_k_delta_1.png>]
-<Bilder/world6_map.png, id=583, 551.4201pt x 666.3294pt>
+<Bilder/world6_map.png, id=585, 551.4201pt x 666.3294pt>
 File: Bilder/world6_map.png Graphic file (type png)
 <use Bilder/world6_map.png>
 Package pdftex.def Info: Bilder/world6_map.png  used on input line 939.
 (pdftex.def)             Requested size: 357.69322pt x 432.23459pt.
  [33 <./Bilder/world5_dist_2000_4_k_delta_1.png>] [34 <./Bilder/world6_map.png>
 ]
-<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png, id=598, 645.3711
+<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png, id=600, 645.3711
 pt x 320.1561pt>
 File: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png Graphic file
  (type png)
@@ -924,7 +924,7 @@ File: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png Graphic file
 Package pdftex.def Info: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_di
 st.png  used on input line 960.
 (pdftex.def)             Requested size: 357.69322pt x 177.44936pt.
-<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png, id=601, 512.3943p
+<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png, id=603, 512.3943p
 t x 583.2189pt>
 File: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png Graphic file 
 (type png)
@@ -934,7 +934,7 @@ p.png  used on input line 969.
 (pdftex.def)             Requested size: 357.69322pt x 407.14696pt.
  [35 <./Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png>] [36 <./B
 ilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png>]
-<Bilder/world6_calced_trace_partition.png, id=622, 582.175pt x 419.5675pt>
+<Bilder/world6_calced_trace_partition.png, id=624, 582.175pt x 419.5675pt>
 File: Bilder/world6_calced_trace_partition.png Graphic file (type png)
 <use Bilder/world6_calced_trace_partition.png>
 Package pdftex.def Info: Bilder/world6_calced_trace_partition.png  used on inpu
@@ -944,68 +944,75 @@ t line 983.
 chapter 5.
 [38
 
-] (Sampling-based_Path_Planning_for_Human_Steering_Evaluation.bbl [39]
-[40
+] [39]
+chapter 6.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+022.
+(/usr/local/share/miktex-texmf/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+(Sampling-based_Path_Planning_for_Human_Steering_Evaluation.bbl [40
 
-]) [41]
+] [41
+
+])
+[42]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     1028.
+(LaTeX3)     1034.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     1028.
+(LaTeX3)     1034.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     1028.
+(LaTeX3)     1034.
 
  (Sampling-based_Path_Planning_for_Human_Steering_Evaluation.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `Sampling-based_Path_Planning_for_Human_Steer
 ing_Evaluation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14169 strings out of 479617
- 237903 string characters out of 2872145
- 684603 words of memory out of 3000000
- 30851 multiletter control sequences out of 15000+200000
- 425304 words of font info for 84 fonts, out of 3000000 for 9000
+ 14192 strings out of 479617
+ 238526 string characters out of 2872145
+ 684628 words of memory out of 3000000
+ 30868 multiletter control sequences out of 15000+200000
+ 425617 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,15n,116p,10655b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.
-pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecsx1440
-.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm120
-0.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm10
-00.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm0
-700.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm
-0800.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ect
-i1200.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ec
-sl1200.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/e
-csx1728.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/
-ecsx1200.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600
-/ecsx2488.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi60
-0/ecrm1200.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi6
-00/ecrm1440.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi
-600/ecbx2488.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dp
-i600/ecbx1440.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/d
-pi600/ecbx1728.pk></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm
-/cmex10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi1
-2.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-/usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/shar
-e/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/share/miktex
--texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/miktex-texmf
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/share/miktex-texmf/fonts/
-type1/public/amsfonts/symbols/msbm10.pfb></home/arne/.miktex/texmfs/install/fon
-ts/type1/public/esvect/vect10.pfb>
+ </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1200.
+pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200
+.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecsx144
+0.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm12
+00.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1
+000.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm
+0700.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecr
+m0800.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ec
+ti1200.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/e
+csl1200.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/
+ecsx1728.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600
+/ecsx1200.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi60
+0/ecsx2488.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi6
+00/ecrm1200.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi
+600/ecrm1440.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dp
+i600/ecbx2488.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/d
+pi600/ecbx1440.pk> </home/arne/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/
+dpi600/ecbx1728.pk></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb></usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+</usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/sha
+re/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/share/mikte
+x-texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/miktex-texm
+f/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/share/miktex-texmf/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb></home/arne/.miktex/texmfs/install/fo
+nts/type1/public/esvect/vect10.pfb>
 Output written on Sampling-based_Path_Planning_for_Human_Steering_Evaluation.pd
-f (46 pages, 1557358 bytes).
+f (47 pages, 1570135 bytes).
 PDF statistics:
- 1336 PDF objects out of 1440 (max. 8388607)
- 217 named destinations out of 1000 (max. 500000)
- 290 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1379 PDF objects out of 1440 (max. 8388607)
+ 219 named destinations out of 1000 (max. 500000)
+ 298 words of extra memory for PDF output out of 10000 (max. 10000000)
 

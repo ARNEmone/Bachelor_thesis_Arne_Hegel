@@ -13,7 +13,7 @@ from RRT_star_graph_and_a_star import main, vertex, dist
 
 
 ####################################################
-#           GAME Parameters
+#           Global Parameters
 ####################################################  
 
 k_phi = 1.2 #positive constant that represent the weight of phi with respect to r.

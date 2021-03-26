@@ -12,7 +12,7 @@ import os
 import yaml
 
 ####################################################
-#           GAME Parameters
+#           Global Parameters
 ####################################################  
 
 obs = np.empty((0,2)) #array of coordinates of obs

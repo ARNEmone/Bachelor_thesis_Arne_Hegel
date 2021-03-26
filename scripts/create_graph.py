@@ -13,7 +13,7 @@ import yaml
 ####################################################
 #           table of contents
 #
-#           GAME Parameters
+#           Global Parameters
 #           vertex class
 #           help functions
 #           kin update functions
@@ -27,7 +27,7 @@ import yaml
 ####################################################  
 
 ####################################################
-#           GAME Parameters
+#           Global Parameters
 ####################################################  
 
 GAME_x = (0, 40) #map boarders
@@ -47,7 +47,7 @@ resolution = 0.05 #map param to load pgm
 shift_x = 200 #map param to load pgm
 shift_y = 200 #map param to load pgm
 k_phi = 1.2 #positive constant that represent the weight of phi with respect to r.
-k_delta = 3 #positive constant that represent the weight of delta with respect to phi.
+k_delta = 10 #positive constant that represent the weight of delta with respect to phi.
 
 
 

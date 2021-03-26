@@ -13,7 +13,7 @@ import yaml
 ####################################################
 #           table of contents
 #
-#           GAME Parameters
+#           Global Parameters
 #           vertex class
 #           help functions
 #           kin update functions
@@ -28,7 +28,7 @@ import yaml
 
 
 ####################################################
-#           GAME Parameters
+#           Global Parameters
 ####################################################  
 
 GAME_x = (0, 40) #map boarders

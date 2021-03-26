@@ -177,7 +177,7 @@ Im Labor des Instituts für Technische Informatik der Universität Heidelberg wurd
 
 Während der Rollstuhl zu einer Zielposition gesteuert wird, kann also seine 3D-Position ermittelt werden. Ist das Ziel bekannt, können die Fortschritte des Fahrers fortlaufend evaluiert werden.
 
-Ziel der Arbeit ist es, unter Verwendung einer Start- und einer Zielposition automatisch einen Weg mit Zwischenzielen zu berechnen, welche dann alle nacheinander auf einem kollisionsfreien Pfad abgefahren werden. Die Pfade zwischen den Zwischenzielen sollen zudem unter der Annahme berechnet werden, dass der Rollstuhl, welcher den Pfad abfahren soll, ein nicht-holonomes System ist. 
+Ziel der Arbeit ist es, unter Verwendung einer Start- und einer Zielposition automatisch einen Weg mit Zwischenzielen zu berechnen, welche dann alle nacheinander auf einem kollisionsfreien Pfad abgefahren werden. Die Pfade zwischen den Zwischenzielen sollen zudem unter der Annahme berechnet werden, dass der Rollstuhl, welcher den Pfad abfahren soll, ein nicht-holonomes System ist. Es ist dem Rollstuhl also nicht möglich seitlich zu fahren.
 
 Aufgrund der Eigenschaften eines nicht-holonomen Systems (z.B. Unfähigkeit von Rollstühlen seitwärts zu fahren) muss ein Distanzmaß verwendet werden, welches diese Eigenschaften berücksichtigt und die Distanz des zuvor erwähnten berechneten Pfades widerspiegelt. Da sich der Rollstuhl kontinuierlich fortbewegt, und sich somit die Navigationsaufgabe mit jeder neuen Position fortlaufend ändert, muss die verbleibende Distanz zur Zielposition kontinuierlich aktualisiert werden. Die Distanz von der aktuellen Position des Rollstuhls bis zur Zielposition berechnet sich hierbei so, dass die Distanz von der Rollstuhlposition zum nächsten Zwischenziel berechnet wird und auf diese die Distanzen zwischen den folgenden Zwischenzielen bis zum endgültigen Ziel aufaddiert werden.
 
@@ -633,7 +633,7 @@ dist(p_0, p_1) = l(\mathcal{P}_{p_1}(p_0))
 
 Dieses Kapitel beschreibt die konkrete Implementierung der in Kapitel \ref{chap:grundlagen} erläuterten Konzepte. Auftretende Probleme und Designentscheidungen werden diskutiert.
 
-Es wird erläutert, wie eine effiziente Evaluierung des menschlichen Steuerverhaltens möglich ist. Das Steuerverhalten wird dabei auf einem von einem Menschen gesteuerten elektrischen Rollstuhl evaluiert. Die Bewertung wird hierbei auf der Grundlage der Distanz des Fahrers zu einer Zielposition geschehen. Diese soll fortlaufend berechnet und mit den bereits berechneten Distanzen verglichen werden. Somit kann abhängig von der Veränderung der Distanz ein gutes oder inadäquates Steuerverhalten erkannt werden. Hierbei entstehen zwei Teilprobleme. 
+Es wird erläutert, wie eine effiziente Evaluation des menschlichen Steuerverhaltens möglich ist. Das Steuerverhalten wird dabei auf einem von einem Menschen gesteuerten elektrischen Rollstuhl evaluiert. Die Bewertung wird hierbei auf der Grundlage der Distanz des Fahrers zu einer Zielposition geschehen. Diese soll fortlaufend berechnet und mit den bereits berechneten Distanzen verglichen werden. Somit kann abhängig von der Veränderung der Distanz ein gutes oder inadäquates Steuerverhalten erkannt werden. Hierbei entstehen zwei Teilprobleme. 
 
 Das erste Teilproblem besteht darin, die Distanz des Fahrers zu einer Zielposition möglichst schnell und genau zu berechnen. Dieses Problem wird in Kapitel \ref{sec:implementierung_RRT_star} behandelt.
 
@@ -684,7 +684,7 @@ Auf Abbildung \ref{fig:world4_analysis_cost} ist zu erkennen, dass der Suchradiu
 
 Eine schnellere Berechnungszeit der Distanz ist durch den A* Algorithmus möglich, da er zunächst keinen eigenen Graphen generieren muss. Jedoch muss diesem Algorithmus zu Beginn ein Graph bereitgestellt werden. Da sowohl in dem Ansatz mit RRT* als auch mit A* eine vorher generierte Karte benötigt wird, wurde die Implementierung so geändert, dass für eine Karte auch ein entsprechender Graph generiert wird. Im Folgenden wird eine Methode zur Generierung eines gerichteten Graphens unter Abwandlung des RRT* Algorithmus vorgestellt, auf welchem der A* Algorithmus angewandt wird.
 
-\subsection{Generierung der Graphen}
+\subsection{Generierung des Graphens}
 \label{subsec:graphen_generierung}
 
 Der generierte Graph soll gerichtet sein und die Knoten sollen auf dem navigierbaren Raum der Karte gleich verteilt sein. Die Kosten der Kanten werden durch die Distanzfunktion (\ref{eq:distanzfunktion_xyp}) repräsentiert, welche die nicht-holonomen Zwangsbeschränkungen eines Rollstuhls berücksichtigt.
@@ -722,7 +722,7 @@ getNeighbors(v_{new}, graph) \equiv \{ v \in graph : euclDist(v, v_{new}) \leq r
 \label{eq:getNeighbors}
 \end{align}
 
-Die verwendete Distanzfunktion ist nicht mehr die Distanzfunktion von Gleichung \ref{eq:distanzfunktion_xyp}, sondern die euklidische Distanz $euclDist$, welche den Abstand zwischen zwei Koordinaten bestimmt. Dadurch ist eine Verwendung der in NumPy\footnote{Die Programmierbibliothek NumPy der Programmiersprache Python ist auf wissenschaftliches Rechnen spezialisiert. \cite{numpy_numpy_nodate}} enthaltenen Funktion $numpy.linalg.norm$ möglich, welche eine schnellere Distanzberechnung auf Grundlage der euklidischen Distanz ermöglicht. Zudem muss nur noch einmal pro Schleifenschritt $neighbors$ berechnet werden.
+Die verwendete Distanzfunktion ist nicht mehr die Distanzfunktion von Gleichung \ref{eq:distanzfunktion_xyp}, sondern die euklidische Distanz $euclDist$, welche den Abstand zwischen zwei Koordinaten bestimmt. Dadurch ist eine Verwendung der in NumPy\footnote{Die Programmierbibliothek NumPy der Programmiersprache Python ist auf wissenschaftliches Rechnen spezialisiert. \cite{numpy_numpy_nodate}} enthaltenen Funktion $numpy.linalg.norm$ möglich, welche eine schnellere Distanzberechnung auf Grundlage der euklidischen Distanz ermöglicht. Zudem muss nur noch einmal pro Schleifenschritt $neighbors$ berechnet werden, was die Berechnungsgeschwindigkeit erneut erhöht.
 
 Die Funktion $linkNeigbors$ wird verwendet, um die Nachbarn von $v_{new}$ mit $v_{new}$ zu verbinden. Sie fügt alle $neighbor \in neighbors$ in  $v_{new}.neighbors$ hinzu, sofern eine valide Verbindung von $v_{new}$ zu $neighbor$ existiert. Um den Knoten $v_{new}$ auch erreichen zu können, werden auch alle Verbindungen von $neighbor$ zu $v_{new}$ überprüft und entsprechend $v_{new}$ in $neighbor.neighbors$ eingefügt. Die Überprüfung einer Verbindung auf Validität geschieht hierbei durch die Funktion $validLink(v_{from}, v_{to})$.
 
@@ -987,7 +987,7 @@ In Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_map} ist zu s
 
 Der zweite inadäquat abgefahrene Streckenabschnitt befindet sich kurz nach dem zweiten Zwischenziel. Hier ist jedoch erneut zu erkennen, dass theoretisch kein Fehler vom Fahrer begangen wurde. Markiert wurde dieser Streckenabschnitt dennoch, da zwei Zwischenziele kurz hintereinander platziert wurden. Der Fahrer passierte beide generierten Zwischenziele seitlich mit etwas Entfernung, wodurch die Distanz zu beiden Zwischenzielen fast zeitgleich anstieg.
 
-Im weiteren Verlauf der Fahrt wurde kein weiteres Fehlverhalten festgestellt. Generell fällt die Distanz konstant ohne größere Schwankungen ab, was für ein sehr gutes Steuerverhalten spricht.
+Im weiteren Verlauf der Fahrt wurde kein weiteres Fehlverhalten festgestellt. Generell fällt die Distanz konstant ohne größere Schwankungen ab, was für ein sehr gutes Steuerverhalten spricht. Die Evaluation einer Fahrt auf dem Rollstuhl mit bewusst inadäquat gefahrenen Streckenabschnitten war aufgrund von fehlerhaften Daten und mangelnder Zeit nicht mehr möglich.
 
 %\subsection{2. Analyse}
 %\label{subsec:analyse_2}
@@ -998,8 +998,8 @@ Im weiteren Verlauf der Fahrt wurde kein weiteres Fehlverhalten festgestellt. Ge
 
 %Hier werden noch einmal die wichtigsten Ergebnisse und Erkenntnisse der Arbeit zusammengefasst (nicht einfach eine Wiederholung des Aufbaus der vorherigen Kapitel!), welche neuen Konzepte, Methoden und Werkzeuge Neues entwickelt wurden, welche Probleme nun (effizienter) gelöst werden können, und es wird ein Ausblick auf weiterführende Arbeiten gegeben (z.B.~was Sie machen würden, wenn Sie noch 6 Monate mehr Zeit hätten).
 
-\section{Zusammenfassung}
-\label{sec:zusammenfassung}
+\section{Fazit}
+\label{sec:fazit}
 
 Die Aufrechterhaltung der Selbstständigkeit einer immer älter werdenden Gesellschaft gewinnt zunehmend an Relevanz. Ein elektrischer Rollstuhl mit Assistenzfunktionen kann dies im Bereich der Mobilität ermöglichen. In dieser Arbeit wurde eine Methode zur Bewertung des menschlichen Steuerverhaltens entwickelt und deren Anwendung unter anderem auf einem elektrischen Rollstuhl getestet. Die Bewertung geschieht dabei auf Grundlage der berechneten Distanz vom Fahrer zum Ziel unter nicht-holonomen Zwangsbeschränkungen. Die Distanz wird dabei auf einem zuvor generierten Graphen über den A* Algorithmus berechnet und wird während der Fahrt fortlaufend aktualisiert. Hierbei basiert der generierte Graph auf einer zufälligen Stichprobe an Knoten auf dem navigierbaren Raum und besitzt Kanten, welche unter nicht-holonomen Zwangsbeschränkungen abgefahren werden können. Anzumerken ist hierbei, dass auch über sehr lange Distanzen eine fortlaufend schnelle und genaue Distanzberechnung möglich ist.
 
@@ -1008,12 +1008,18 @@ Dies liegt besonders an folgenden Umständen. Der verwendete Graph wird unmittelb
 \section{Weitere Arbeiten}
 \label{sec:weitere_arbeiten}
 
+Aufgrund von fehlerhaften Daten und mangelnder Zeit war es nicht mehr möglich eine Fahrt auf dem Rollstuhl zu evaluieren, bei der bewusst inadäquat gefahren wurde. Um das Bewertungsverfahren genauer zu evaluieren, wäre es somit empfehlenswert, solch eine Fahrt zu analysieren. Hierbei wären besonders sehr weit gefahrene Kurven und gefahrene Schlangenlinien als inadäquat gefahrene Streckenabschnitte interessant, da dies typische Fehlverhalten beim Steuern des Rollstuhl sind.
+
 Es gibt einige weitere Punkte, in denen das Bewertungsverfahren verbessert werden sollte. So ist es derzeit nur möglich, eine Angabe darüber zu machen, wann inadäquat gefahren wurde, jedoch nicht, wieso. Eine Weiterentwicklung wäre somit dahingehend wünschenswert vom System eine Empfehlung an den Fahrer zu geben, wie ein besseres Steuerverhalten in der aktuellen Situation aussehen könnte. Weitergehend werden beim Berechnen des Weges vereinzelt Streckenabschnitte berechnet, welche nicht sonderlich intuitiv sind. So wäre eine Verbesserung der Berechnung des Weges durch zusätzliche Überprüfungen und Angleichungen des berechneten Weges in Betracht zu ziehen.
 
 %Zurzeit nur Angabe möglich wann schlecht gefahren wurde. Bei inadäquatem Fahren angeben wie richtig gefahren werden muss, indem schritte simuliert werden und die besten dem Fahrer vorgeschlagen werden. 
 
 %Anderes verfahren zum platzieren von Zwischenziele möglicherweise besser. In Gebäuden vlt in die mitte des Gangs verlegen bzw Mindestabstand zur Wand. Begründung: Mensch fährt intuitiv etwas mittiger vom weg
 
+\chapter{Anhänge}
+\label{anhänge}
+
+Die während der Arbeit generierten Implementierungen sind unter Folgendem Link zu finden: \url{https://github.com/Arne-Hegel/Bachelor_thesis_Arne_Hegel} 
 
 % References (Literaturverzeichnis):
 % a) Style (with abbreviations: use alpha):
