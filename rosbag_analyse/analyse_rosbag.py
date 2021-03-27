@@ -21,8 +21,8 @@ resolution = 0.05 #map param to load pgm
 shift_x = 200 #map param to load pgm
 shift_y = 200 #map param to load pgm
 
-world = None#'world5' #world of the rosbag i want to analyse (only needed for obs in odom)
-to_analyse = 'rosbags/record.bag' #rosbag i want to analyse
+world = 'world7' #world of the rosbag i want to analyse (only needed for obs in odom)
+to_analyse = 'rosbags/world7_3rounds_k_delta_2.bag' #rosbag i want to analyse
 
 
 
@@ -187,7 +187,7 @@ bag.close()
 #           cut
 ##############################################################
 
-"""
+
 
 pg_start = (0.5,-6.5,1.17)
 pg_stop = (0.5,-6.5,1.17)
@@ -199,93 +199,38 @@ def near_to(xyp1, xyp2, rad):
     else:
         return False
 
-#analyse_world6_1newnewTheta
+#world7_3rounds_k_delta_1
 #1 round
-#time_start = 1615819599
-#time_stop = 1615819760
+#time_start = 1616856317
+#time_stop = 1616856437
 #2 round
-#time_start = 1615819760
-#time_stop = 1615819880
+#time_start = 1616856437
+#time_stop = 1616856566
 #3 round
-#time_start = 1615819880
-#time_stop = 1615819990
+#time_start = 1616856566
+#time_stop = 1616856676
 
-#analyse_world6_1newnewTheta_5000_6_k_delta_1
+#world7_3rounds_k_delta_2
 #1 round
-#time_start = 1615998370
-#time_stop = 1615998500
+#time_start = 1616859382
+#time_stop = 1616859502
 #2 round
-#time_start = 1615998500
-#time_stop = 1615998620
+#time_start = 1616859502
+#time_stop = 1616859631
 #3 round
-#time_start = 1615998620
-#time_stop = 1615998723
+time_start = 1616859631
+time_stop = 1616859742
 
-#analyse_world6_1newnewTheta_5000_6_k_delta_3
+#world7_3rounds_k_delta_3
 #1 round
-#time_start = 1616065370
-#time_stop = 1616065500
+#time_start = 1616857674
+#time_stop = 1616857794
 #2 round
-#time_start = 1616065500
-#time_stop = 1616065620
+#time_start = 1616857794
+#time_stop = 1616857923
 #3 round
-#time_start = 1616065620
-#time_stop = 1616065722
-
-#analyse_world6_1newnewTheta_myGoals_k_delta_3
-#1 round
-#time_start = 1616068050
-#time_stop = 1616068180
-#2 round
-#time_start = 1616068180
-#time_stop = 1616068300
-#3 round
-#time_start = 1616068300
-#time_stop = 1616068402
-
-#analyse_world6_1newnewTheta_myGoals_k_delta_5
-#1 round
-#time_start = 1616069289
-#time_stop = 1616069419
-#2 round
-#time_start = 1616069419
-#time_stop = 1616069539
-#3 round
-#time_start = 1616069539
-#time_stop = 1616069641
-
-#analyse_world6_1newnewTheta_myGoals_k_delta_5
-#1 round
-#time_start = 1616069289
-#time_stop = 1616069419
-#2 round
-#time_start = 1616069419
-#time_stop = 1616069539
-#3 round
-#time_start = 1616069539
-#time_stop = 1616069641
-
-#analyse_world6_2newnewTheta_5000_6_k_delta_1
-#1 round
-time_start = 1616074190
-time_stop = 1616074310
-#2 round
-#time_start = 1616074320
-#time_stop = 1616074440
-#3 round
-#time_start = 1616074440
-#time_stop = 1616074542
-
-#analyse_world6_2newnewTheta_5000_6_k_delta_3
-#1 round
-#time_start = 1616075219
-#time_stop = 1616075349
-#2 round
-#time_start = 1616075349
-#time_stop = 1616075469
-#3 round
-#time_start = 1616075469
-#time_stop = 1616075571
+#time_start = 1616857923
+#time_stop = 1616858034
 
 #dist
 for i in range(len(dist)):
@@ -337,7 +282,7 @@ for i in range(len(odom_time)):
         odom_time = odom_time[:i]
         break
 
-"""
+
 print("start: ", i_goal_time[0], "stop: ", i_goal_time[len(i_goal_time)-1])
 
 
@@ -348,13 +293,13 @@ print("start: ", i_goal_time[0], "stop: ", i_goal_time[len(i_goal_time)-1])
 #dist
 dist_badly_driven = [] #array with badly dirven sections
 dist_badly_driven_time = [] #time array with badly dirven sections
-index = 200 #index
+index = 50 #index
 while index < len(dist):
     badly_driven_section = []
     badly_driven_section_time = []
     while index < len(dist):
         dist_grows = False #ture if all last three dist are greater than the selected
-        for i in range(index-200, index, 20):
+        for i in range(index-50, index, 5):
             if dist[i] < dist[index]:
                 dist_grows = True
         if dist_grows:
@@ -375,11 +320,11 @@ x_badly_driven = [] #array with badly dirven sections
 y_badly_driven = [] #array with badly dirven sections
 index = 0 #index
 for i in range(len(dist_badly_driven_time)):
-    while index < len(odom_time):
+    while index < (len(odom_time)-1):
         if (odom_time[index] - dist_badly_driven_time[i][0]) > -0.5:
             x_badly_driven_section = [] #array with badly dirven sections
             y_badly_driven_section = [] #array with badly dirven sections
-            while index < len(odom_time) and (odom_time[index] - dist_badly_driven_time[i][len(dist_badly_driven_time)-1]) < 0.5:
+            while index < (len(odom_time)-1) and (odom_time[index] - dist_badly_driven_time[i][len(dist_badly_driven_time[i])-1]) < 0.5:
                 x_badly_driven_section.append(odom_x[index])
                 y_badly_driven_section.append(odom_y[index])
                 index += 1

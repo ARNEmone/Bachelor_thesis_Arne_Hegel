@@ -530,6 +530,8 @@ def calc_graph(world, start_xyp, save_file): #(0, 0, 1.57); (0, 0, 0); (0, 0, -1
         print("choose between world1, world2, world3, world4, world5 and world6")
         return None
     
+    plot_it()
+    
     #calcs the RRT graph
     time_start = time.time()
     RRT_star()
@@ -655,10 +657,10 @@ def main(world, start_xyp, goal_xyp, n_vertex, r_search, load_saved_graph, calc_
 #           launch main
 ####################################################  
 
-world="world6" #selected world
-start_xyp = (0, 0, -0.4) #start position
+world="world7" #selected world
+start_xyp = (-4.56, 9.94, 2.1) #start position
 goal_xyp = None#(15.0, 10.5, -0.4) #goal position
-n_vertex = 1000 #count of nodes in the graph
+n_vertex = 3000 #count of nodes in the graph
 r_search = 4 #search radius for find_neighbors
 calc_new_graph = True #clac new graph or load a previously calced graph
 load_saved_graph = True #load the last calced graph or the saved graph
@@ -691,6 +693,10 @@ world5:
 world6:
     Start: (0, 0, -0.4), Ziel: (15.0, 10.5, -0.4)
     trace: [(0, 0, -0.4), (1.5, -0.52, -0.2), (3.98, 0.66, 1.29), (4.98, 2.54, 1.05), (6.4, 5.92, 1.22), (8.14, 8.74, 0.95), (8.75, 10.49, 1.37), (12.33, 11.51, -0.3), (15.0, 10.5, -0.4)]
+   
+world7:
+    Start: (-4.56, 9.94, 2.1), Ziel: (-5.24, 10.16, 2.1)
+    trace: [(-4.56, 9.94, 2.1), (-14.6, 26.9, 2.1), (-6.7, 31.1, -1.04), (2.5, 14.5, -1.04), (-5.24, 10.16, 2.1)]
    
 '''
     

@@ -21,7 +21,7 @@ resolution = 0.05 #map param to load pgm
 shift_x = 200 #map param to load pgm
 shift_y = 200 #map param to load pgm
 
-world = None#"world7" #world of the rosbag i want to analyse
+world = "world7" #world of the rosbag i want to analyse
 to_analyse = 'rosbags/world7_odom.bag' #rosbag i want to analyse
 
 
@@ -293,8 +293,8 @@ for i in range(len(odom_time)):
         break
 
 """
-print("start: ", odom_time[0], "stop: ", odom_time[len(odom_time)-1])
-
+print("start_time: ", odom_time[0], "stop_time: ", odom_time[len(odom_time)-1])
+print("start_pose: ", odom_x[0], odom_y[0], "stop_pose: ", odom_x[len(odom_time)-1], odom_y[len(odom_time)-1])
 
 
 ##############################################################
@@ -306,6 +306,9 @@ init_w(world)
 plot_obs_plt()
 
 plt.plot(odom_x, odom_y, 'y-', label="gefahrener Weg") #plot trace
+
+plt.plot(odom_x[0], odom_y[0], 'bo', label="Start") #plot start
+plt.plot(odom_x[len(odom_x)-1], odom_y[len(odom_y)-1], 'ro', label="Ziel") #plot goal
 
 plt.title('Fahrt')
 plt.xlabel('x [m]')

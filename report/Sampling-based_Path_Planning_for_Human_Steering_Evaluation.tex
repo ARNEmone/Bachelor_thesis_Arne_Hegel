@@ -126,6 +126,19 @@ Empfehlungen ``Verantwortung in der Wissenschaft'' der Universität Heidelberg be
 Abgabedatum: 30. März 2021
 \newpage
 
+\onehalfspacing
+
+\thispagestyle{empty}
+
+\vspace*{100pt}
+\noindent
+Aus Gründen der besseren Lesbarkeit wird in dieser Arbeit die
+Sprachform des generischen Maskulinums angewendet. Es wird an dieser
+Stelle darauf hingewiesen, dass die ausschließliche Verwendung der
+männlichen Form geschlechtsunabhängig verstanden werden soll.  
+
+\newpage
+
 % Add a brief summary of your topic and contributions (Zusammenfassung) in German *and* in English:
 \chapter*{Zusammenfassung}
 \input{zusammenfassung}
@@ -981,7 +994,7 @@ Die Analyse der Distanz ist in Abbildung \ref{fig:world6_2_1round_newnewTheta_50
 \begin{figure} [h]
    \centering
    \includegraphics[width=0.8\textwidth]{Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png}
-   \caption{Die Veränderung der Distanz im Verlauf der Fahrt. Die Konstanten der Distanzfunktion \ref{eq:distanzfunktion_xyp} wurden hierbei mit $k_{\phi} = 1.2$ und $k_{\delta} = 1$ gewählt. Solange sich die Distanz nicht länger als 0.5 Sekunden erhöhte, wurde der gefahrene Streckenabschnitt als gut bewertet, andernfalls als inadäquat. Die vertikalen Linien markieren die Zeiten, an denen ein Zwischenziel erreicht wurde.}
+   \caption{Die Veränderung der Distanz im Verlauf der Fahrt. Die Konstanten der Distanzfunktion (\ref{eq:distanzfunktion_xyp}) wurden hierbei mit $k_{\phi} = 1.2$ und $k_{\delta} = 1$ gewählt. Solange sich die Distanz nicht länger als 0.5 Sekunden erhöhte, wurde der gefahrene Streckenabschnitt als gut bewertet, andernfalls als inadäquat. Die vertikalen Linien markieren die Zeiten, an denen ein Zwischenziel erreicht wurde.}
    \label{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_dist}
 \end{figure}
 
@@ -1050,6 +1063,50 @@ Es gibt einige weitere Punkte, in denen das Bewertungsverfahren verbessert werde
 \label{anhänge}
 
 Die während der Arbeit generierten Implementierungen sind unter Folgendem Link zu finden: \url{https://github.com/Arne-Hegel/Bachelor_thesis_Arne_Hegel} 
+
+In den folgenden Abbildungen ist die Evaluation der Fahrt mit bewusst inadäquat gefahrenen Streckenabschnitten zu betrachten. Diese konnte aufgrund von Zeitmangel nicht mehr diskutiert werden. Die Fahrt wurde auf einem elektrischen Rollstuhl durchgeführt. Die Karte stellt den Flur eines Bürogebäudes dar. Die Startposition wurde bei $(-4.56, 9.94, 2.1)$ gewählt. Die Wegpunkte $(-14.6, 26.9, 2.1)$, $(-6.7, 31.1, -1.04)$, $(2.5, 14.5, -1.04)$ und $(-5.24, 10.16, 2.1)$ mussten alle drei mal hintereinander abgefahren werden, wodurch sich drei gefahrene Runden ergaben. Für jede Runde wurde eine einzelne Analyse angefertigt. Die Zwischenziele wurden auf einem Graphen mit 5000 Knoten und einem Suchradius von 6 Metern berechnet. Während der Generierung des Graphens wurden die Konstanten der Distanzfunktion (\ref{eq:distanzfunktion_xyp}) mit $k_{\phi} = 1.2$ und $k_{\delta} = 10$ gewählt. Während der Analyse wurden die Konstanten der Distanzfunktion (\ref{eq:distanzfunktion_xyp}) mit $k_{\phi} = 1.2$ und $k_{\delta} = 1$ gewählt. Solange sich die Distanz nicht länger als 0.5 Sekunden erhöhte, wurde der gefahrene Streckenabschnitt als gut bewertet, andernfalls als inadäquat.
+
+\begin{figure}
+   \centering
+   \includegraphics[width=1\textwidth]{Bilder/world7_1round_5000_6_k_delta_1_trace.png}
+   \caption{1. Runde; Der vom Fahrer gefahrene Weg beim Abfahren aller Wegpunkte.}
+   \label{fig:world7_1round_5000_6_k_delta_1_trace}
+\end{figure}
+
+\begin{figure}
+   \centering
+   \includegraphics[width=1\textwidth]{Bilder/world7_1round_5000_6_k_delta_1_dist.png}
+   \caption{1. Runde; Die Veränderung der Distanz im Verlauf der Fahrt.}
+   \label{fig:world7_1round_5000_6_k_delta_1_dist}
+\end{figure}
+
+\begin{figure}
+   \centering
+   \includegraphics[width=1\textwidth]{Bilder/world7_2round_5000_6_k_delta_1_trace.png}
+   \caption{2. Runde; Der vom Fahrer gefahrene Weg beim Abfahren aller Wegpunkte.}
+   \label{fig:world7_2round_5000_6_k_delta_1_trace}
+\end{figure}
+
+\begin{figure}
+   \centering
+   \includegraphics[width=1\textwidth]{Bilder/world7_2round_5000_6_k_delta_1_dist.png}
+   \caption{2. Runde; Die Veränderung der Distanz im Verlauf der Fahrt.}
+   \label{fig:world7_2round_5000_6_k_delta_1_dist}
+\end{figure}
+
+\begin{figure}
+   \centering
+   \includegraphics[width=1\textwidth]{Bilder/world7_3round_5000_6_k_delta_1_trace.png}
+   \caption{3. Runde; Der vom Fahrer gefahrene Weg beim Abfahren aller Wegpunkte.}
+   \label{fig:world7_3round_5000_6_k_delta_1_trace}
+\end{figure}
+
+\begin{figure}
+   \centering
+   \includegraphics[width=1\textwidth]{Bilder/world7_3round_5000_6_k_delta_1_dist.png}
+   \caption{3. Runde; Die Veränderung der Distanz im Verlauf der Fahrt.}
+   \label{fig:world7_3round_5000_6_k_delta_1_dist}
+\end{figure}
 
 % References (Literaturverzeichnis):
 % a) Style (with abbreviations: use alpha):

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.17)  27 MAR 2021 13:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.17)  27 MAR 2021 17:32
 entering extended mode
 **./Sampling-based_Path_Planning_for_Human_Steering_Evaluation.tex
 (Sampling-based_Path_Planning_for_Human_Steering_Evaluation.tex
@@ -680,23 +680,23 @@ File: uesvect.fd
 
 
 
-{/home/arne/.miktex/texmfs/data/pdftex/config/pdftex.map}] [2]
+{/home/arne/.miktex/texmfs/data/pdftex/config/pdftex.map}] [2] [3]
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-30.
+43.
 
 (/usr/local/share/miktex-texmf/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) (zusammenfassung.tex)
-[3
+[4
 
-] (abstract.tex) [4
+] (abstract.tex) [5
 
 ]
 (Sampling-based_Path_Planning_for_Human_Steering_Evaluation.toc)
 \tf@toc=\write4
 \openout4 = `Sampling-based_Path_Planning_for_Human_Steering_Evaluation.toc'.
 
- [5
+ [6
 
 ]
 chapter 1.
@@ -720,19 +720,19 @@ Class scrreprt Warning: \float@addtolists detected!
 
 
 ] [2]
-Overfull \hbox (3.15233pt too wide) in paragraph at lines 200--201
+Overfull \hbox (3.15233pt too wide) in paragraph at lines 213--214
 \T1/cmr/m/n/12 ti-ma-len Pfad an-nä-hert [[]]. Zu-dem ha-ben [[]]
  []
 
-<Bilder/nicht-holonomer_RRT_star_Park_2015.png, id=114, 1161.33875pt x 727.7187
+<Bilder/nicht-holonomer_RRT_star_Park_2015.png, id=118, 1161.33875pt x 727.7187
 5pt>
 File: Bilder/nicht-holonomer_RRT_star_Park_2015.png Graphic file (type png)
 <use Bilder/nicht-holonomer_RRT_star_Park_2015.png>
 Package pdftex.def Info: Bilder/nicht-holonomer_RRT_star_Park_2015.png  used on
- input line 205.
+ input line 218.
 (pdftex.def)             Requested size: 357.69322pt x 224.13583pt.
 Class scrreprt Info: Workaround for not recommended usage of \\ or
-(scrreprt)           \newlinein caption text  on input line 206.
+(scrreprt)           \newlinein caption text  on input line 219.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -742,64 +742,64 @@ chapter 2.
 
 ]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 278.
+put line 291.
  [7] [8] [9] [10] [11]
-<Bilder/polarkoordinaten_fahrzeug_park_2016.png, id=280, 708.6475pt x 442.65375
+<Bilder/polarkoordinaten_fahrzeug_park_2016.png, id=284, 708.6475pt x 442.65375
 pt>
 File: Bilder/polarkoordinaten_fahrzeug_park_2016.png Graphic file (type png)
 <use Bilder/polarkoordinaten_fahrzeug_park_2016.png>
 Package pdftex.def Info: Bilder/polarkoordinaten_fahrzeug_park_2016.png  used o
-n input line 498.
+n input line 511.
 (pdftex.def)             Requested size: 357.69322pt x 223.43367pt.
 Class scrreprt Info: Workaround for not recommended usage of \\ or
-(scrreprt)           \newlinein caption text  on input line 499.
+(scrreprt)           \newlinein caption text  on input line 512.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12] [13 <./Bilder/polarkoordinaten_fahrzeug_park_2016.png>]
-<Bilder/graceful_motion_examples_park_2016.png, id=311, 1088.065pt x 1891.065pt
+<Bilder/graceful_motion_examples_park_2016.png, id=316, 1088.065pt x 1891.065pt
 >
 File: Bilder/graceful_motion_examples_park_2016.png Graphic file (type png)
 <use Bilder/graceful_motion_examples_park_2016.png>
 Package pdftex.def Info: Bilder/graceful_motion_examples_park_2016.png  used on
- input line 565.
+ input line 578.
 (pdftex.def)             Requested size: 312.979pt x 543.9511pt.
 Class scrreprt Info: Workaround for not recommended usage of \\ or
-(scrreprt)           \newlinein caption text  on input line 566.
+(scrreprt)           \newlinein caption text  on input line 579.
  [14] [15 <./Bilder/graceful_motion_examples_park_2016.png>]
-<Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.png, id=332, 418.56375pt
+<Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.png, id=336, 418.56375pt
  x 217.81375pt>
 File: Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.png Graphic file (t
 ype png)
 <use Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.png>
 Package pdftex.def Info: Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.
-png  used on input line 582.
+png  used on input line 595.
 (pdftex.def)             Requested size: 223.5574pt x 116.33476pt.
  [16 <./Bilder/nicht_holonome_zwangsbeschraenkungen_park_2015.png>]
-<Bilder/vektorfelder_l_minus_park_2016.png, id=356, 416.55624pt x 382.42876pt>
+<Bilder/vektorfelder_l_minus_park_2016.png, id=360, 416.55624pt x 382.42876pt>
 File: Bilder/vektorfelder_l_minus_park_2016.png Graphic file (type png)
 <use Bilder/vektorfelder_l_minus_park_2016.png>
 Package pdftex.def Info: Bilder/vektorfelder_l_minus_park_2016.png  used on inp
-ut line 603.
+ut line 616.
 (pdftex.def)             Requested size: 268.27162pt x 246.30577pt.
 Class scrreprt Info: Workaround for not recommended usage of \\ or
-(scrreprt)           \newlinein caption text  on input line 604.
+(scrreprt)           \newlinein caption text  on input line 617.
  [17 <./Bilder/vektorfelder_l_minus_park_2016.png>] [18]
 chapter 3.
-<Bilder/world4_map.png, id=389, 1339.1631pt x 716.1957pt>
+<Bilder/world4_map.png, id=393, 1339.1631pt x 716.1957pt>
 File: Bilder/world4_map.png Graphic file (type png)
 <use Bilder/world4_map.png>
-Package pdftex.def Info: Bilder/world4_map.png  used on input line 675.
+Package pdftex.def Info: Bilder/world4_map.png  used on input line 688.
 (pdftex.def)             Requested size: 312.979pt x 167.3771pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Bilder/world4_analysis_cost.png, id=390, 530.4618pt x 299.9205pt>
+<Bilder/world4_analysis_cost.png, id=394, 530.4618pt x 299.9205pt>
 File: Bilder/world4_analysis_cost.png Graphic file (type png)
 <use Bilder/world4_analysis_cost.png>
-Package pdftex.def Info: Bilder/world4_analysis_cost.png  used on input line 68
-3.
+Package pdftex.def Info: Bilder/world4_analysis_cost.png  used on input line 69
+6.
 (pdftex.def)             Requested size: 312.979pt x 176.96071pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -807,70 +807,70 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [19
 
 ]
-<Bilder/world4_analysis_time_graph.png, id=408, 530.4618pt x 297.0297pt>
+<Bilder/world4_analysis_time_graph.png, id=413, 530.4618pt x 297.0297pt>
 File: Bilder/world4_analysis_time_graph.png Graphic file (type png)
 <use Bilder/world4_analysis_time_graph.png>
 Package pdftex.def Info: Bilder/world4_analysis_time_graph.png  used on input l
-ine 697.
+ine 710.
 (pdftex.def)             Requested size: 312.979pt x 175.25505pt.
  [20 <./Bilder/world4_map.png> <./Bilder/world4_analysis_cost.png>]
 [21 <./Bilder/world4_analysis_time_graph.png>] [22]
-<Bilder/kin_update_example.png, id=462, 462.528pt x 346.896pt>
+<Bilder/kin_update_example.png, id=466, 462.528pt x 346.896pt>
 File: Bilder/kin_update_example.png Graphic file (type png)
 <use Bilder/kin_update_example.png>
-Package pdftex.def Info: Bilder/kin_update_example.png  used on input line 755.
+Package pdftex.def Info: Bilder/kin_update_example.png  used on input line 768.
 
 (pdftex.def)             Requested size: 357.69322pt x 268.28053pt.
 Class scrreprt Info: Workaround for not recommended usage of \\ or
-(scrreprt)           \newlinein caption text  on input line 756.
+(scrreprt)           \newlinein caption text  on input line 769.
  [23 <./Bilder/kin_update_example.png>]
-<Bilder/world4_analyse_trace_r_s_40.png, id=478, 1339.1631pt x 716.1957pt>
+<Bilder/world4_analyse_trace_r_s_40.png, id=482, 1339.1631pt x 716.1957pt>
 File: Bilder/world4_analyse_trace_r_s_40.png Graphic file (type png)
 <use Bilder/world4_analyse_trace_r_s_40.png>
 Package pdftex.def Info: Bilder/world4_analyse_trace_r_s_40.png  used on input 
-line 772.
+line 785.
 (pdftex.def)             Requested size: 447.11482pt x 239.12108pt.
 Class scrreprt Info: Workaround for not recommended usage of \\ or
-(scrreprt)           \newlinein caption text  on input line 773.
+(scrreprt)           \newlinein caption text  on input line 786.
 Class scrreprt Info: Workaround for not recommended usage of \\ or
-(scrreprt)           \newlinein caption text  on input line 773.
+(scrreprt)           \newlinein caption text  on input line 786.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Bilder/world4_map_with_goals.png, id=488, 1339.1631pt x 716.1957pt>
+<Bilder/world4_map_with_goals.png, id=492, 1339.1631pt x 716.1957pt>
 File: Bilder/world4_map_with_goals.png Graphic file (type png)
 <use Bilder/world4_map_with_goals.png>
 Package pdftex.def Info: Bilder/world4_map_with_goals.png  used on input line 7
-84.
+97.
 (pdftex.def)             Requested size: 447.11482pt x 239.12108pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [24] [25 <./Bilder/world4_analyse_trace_r_s_40.png>] [26 <./Bilder/world4_map_w
 ith_goals.png>]
-<Bilder/theta.png, id=519, 462.528pt x 346.896pt>
+<Bilder/theta.png, id=523, 462.528pt x 346.896pt>
 File: Bilder/theta.png Graphic file (type png)
 <use Bilder/theta.png>
-Package pdftex.def Info: Bilder/theta.png  used on input line 832.
+Package pdftex.def Info: Bilder/theta.png  used on input line 845.
 (pdftex.def)             Requested size: 312.979pt x 234.74281pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Bilder/dreieck_theta.png, id=521, 734.745pt x 283.65974pt>
+<Bilder/dreieck_theta.png, id=525, 734.745pt x 283.65974pt>
 File: Bilder/dreieck_theta.png Graphic file (type png)
 <use Bilder/dreieck_theta.png>
-Package pdftex.def Info: Bilder/dreieck_theta.png  used on input line 843.
+Package pdftex.def Info: Bilder/dreieck_theta.png  used on input line 856.
 (pdftex.def)             Requested size: 357.69322pt x 138.0942pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [27]
-<Bilder/start_stop_theta.png, id=539, 830.50275pt x 221.02576pt>
+<Bilder/start_stop_theta.png, id=543, 830.50275pt x 221.02576pt>
 File: Bilder/start_stop_theta.png Graphic file (type png)
 <use Bilder/start_stop_theta.png>
-Package pdftex.def Info: Bilder/start_stop_theta.png  used on input line 881.
+Package pdftex.def Info: Bilder/start_stop_theta.png  used on input line 894.
 (pdftex.def)             Requested size: 357.69322pt x 95.19435pt.
 
 
@@ -882,62 +882,62 @@ chapter 4.
 [30
 
 ]
-<Bilder/world5_map.png, id=562, 462.528pt x 346.896pt>
+<Bilder/world5_map.png, id=566, 462.528pt x 346.896pt>
 File: Bilder/world5_map.png Graphic file (type png)
 <use Bilder/world5_map.png>
-Package pdftex.def Info: Bilder/world5_map.png  used on input line 912.
+Package pdftex.def Info: Bilder/world5_map.png  used on input line 925.
 (pdftex.def)             Requested size: 357.69322pt x 268.28053pt.
-<Bilder/world5_trace_2000_4_k_delta_1.png, id=565, 648.2619pt x 562.9833pt>
+<Bilder/world5_trace_2000_4_k_delta_1.png, id=569, 648.2619pt x 562.9833pt>
 File: Bilder/world5_trace_2000_4_k_delta_1.png Graphic file (type png)
 <use Bilder/world5_trace_2000_4_k_delta_1.png>
 Package pdftex.def Info: Bilder/world5_trace_2000_4_k_delta_1.png  used on inpu
-t line 926.
+t line 939.
 (pdftex.def)             Requested size: 357.69322pt x 310.63826pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Bilder/world5_dist_2000_4_k_delta_1.png, id=569, 514.5624pt x 299.1978pt>
+<Bilder/world5_dist_2000_4_k_delta_1.png, id=573, 514.5624pt x 299.1978pt>
 File: Bilder/world5_dist_2000_4_k_delta_1.png Graphic file (type png)
 <use Bilder/world5_dist_2000_4_k_delta_1.png>
 Package pdftex.def Info: Bilder/world5_dist_2000_4_k_delta_1.png  used on input
- line 936.
+ line 949.
 (pdftex.def)             Requested size: 357.69322pt x 207.99435pt.
 [31 <./Bilder/world5_map.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [32 <./Bilder/world5_trace_2000_4_k_delta_1.png>]
-<Bilder/world6_map.png, id=590, 551.4201pt x 666.3294pt>
+<Bilder/world6_map.png, id=594, 551.4201pt x 666.3294pt>
 File: Bilder/world6_map.png Graphic file (type png)
 <use Bilder/world6_map.png>
-Package pdftex.def Info: Bilder/world6_map.png  used on input line 962.
+Package pdftex.def Info: Bilder/world6_map.png  used on input line 975.
 (pdftex.def)             Requested size: 357.69322pt x 432.23459pt.
  [33 <./Bilder/world5_dist_2000_4_k_delta_1.png>] [34 <./Bilder/world6_map.png>
 ]
-<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png, id=605, 645.3711
+<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png, id=609, 645.3711
 pt x 320.1561pt>
 File: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png Graphic file
  (type png)
 <use Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png>
 Package pdftex.def Info: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_di
-st.png  used on input line 983.
+st.png  used on input line 996.
 (pdftex.def)             Requested size: 357.69322pt x 177.44936pt.
-<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png, id=608, 512.3943p
+<Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png, id=612, 512.3943p
 t x 583.2189pt>
 File: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png Graphic file 
 (type png)
 <use Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png>
 Package pdftex.def Info: Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_ma
-p.png  used on input line 992.
+p.png  used on input line 1005.
 (pdftex.def)             Requested size: 357.69322pt x 407.14696pt.
  [35 <./Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_dist.png>] [36 <./B
 ilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png>]
-<Bilder/world6_calced_trace_partition.png, id=629, 582.175pt x 419.5675pt>
+<Bilder/world6_calced_trace_partition.png, id=633, 582.175pt x 419.5675pt>
 File: Bilder/world6_calced_trace_partition.png Graphic file (type png)
 <use Bilder/world6_calced_trace_partition.png>
 Package pdftex.def Info: Bilder/world6_calced_trace_partition.png  used on inpu
-t line 1006.
+t line 1019.
 (pdftex.def)             Requested size: 357.69322pt x 257.79239pt.
  [37 <./Bilder/world6_calced_trace_partition.png>]
 chapter 5.
@@ -946,41 +946,85 @@ chapter 5.
 ] [39]
 chapter 6.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-052.
+065.
 (/usr/local/share/miktex-texmf/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
+<Bilder/world7_1round_5000_6_k_delta_1_trace.png, id=654, 578.16pt x 687.2877pt
+>
+File: Bilder/world7_1round_5000_6_k_delta_1_trace.png Graphic file (type png)
+<use Bilder/world7_1round_5000_6_k_delta_1_trace.png>
+Package pdftex.def Info: Bilder/world7_1round_5000_6_k_delta_1_trace.png  used 
+on input line 1071.
+(pdftex.def)             Requested size: 447.11482pt x 531.50986pt.
+<Bilder/world7_1round_5000_6_k_delta_1_dist.png, id=655, 800.0289pt x 360.6273p
+t>
+File: Bilder/world7_1round_5000_6_k_delta_1_dist.png Graphic file (type png)
+<use Bilder/world7_1round_5000_6_k_delta_1_dist.png>
+Package pdftex.def Info: Bilder/world7_1round_5000_6_k_delta_1_dist.png  used o
+n input line 1078.
+(pdftex.def)             Requested size: 447.11482pt x 201.5482pt.
+<Bilder/world7_2round_5000_6_k_delta_1_trace.png, id=656, 565.8741pt x 686.565p
+t>
+File: Bilder/world7_2round_5000_6_k_delta_1_trace.png Graphic file (type png)
+<use Bilder/world7_2round_5000_6_k_delta_1_trace.png>
+Package pdftex.def Info: Bilder/world7_2round_5000_6_k_delta_1_trace.png  used 
+on input line 1085.
+(pdftex.def)             Requested size: 447.11482pt x 542.49565pt.
+<Bilder/world7_2round_5000_6_k_delta_1_dist.png, id=657, 826.0461pt x 346.896pt
+>
+File: Bilder/world7_2round_5000_6_k_delta_1_dist.png Graphic file (type png)
+<use Bilder/world7_2round_5000_6_k_delta_1_dist.png>
+Package pdftex.def Info: Bilder/world7_2round_5000_6_k_delta_1_dist.png  used o
+n input line 1092.
+(pdftex.def)             Requested size: 447.11482pt x 187.76567pt.
+<Bilder/world7_3round_5000_6_k_delta_1_trace.png, id=658, 562.2606pt x 682.2288
+pt>
+File: Bilder/world7_3round_5000_6_k_delta_1_trace.png Graphic file (type png)
+<use Bilder/world7_3round_5000_6_k_delta_1_trace.png>
+Package pdftex.def Info: Bilder/world7_3round_5000_6_k_delta_1_trace.png  used 
+on input line 1099.
+(pdftex.def)             Requested size: 447.11482pt x 542.51505pt.
+<Bilder/world7_3round_5000_6_k_delta_1_dist.png, id=659, 787.743pt x 346.896pt>
+
+File: Bilder/world7_3round_5000_6_k_delta_1_dist.png Graphic file (type png)
+<use Bilder/world7_3round_5000_6_k_delta_1_dist.png>
+Package pdftex.def Info: Bilder/world7_3round_5000_6_k_delta_1_dist.png  used o
+n input line 1106.
+(pdftex.def)             Requested size: 447.11482pt x 196.89644pt.
+
 (Sampling-based_Path_Planning_for_Human_Steering_Evaluation.bbl [40
 
-] [41
+] [41 <./Bilder/world7_1round_5000_6_k_delta_1_trace.png>] [42 <./Bilder/world7
+_1round_5000_6_k_delta_1_dist.png>] [43 <./Bilder/world7_2round_5000_6_k_delta_
+1_trace.png>] [44 <./Bilder/world7_2round_5000_6_k_delta_1_dist.png>] [45 <./Bi
+lder/world7_3round_5000_6_k_delta_1_trace.png>] [46 <./Bilder/world7_3round_500
+0_6_k_delta_1_dist.png>] [47
 
-])
-[42]
-
-LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     1064.
-
-
-LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     1064.
-
+]) [48]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     1064.
+(LaTeX3)     1121.
 
- (Sampling-based_Path_Planning_for_Human_Steering_Evaluation.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     1121.
 
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     1121.
+
+
+(Sampling-based_Path_Planning_for_Human_Steering_Evaluation.aux)
 Package rerunfilecheck Info: File `Sampling-based_Path_Planning_for_Human_Steer
 ing_Evaluation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14203 strings out of 479617
- 238680 string characters out of 2872145
- 685679 words of memory out of 3000000
- 30877 multiletter control sequences out of 15000+200000
+ 14258 strings out of 479617
+ 240784 string characters out of 2872145
+ 686223 words of memory out of 3000000
+ 30913 multiletter control sequences out of 15000+200000
  425617 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,15n,116p,10655b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1012,9 +1056,9 @@ f/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/share/miktex-texmf/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb></home/arne/.miktex/texmfs/install/fo
 nts/type1/public/esvect/vect10.pfb>
 Output written on Sampling-based_Path_Planning_for_Human_Steering_Evaluation.pd
-f (47 pages, 1572370 bytes).
+f (54 pages, 1819975 bytes).
 PDF statistics:
- 1386 PDF objects out of 1440 (max. 8388607)
- 221 named destinations out of 1000 (max. 500000)
- 298 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1440 PDF objects out of 1440 (max. 8388607)
+ 234 named destinations out of 1000 (max. 500000)
+ 328 words of extra memory for PDF output out of 10000 (max. 10000000)
 

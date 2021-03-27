@@ -28,9 +28,3 @@ The evaluation is done via the script scripts/analyze_drive.py. The parameters c
 
 ### Evaluation of the rosbag record.bag
 To look at the evaluations in the rosbag record.bag, the rosbag_analysis/analyse_rosbag.py script can be used. In the script in the "Global Parameters" area, the map and the rosbag to be analyzed can be specified. If the parameter world=None is set, no map is needed and used.
-
-## Technologies
-A list of technologies used within the project:
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
