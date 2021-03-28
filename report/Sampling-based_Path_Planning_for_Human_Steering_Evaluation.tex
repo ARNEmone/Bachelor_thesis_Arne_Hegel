@@ -187,13 +187,13 @@ Aufgrund von verbessertem sozialen Umfeld und voranschreitender Medizin wird uns
 
 %In diesem Abschnitt sollen neben den Herausforderungen und der Problemstellung insbesondere die Ziele der Arbeit beschrieben werden. 
 
-Im Labor des Instituts für Technische Informatik der Universität Heidelberg wurde ein elektronischer Rollstuhl mit Sensoren ausgestattet, sodass dessen 3D-Position $ (x, y, \varphi) $\ beim Fahren ermittelt werden kann. Zusätzlich können durch Laserscanner und Ultraschall - Sensoren die Abstände zu Objekten in der Umgebung gemessen werden. Die Variablen $ (x, y) $\ beschreiben hierbei den Schnittpunkt der Koordinaten, an dem sich der Rollstuhl befindet und $ \varphi $\ dessen Orientierung. Linear- und Rotationsgeschwindigkeit können in Form von $ (v, \omega) $\ über einen Joystick vom Nutzer eingegeben werden. Die Sensor- und Eingabedaten können während des Fahrens sowohl online als auch offline verarbeitet und gespeichert werden. Mit Hilfe der Sensordaten kann so eine Umgebung abgefahren, erfasst und gespeichert werden, wobei hierbei nur statische Objekte erfasst werden sollten, um später mit der Karte in dieser statischen Umgebung navigieren zu können.
+Im Labor des Instituts für Technische Informatik der Universität Heidelberg wurde ein elektrischer Rollstuhl mit Sensoren ausgestattet, sodass dessen 3D-Position $ (x, y, \varphi) $\ beim Fahren ermittelt werden kann. Zusätzlich können durch Laserscanner und Ultraschall - Sensoren die Abstände zu Objekten in der Umgebung gemessen werden. Die Variablen $ (x, y) $\ beschreiben hierbei den Schnittpunkt der Koordinaten, an dem sich der Rollstuhl befindet und $ \varphi $\ dessen Orientierung. Linear- und Rotationsgeschwindigkeit können in Form von $ (v, \omega) $\ über einen Joystick vom Nutzer eingegeben werden. Die Sensor- und Eingabedaten können während des Fahrens sowohl online als auch offline verarbeitet und gespeichert werden. Mit Hilfe der Sensordaten kann so eine Umgebung abgefahren, erfasst und gespeichert werden, wobei hierbei nur statische Objekte erfasst werden sollten, um später mit der Karte in dieser statischen Umgebung navigieren zu können.
 
 Während der Rollstuhl zu einer Zielposition gesteuert wird, kann also seine 3D-Position ermittelt werden. Ist das Ziel bekannt, können die Fortschritte des Fahrers fortlaufend evaluiert werden.
 
-Ziel der Arbeit ist es, unter Verwendung einer Start- und einer Zielposition automatisch einen Weg mit Zwischenzielen zu berechnen, welche dann alle nacheinander auf einem kollisionsfreien Pfad abgefahren werden. Die Pfade zwischen den Zwischenzielen sollen zudem unter der Annahme berechnet werden, dass der Rollstuhl, welcher den Pfad abfahren soll, ein nicht-holonomes System ist. Es ist dem Rollstuhl also beispielsweise nicht möglich seitlich zu fahren.
+Ziel der Arbeit ist es, unter Verwendung einer Start- und einer Zielposition automatisch einen Weg mit Zwischenzielen zu berechnen, welche dann alle nacheinander auf einem kollisionsfreien Pfad abgefahren werden könnten. Die Distanz vom Rollstuhl zum Ziel entlang des berechneten Pfades dient dazu den Navigationsfortschritt zu bewerten. Die Pfade zwischen den Zwischenzielen sollen unter der Annahme berechnet werden, dass der Rollstuhl, welcher den Pfad abfahren soll, ein nicht-holonomes System ist. Es ist dem Rollstuhl also beispielsweise nicht möglich seitlich zu fahren.
 
-Aufgrund der Eigenschaften eines nicht-holonomen Systems (z.B. Unfähigkeit von Rollstühlen, seitwärts zu fahren) muss ein Distanzmaß verwendet werden, welches diese Eigenschaften berücksichtigt und die Distanz des zuvor erwähnten berechneten Pfades widerspiegelt. Da sich der Rollstuhl kontinuierlich fortbewegt, und sich somit die Navigationsaufgabe mit jeder neuen Position fortlaufend ändert, muss die verbleibende Distanz zur Zielposition kontinuierlich aktualisiert werden. Die Distanz von der aktuellen Position des Rollstuhls bis zur Zielposition berechnet sich hierbei so, dass die Distanz von der Rollstuhlposition zum nächsten Zwischenziel berechnet wird und auf diese Distanz die Distanzen zwischen den folgenden Zwischenzielen bis zum endgültigen Ziel aufaddiert werden.
+Aufgrund der Eigenschaften eines nicht-holonomen Systems (z.B. Unfähigkeit von Rollstühlen, seitwärts zu fahren) muss ein Distanzmaß verwendet werden, welches diese Eigenschaften berücksichtigt und die Distanz des zuvor erwähnten berechneten Pfades widerspiegelt. Da sich der Rollstuhl kontinuierlich fortbewegt, und sich somit die Navigationsaufgabe mit jeder neuen Position fortlaufend ändert, muss die verbleibende Distanz zur Zielposition kontinuierlich aktualisiert werden.
 
 Zur Bewertung des Fahrverhaltens wird das nicht-holonome Distanzmaß verwendet, welches sich bei korrektem Fahrverhalten mit konstanter Geschwindigkeit linear bis zu einer Distanz von null verringert. Bei unpassenden Eingaben bezüglich des Navigationsfortschritts soll das System eine verringerte Reduzierung bis zu einem Anstieg der Restdistanz erkennen.
 
@@ -204,13 +204,14 @@ Das Problem kann in zwei Teile unterteilt werden.
 
 \begin{enumerate}
 \item Zunächst muss, unter Zuhilfenahme einer \textit{occupancy grid map}\footnote{Dies stellt eine 2-D-Rasterkarte dar, in der jede Zelle die Belegungswahrscheinlichkeit darstellt.} innerhalb einer statischen Umgebung, ein Weg von einer gegebenen Startposition zu einer gegebenen Zielposition berechnet werden. Dieser Weg soll aus Zwischenzielen bestehen, welche nacheinander auf kurzen und intuitiven Pfaden erreicht werden können. Die Bezeichnung "kurz" bezieht sich hier auf ein nicht-holonomes Distanzmaß zwischen zwei 3D-Positionen $(x, y, \varphi)$, welches in Gleichung (\ref{eq:distanzfunktion_xyp}) beschrieben ist \cite{park_feedback_2015}.
-\item Der zweite Teil des Problems besteht darin, unter Verwendung des zuvor berechneten Weges mit Zwischenzielen, eine Methode zu erarbeiten, die es ermöglicht, das Fahrverhalten eines Rollstuhlfahrers auf diesem Weg zu evaluieren. Die Bewertung kann mit Hilfe einer nicht-holonomen Distanzfunktion geschehen, welche die Distanz der aktuellen Position zum nächsten Zwischenziel und zwischen allen folgenden Zwischenzielen berechnen kann. Die Summe dieser Teildistanzen ergibt eine Gesamtdistanz, die zur Bewertung verwendet werden kann. 
+
+\item Der zweite Teil des Problems besteht darin, unter Verwendung des zuvor berechneten Weges aus Zwischenzielen, eine Methode zu erarbeiten, die es ermöglicht, das Steuerverhalten eines Rollstuhlfahrers auf diesem Weg zu evaluieren. Die Bewertung kann mit Hilfe einer nicht-holonomen Distanzfunktion geschehen, welche die Distanz der aktuellen Position zum nächsten Zwischenziel und zwischen allen folgenden Zwischenzielen berechnen kann. Die Summe dieser Teildistanzen ergibt eine Gesamtdistanz, die zur Bewertung verwendet werden kann. 
 \end{enumerate}
 
 \section{Lösungsansatz}
 \label{sec:loesungsansatz}
 
-Um einen Weg zwischen einer Start- und einer Zielposition zu berechnen, wird zunächst ein Wegfindungsalgorithmus benötigt. Diverse Wegfindungsalgorithmen, welche eine Distanz über einen navigierbaren Bereich mit nicht-holonomen Navigationsbeschränkungen berechnen, wurden schon früher untersucht \cite{konolige_gradient_2000}, \cite{park_feedback_2015}. Da für unser Distanzmaß Zwischenziele benötigt werden, bietet sich insbesondere hier ein stichprobenbasierter Wegfindungsalgorithmus an. Der optimierte stichprobenbasierte Wegfindungsalgorithmus des \textit{Rapidly Exploring Random Tree} \textit{RRT*} ist hierfür besonders gut geeignet, da er sich mit steigender Anzahl der Stichproben asymptotisch dem optimalen Pfad annähert \cite{park_feedback_2015}. Zudem haben \cite{park_feedback_2015} eine Möglichkeit gefunden, Zwischenziele mit nicht-holonomen Pfaden in einen RRT* einzufügen, indem sie eine Distanzfunktion für zwei 3D-Positionen $ (x, y, \varphi) $\ definierten, welche die Distanz unter nicht-holonomen Zwangsbedingungen korrekt wiedergibt. Ein Beispielergebnis des RRT* von \cite{park_feedback_2015} ist in Abbildung \ref{fig:nicht-holonomer_RRT_star_von_park_2015} dargestellt. Auf Grundlage dieses Graphens ist eine wiederholte Neuplanung für alle Positionen möglich, um die Gesamtdistanz zu aktualisieren. Indem die berechneten Distanzwerte nach jeder Berechnung gespeichert und verglichen werden, ist eine Bewertung des Fahrtfortschritts möglich.
+Um einen Weg zwischen einer Start- und einer Zielposition zu berechnen, wird zunächst ein Wegfindungsalgorithmus benötigt. Diverse Wegfindungsalgorithmen, welche eine Distanz über einen navigierbaren Bereich mit nicht-holonomen Navigationsbeschränkungen berechnen, wurden schon früher untersucht \cite{konolige_gradient_2000}, \cite{park_feedback_2015}. Da für unser Distanzmaß Zwischenziele benötigt werden, bietet sich insbesondere hier ein stichprobenbasierter Wegfindungsalgorithmus an. Der optimierte stichprobenbasierte Wegfindungsalgorithmus des \textit{Rapidly Exploring Random Tree} (\textit{RRT*}) ist hierfür besonders gut geeignet, da er sich mit steigender Anzahl der Stichproben asymptotisch dem optimalen Pfad annähert \cite{park_feedback_2015}. \cite{park_feedback_2015} haben zudem eine Möglichkeit gefunden, Zwischenziele mit nicht-holonomen Pfaden in einen RRT* einzufügen, indem sie eine Distanzfunktion für zwei 3D-Positionen $ (x, y, \varphi) $\ definierten, welche die Distanz unter nicht-holonomen Zwangsbedingungen korrekt wiedergibt. Ein Beispielergebnis des RRT* von \cite{park_feedback_2015} ist in Abbildung \ref{fig:nicht-holonomer_RRT_star_von_park_2015} dargestellt. Auf Grundlage dieses Graphens ist eine wiederholte Neuplanung für alle Positionen möglich, um den zu fahrenden Weg und die Gesamtdistanz zu aktualisieren. Die Distanz von der aktuellen Position des Rollstuhls bis zur Zielposition entlang eines Pfades aus Zwischenzielen berechnet sich hierbei so, dass die Distanz von der Rollstuhlposition zum nächsten Zwischenziel berechnet wird und auf diese Distanz die Distanzen zwischen den folgenden Zwischenzielen bis zum endgültigen Ziel aufaddiert werden. Indem die berechneten Gesamtdistanzen nach jeder Berechnung gespeichert und verglichen werden, ist eine Bewertung des Navigationsfortschritts möglich.
 
 % Abbildung: nicht-holonomer RRT* von park_2015
 \begin{figure}[h]
@@ -220,7 +221,7 @@ Um einen Weg zwischen einer Start- und einer Zielposition zu berechnen, wird zun
    \label{fig:nicht-holonomer_RRT_star_von_park_2015}
 \end{figure}
 
-Der Pfad von der Startposition zur Zielposition wird als eine Liste von Zwischenzielen ausgegeben. Die Distanzfunktion von \cite{park_feedback_2015} stellt einen Übergang zwischen zwei Zwischenzielen dar, welcher von einem nicht-holonomen System, wie dem Rollstuhl, in glatten Bewegungen abgefahren werden kann. Zusätzlich können die Kosten für lineare und Winkelbeschleunigung berücksichtigt werden, um die Bewegungsqualität zu sichern.
+Der Pfad von der Startposition zur Zielposition wird als eine Liste von Zwischenzielen ausgegeben. Die Distanzfunktion von \cite{park_feedback_2015} stellt einen Übergang zwischen zwei Zwischenzielen dar, welcher von einem nicht-holonomen System, wie dem Rollstuhl, mit intuitiven Bewegungen abgefahren werden kann. Zusätzlich können die Kosten für lineare und Winkelbeschleunigung berücksichtigt werden, um die Bewegungsqualität zu sichern.
 
 \section{Aufbau der Arbeit}
 \label{sec:aufbau_der_arbeit}
@@ -229,7 +230,7 @@ Der Pfad von der Startposition zur Zielposition wird als eine Liste von Zwischen
 
 Für Programme mit der Aufgabe, das Fahrverhalten von Rollstuhlfahrern mit einem Distanzmaß zu bewerten, ist es notwendig, einen navigierbaren Weg zu berechnen, welcher einem sicheren, schnellen und intuitiven Fahrverhalten entspricht.
 
-In dieser Arbeit wird gezeigt, dass ein Weg mit entsprechenden Eigenschaften berechnet werden kann und auf dessen Grundlage eine Bewertung des Fahrverhaltens stattfinden kann. Zudem wird gezeigt, dass diese Bewertung während der Fahrt stattfinden kann.
+In dieser Arbeit wird gezeigt, dass ein Weg mit entsprechenden Eigenschaften berechnet werden kann und auf dessen Grundlage eine Bewertung des Steuerverhaltens stattfinden kann. Zudem wird gezeigt, dass diese Bewertung während der Fahrt stattfinden kann.
 
 Aufbau der Arbeit:
 
@@ -246,7 +247,7 @@ Aufbau der Arbeit:
 	Es wird die Implementierung eines RRT* Algorithmus mit nicht-holonomer Distanzfunktion beschrieben, welcher einen Pfad für nicht-holonome Systeme berechnet. Dabei wird der Pfad kollisionsfrei, schnell, intuitiv und navigierbar sein \cite{park_graceful_2016}. Dass der Pfad kollisionsfrei ist, wird hierbei sichergestellt, indem der berechnete Pfad an bestimmten Punkten in regelmäßigen Abständen auf eine Mindestentfernung zu allen Objekten überprüft wird. }
 	
 	\item{Bewertung menschlichen Steuerverhaltens (Kapitel \ref{sec:bewertung_steuerverhalten}) \\
-	Das menschliche Steuerverhalten wird mithilfe der Distanz zu einem vorher definierten Ziel bewertet. Die Distanz berechnet man hier mit dem in Kapitel \ref{sec:implementierung_RRT_star} entworfenen Algorithmus und dessen ausgegebenen Pfad berechnet. Nach Aktualisierungen der Position des Rollstuhls wird die Distanz auf Grundlage des zuvor schon berechneten Pfades aktualisiert und gespeichert. Daraufhin ist ein Vergleich mit zuvor gemessenen Distanzen möglich, der eine Auskunft über das Steuerverhalten des Fahrers gibt. }
+	Das menschliche Steuerverhalten wird mithilfe der Distanz zu einem vorher definierten Ziel bewertet. Die Distanz berechnet man hier mit dem in Kapitel \ref{sec:implementierung_RRT_star} entworfenen Algorithmus und dessen ausgegebenen Pfad. Nach Aktualisierungen der Position des Rollstuhls wird die Distanz auf Grundlage des zuvor schon berechneten Pfades aktualisiert und gespeichert. Daraufhin ist ein Vergleich mit zuvor gemessenen Distanzen möglich, der eine Auskunft über das Steuerverhalten des Fahrers gibt. }
 	
 	\end{itemize}	
 	
@@ -318,7 +319,7 @@ Zu Beginn werden die geschätzten Kosten $h$ aller Knoten zum Ziel berechnet, wob
 \label{eq:calc_all_h}
 \end{align}
 
-Zudem wird der Startknoten, welcher mit dem Zielknoten an den Algorithmus übergeben wurde, initialisiert und in die $openlist$ eingefügt, welche die als nächstes zu untersuchenden Knoten beinhaltet. Vollständig untersuchte Knoten werden hingegen in die $closedlist$ eingefügt. Bei der Initialisierung des Startknotens werden dessen Kosten $g$ vom Startknoten zum aktuell betrachteten Knoten über alle abgegangenen Knoten berechnet. Da sich der A* Algorithmus vom Startknoten aus kontinuierlich ausbreitet, sind die Kosten über alle abgegangenen Knoten bis zum Vorgänger $parent$ gespeichert und erleichtern somit die Berechnung von $g$.
+Zudem wird der Startknoten, welcher mit dem Zielknoten an den Algorithmus übergeben wurde, initialisiert und in die $openlist$ eingefügt, welche die als nächstes zu untersuchenden Knoten beinhaltet. Vollständig untersuchte Knoten werden hingegen in die $closedlist$ eingefügt. Der Wert $g$ eines Knoten beschreibt die Kosten vom Startknoten zu diesem Knoten über alle abgegangenen Knoten. Da sich der A* Algorithmus vom Startknoten aus kontinuierlich ausbreitet, sind die Kosten über alle abgegangenen Knoten bis zum Vorgänger $parent$ eines betrachteten Knoten gespeichert und erleichtern somit die Berechnung von $g$.
 
 \begin{align}
 g : V \times V \rightarrow \R, g(v, parent) = v.parent.g + cost(v.parent, v)
@@ -426,7 +427,7 @@ nearTo(v_{new}, parents) \equiv \{ v \in parents : dist(v, v_{new}) \leq radius\
 \label{eq:nearTo}
 \end{align}
 
-Der Vorgänger aus $neighbors$ mit den geringsten Gesamtkosten von $v_{min}$ zu $v_{new}$ wird daraufhin bestimmt. 
+Der Vorgänger $v_{min}$ aus $neighbors$ mit den geringsten Gesamtkosten von $v_{min}$ zu $v_{new}$ wird daraufhin bestimmt. 
 
 \begin{align}
 \begin{autobreak}
@@ -459,7 +460,7 @@ cost[v_{new}] + dist(v_{new}, v) < cost[v] \}
 
 Die Nachbarn, welche eine valide Verbindung und geringere Gesamtkosten über $v_{new}$ haben, werden neu verbunden.
 
-Nachdem der Graph vollständig aufgebaut wurde, kann die Zielposition (falls möglich) als Knoten eingefügt werden. Von ihm aus ist es möglich, den Weg über $parents$ bis zu Startknoten zurückzuverfolgen und so den Weg auszulesen.
+Nachdem der Graph vollständig aufgebaut wurde, kann die Zielposition (falls möglich) als Knoten eingefügt werden. Von ihm aus ist es möglich, den Weg über $parents$ bis zum Startknoten zurückzuverfolgen und so den Weg auszulesen.
 
 % chooseParent(neighbors, nearest, new)
 %\begin{algorithm}

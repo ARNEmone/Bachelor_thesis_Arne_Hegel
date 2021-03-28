@@ -1,10 +1,5 @@
 # Sampling-based Path Planning for Human Steering Evaluation
 
-## Table of Contents
-1. [General Info](#general-info)
-2. [Introduction](#introduction)
-3. [Technologies](#technologies)
-
 ## General Info
 This bachelor thesis addresses the topic Sampling-based Path Planning for Human Steering Evaluation. The bachelor thesis itself with all used references can be found in the folder "Report". In the following a short introduction to the implementations is given.
 
