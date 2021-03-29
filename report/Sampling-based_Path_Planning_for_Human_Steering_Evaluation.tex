@@ -7,6 +7,8 @@
      a4paper,      % paper format
      BCOR10mm,     % binding correction
      DIV14,        % stripe size for margin calculation
+     twoside,
+     openright,
 %     liststotoc,   % table listing in toc
 %     bibtotoc,     % bibliography in toc
 %     idxtotoc,     % index in toc
@@ -217,7 +219,7 @@ Um einen Weg zwischen einer Start- und einer Zielposition zu berechnen, wird zun
 \begin{figure}[h]
    \centering
    \includegraphics[width=0.8\textwidth]{Bilder/nicht-holonomer_RRT_star_Park_2015.png}
-   \caption{Nicht-holonomer Pfad mit minimaler Distanz durch RRT* berechnet. \cite{park_feedback_2015} \\(Start: rotes Dreieck, Ziel: blaues Dreieck, Berechneter Pfad mit Zwischenzielen: magenta, Weitere berechnete Pfade: grau)}
+   \caption{Nicht-holonomer Pfad mit minimaler Distanz durch RRT* berechnet. \cite{park_feedback_2015} \\(Start: rotes Dreieck, Ziel: blaues Dreieck, Berechneter Pfad mit Zwischenzielen: Magenta, Weitere berechnete Pfade: Grau)}
    \label{fig:nicht-holonomer_RRT_star_von_park_2015}
 \end{figure}
 
@@ -533,7 +535,7 @@ Die Kinematik kann somit durch Gleichung (\ref{eq:polar_update}) beschrieben wer
 \label{eq:polar_update}
 \end{align}
 
-Aufbauend auf Gleichung (\ref{eq:polar_update}) wurde ein Regelgesetz entwickelt, welches die Relativposition $(r, \phi, \delta)^T$ zum Ziel auf null regelt. Nehmen wir $v$ als positiv, größer null und konstant an, so ist $\omega$ das einzige Kontrollsignal. Da $\omega$ zudem nur einen indirekten Effekt auf $(\phi, \delta)^T$ über $\delta$ hat und $(\phi, \delta)^T$ die eigentliche Position beschreiben, kann die Gleichung (\ref{eq:polar_update}) in zwei Teile aufgeteilt werden. \cite{park_graceful_2016}
+Aufbauend auf Gleichung (\ref{eq:polar_update}) wurde ein Regelgesetz entwickelt, welches die Relativposition $(r, \phi, \delta)^T$ zum Ziel auf null regelt. Nehmen wir $v$ als positiv, größer null und konstant an, so ist $\omega$ das einzige Kontrollsignal. Da $\omega$ zudem nur einen indirekten Effekt auf $(r, \phi)^T$ über $\delta$ hat und $(r, \phi)^T$ die eigentliche Position des Agenten beschreiben, kann die Gleichung (\ref{eq:polar_update}) in zwei Teile aufgeteilt werden. \cite{park_graceful_2016}
 
 \begin{align}
 \begin{pmatrix}
@@ -577,7 +579,7 @@ Mit den zuvor vorgestellten Regelgesetzen ist es möglich, einen sicheren, komfor
 \begin{figure}
    \centering
    \includegraphics[width=0.7\textwidth]{Bilder/graceful_motion_examples_park_2016.png}
-   \caption{Beispielwege unter Verwendung der zuvor vorgestellten Regelgesetze. \\ Die Koordinaten sind gegeben als $(x, y, \varphi)$, wobei $\varphi$ die Orientierung relativ zur x-Achse angibt. Die Startposition ist schwarz markiert bei $(0, 0, 0)$. Die Zielpositionen sind in rot markiert. In der oberen Abbildung sind die Konstanten $k_{\phi} = 1$ und $k_{\delta} = 3$ gewählt. In der unteren Abbildung sind die Konstanten $k_{\phi} = 1$ und $k_{\delta} = 10$ gewählt. \cite{park_graceful_2016}}
+   \caption{Beispielwege unter Verwendung der zuvor vorgestellten Regelgesetze. \\ Die Koordinaten sind gegeben als $(x, y, \varphi)$, wobei $\varphi$ die Orientierung relativ zur x-Achse angibt. Die Startposition ist Schwarz markiert bei $(0, 0, 0)$. Die Zielpositionen sind in Rot markiert. In der oberen Abbildung sind die Konstanten $k_{\phi} = 1$ und $k_{\delta} = 3$ gewählt. In der unteren Abbildung sind die Konstanten $k_{\phi} = 1$ und $k_{\delta} = 10$ gewählt. \cite{park_graceful_2016}}
    \label{fig:graceful_motion_examples_park_2016}
 \end{figure}
 
@@ -600,16 +602,16 @@ Zum effizienten Navigieren eines Agenten ist es notwendig, die Distanz von einer
 
 Um Algorithmen wie den RRT* effizient erweitern zu können, ist auch eine Distanzfunktion nötig, welche die tatsächlichen Kosten zwischen zwei Positionen berechnet. Nur mit solch einer Distanzfunktion ist es dem RRT* Algorithmus möglich, sich asymptotisch dem optimalen Weg anzunähern \cite{park_feedback_2015}. Dieses Problem wurde schon von anderen wie \cite{karaman_sampling-based_2013}, \cite{webb_kinodynamic_2012} und \cite{park_feedback_2015} behandelt.
 
-Die Distanzfunktion von \cite{park_feedback_2015}, welche auch in \cite{park_graceful_2016} auf einem RRT* Algorithmus angewandt wurde, besteht dabei aus zwei Komponenten. Die dabei verwendeten Variablen entspringen dem Polarkoordinatensystem, welche in Kapitel \ref{sec:positionsregelung} genauer erklärt wurden und auch in Abbildung \ref{fig:egozentrische_polarkoordinaten} nochmals sehr übersichtlich dargestellt sind. 
+Die Distanzfunktion von \cite{park_feedback_2015}, welche auch in \cite{park_graceful_2016} auf einem RRT* Algorithmus angewandt wurde, besteht dabei aus zwei Komponenten. Die dabei verwendeten Variablen entspringen dem Polarkoordinatensystem, welches in Kapitel \ref{sec:positionsregelung} genauer erklärt wurde und auch in Abbildung \ref{fig:egozentrische_polarkoordinaten} nochmals sehr übersichtlich dargestellt ist. 
 
-Die erste Komponente aus Gleichung (\ref{eq:distanzfunktion_1_komponente}) der Distanzfunktion spiegelt die Entfernung einer $(x, y)$ Koordinate zu einer Zielposition wider. \cite{park_feedback_2015}
+Die erste Komponente der Distanzfunktion ist in Gleichung (\ref{eq:distanzfunktion_1_komponente}) beschrieben und spiegelt die Entfernung einer $(x, y)$ Koordinate zu einer Zielposition $(x, y, \varphi)$ wider. \cite{park_feedback_2015}
 
 \begin{align}
 l^-(r, \phi) = \sqrt{r^2 + k_{\phi}^2 \phi^2}
 \label{eq:distanzfunktion_1_komponente}
 \end{align}
 
-Hierbei ist $r$ die radiale Distanz zum Ziel und $\phi$ die Orientierung der Zielposition. Die positive Konstante $k_{\phi}$ gewichtet die Orientierung $\phi$, sodass eine höhere Gewichtung von $\phi$ den Agenten schneller zum Ziel konvergieren lässt. Veranschaulicht wird dies in Abbildung \ref{fig:vektorfelder_l_minus} mit der Gewichtung von $k_{\phi} = 1$. \cite{park_feedback_2015}
+Hierbei ist $r$ die radiale Distanz zum Ziel und $\phi$ die Orientierung der Zielposition in Relation zur Luftlinie entlang von $r$. Die positive Konstante $k_{\phi}$ gewichtet die Orientierung $\phi$, sodass eine höhere Gewichtung von $\phi$ den Agenten schneller zum Ziel konvergieren lässt. Veranschaulicht wird dies in Abbildung \ref{fig:vektorfelder_l_minus} mit der Gewichtung von $k_{\phi} = 1$. \cite{park_feedback_2015}
 
 % Abbildung: vektorfelder_l_minus_park_2016
 \begin{figure} [h]
@@ -626,7 +628,7 @@ Die zweite Komponente aus Gleichung (\ref{eq:distanzfunktion_2_komponente}) spie
 \label{eq:distanzfunktion_2_komponente}
 \end{align}
 
-Die Gleichung \ref{eq:distanzfunktion_2_komponente} beschreibt die Abweichung zwischen der Orientierung $\delta$ und der gewünschten Orientierung $\arctan(-k_{\phi} \phi)$. Mit Gleichung (\ref{eq:distanzfunktion_2_komponente}) ist es also möglich, ungünstige Ausrichtungen des Agenten mit höheren Kosten zu belegen. 
+Die Gleichung (\ref{eq:distanzfunktion_2_komponente}) beschreibt die Abweichung zwischen der Orientierung $\delta$ und der gewünschten Orientierung $\arctan(-k_{\phi} \phi)$. Mit Gleichung (\ref{eq:distanzfunktion_2_komponente}) ist es also möglich, ungünstige Ausrichtungen des Agenten mit höheren Kosten zu belegen. 
 
 Zusammengefügt gibt die Funktion die Distanz von der Position eines Agenten zu einer Zielposition wieder. \cite{park_feedback_2015}
 
@@ -686,16 +688,16 @@ Die Herausforderungen für die in diesem Kapitel behandelten Problemen bestehen d
 % Abbildung: world4_map
 \begin{figure} [h]
    \centering
-   \includegraphics[width=0.7\textwidth]{Bilder/world4_map.png}
+   \includegraphics[width=0.8\textwidth]{Bilder/world4_map.png}
    \caption{Karte eines Flurs.}
    \label{fig:world4_map}
 \end{figure}
 
 % Abbildung: world4_analysis_cost
-\begin{figure} [h]
+\begin{figure} [!h]
    \centering
-   \includegraphics[width=0.7\textwidth]{Bilder/world4_analysis_cost.png}
-   \caption{Größe des RRT* Graphen gegenüber den berechneten Kosten bei verschiedenen Suchradien der Funktionen \ref{eq:nearTo} und \ref{eq:nearFrom} (nearTo und nearFrom). Die Konstanten der Gleichung \ref{eq:regelung_omega} wurden hierbei mit $k_{\phi} = 1.2$ und $k_{\delta} = 10$ gewählt.}
+   \includegraphics[width=0.8\textwidth]{Bilder/world4_analysis_cost.png}
+   \caption{Größe des RRT* Graphen gegenüber den berechneten Kosten zu einer Zielposition bei verschiedenen Suchradien der Funktionen (\ref{eq:nearTo}) und (\ref{eq:nearFrom}) (nearTo und nearFrom). Die Konstanten der Gleichung (\ref{eq:regelung_omega}) wurden hierbei mit $k_{\phi} = 1.2$ und $k_{\delta} = 10$ gewählt.}
    \label{fig:world4_analysis_cost}
 \end{figure}
 
@@ -708,14 +710,14 @@ Ein großer Nachteil des RRT* Algorithmus ist jedoch, dass er relativ viel Berech
 % Abbildung: world4_analysis_time_graph
 \begin{figure} [h]
    \centering
-   \includegraphics[width=0.7\textwidth]{Bilder/world4_analysis_time_graph.png}
-   \caption{Größe des RRT* Graphen gegenüber der Berechnungszeit des Graphen bei verschiedenen Suchradien der Funktionen \ref{eq:nearTo} und \ref{eq:nearFrom} (nearTo und nearfrom). Zu bemerken ist, dass die Berechnungszeiten für steigende Anzahl an Knoten exponentiell ansteigen. Dabei führt ein größerer Suchradius zu einem schnelleren Anstieg der Berechnungszeit. }
+   \includegraphics[width=0.8\textwidth]{Bilder/world4_analysis_time_graph.png}
+   \caption{Größe des RRT* Graphen gegenüber der Berechnungszeit des Graphen bei verschiedenen Suchradien der Funktionen (\ref{eq:nearTo}) und (\ref{eq:nearFrom}) (nearTo und nearfrom). Zu bemerken ist, dass die Berechnungszeiten für steigende Anzahl an Knoten exponentiell ansteigen. Dabei führt ein größerer Suchradius zu einem schnelleren Anstieg der Berechnungszeit. }
    \label{fig:world4_analysis_time_graph}
 \end{figure}
 
 In Abbildung \ref{fig:world4_analysis_time_graph} wurden erneut für verschiedene Suchradien der Funktionen (\ref{eq:nearTo}) und (\ref{eq:nearFrom}) (nearTo und nearfrom) Graphen berechnet. Auf der x-Achse sind dabei die Anzahl der Knoten und auf der y-Achse die Berechnungszeiten aufgetragen. Die Berechnungszeiten steigen dabei exponentiell mit steigender Anzahl an Knoten an, wobei ein größerer Suchradius zu einem verstärkten Wachstum der Berechnungszeiten führt. 
 
-Auf Abbildung \ref{fig:world4_analysis_cost} ist zu erkennen, dass der Suchradius mit vier Metern am schnellsten gegen einen optimalen Wert konvergiert und ab schätzungsweise 1000 in den Graphen eingefügten Knoten sich nicht mehr erheblich verändert. In Abbildung \ref{fig:world4_analysis_time_graph} hat der Graph für einen Suchradius von vier Metern jedoch eine Berechnungszeit von ungefähr 35 Sekunden. Dies ist eine zu lange Berechnungszeit, um auf den berechneten Distanzen eine angemessene Bewertung des Fahrverhaltens durchzuführen, da mit einem Rollstuhl innerhalb von nur wenigen Sekunden schon mehrere Meter zurückgelegt werden können.
+Auf Abbildung \ref{fig:world4_analysis_cost} ist zu erkennen, dass der Suchradius mit vier Metern am schnellsten gegen einen optimalen Wert konvergiert und ab schätzungsweise 1000 in den Graphen eingefügten Knoten sich nicht mehr erheblich verändert. In Abbildung \ref{fig:world4_analysis_time_graph} hat der Graph für einen Suchradius von vier Metern und 1000 in den Graphen eingefügten Knoten jedoch eine Berechnungszeit von ungefähr 35 Sekunden. Dies ist eine zu lange Berechnungszeit, um auf den berechneten Distanzen eine angemessene Bewertung des Fahrverhaltens durchzuführen, da mit einem Rollstuhl innerhalb von nur wenigen Sekunden schon mehrere Meter zurückgelegt werden können.
 
 Eine schnellere Berechnungszeit der Distanz ist durch den A* Algorithmus möglich, da er zunächst keinen eigenen Graphen generieren muss. Jedoch muss diesem Algorithmus zu Beginn ein Graph bereitgestellt werden. Da sowohl in dem Ansatz mit RRT* als auch mit A* eine vorher generierte Karte benötigt wird, wurde die Implementierung so geändert, dass für eine Karte auch ein entsprechender Graph generiert wird. Im Folgenden wird eine Methode zur Generierung eines gerichteten Graphens unter Abwandlung des RRT* Algorithmus vorgestellt, auf welchem der A* Algorithmus angewandt wird.
 
@@ -724,7 +726,7 @@ Eine schnellere Berechnungszeit der Distanz ist durch den A* Algorithmus möglich
 
 Der generierte Graph soll gerichtet und die Knoten sollen auf dem navigierbaren Raum der Karte gleich verteilt sein. Die Kosten der Kanten werden durch die Distanzfunktion (\ref{eq:distanzfunktion_xyp}) repräsentiert, welche die nicht-holonomen Zwangsbeschränkungen eines Rollstuhls berücksichtigt.
 
-Der Algorithmus zur Generierung des Graphens ist eine Abwandlung des RRT* Algorithmus, welcher in Kapitel \ref{subsec:pfadplanung_stickprobenbasierte} beschrieben ist. Dieser abgewandelte Algorithmus ist in Algorithmus \ref{alg:RRT_graph} beschrieben. 
+Der Algorithmus zur Generierung des Graphens ist eine Abwandlung des RRT* Algorithmus, welcher in Kapitel \ref{subsec:pfadplanung_stickprobenbasierte} beschrieben wurde. Dieser abgewandelte Algorithmus ist in Algorithmus \ref{alg:RRT_graph} beschrieben, wobei in Rot die essentiellen Veränderungen markiert sind. 
 
 % RRT graph
 \begin{algorithm}
@@ -757,21 +759,21 @@ getNeighbors(v_{new}, graph) \equiv \{ v \in graph : euclDist(v, v_{new}) \leq r
 \label{eq:getNeighbors}
 \end{align}
 
-Die verwendete Distanzfunktion ist nicht mehr die Distanzfunktion von Gleichung \ref{eq:distanzfunktion_xyp}, sondern die euklidische Distanz $euclDist$, welche den Abstand zwischen zwei Koordinaten bestimmt. Dadurch ist eine Verwendung der in NumPy\footnote{Die Programmierbibliothek NumPy der Programmiersprache Python ist auf wissenschaftliches Rechnen spezialisiert. \cite{numpy_numpy_nodate}} enthaltenen Funktion $numpy.linalg.norm$ möglich, welche eine schnellere Distanzberechnung auf Grundlage der euklidischen Distanz ermöglicht. Zudem muss nur noch einmal pro Schleifenschritt $neighbors$ berechnet werden, was die Berechnungsgeschwindigkeit erneut erhöht.
+Die verwendete Distanzfunktion ist nicht mehr die Distanzfunktion von Gleichung (\ref{eq:distanzfunktion_xyp}), sondern die euklidische Distanz $euclDist$, welche den Abstand zwischen zwei Koordinaten bestimmt. Dadurch ist eine Verwendung der in NumPy\footnote{Die Programmierbibliothek NumPy der Programmiersprache Python ist auf wissenschaftliches Rechnen spezialisiert. \cite{numpy_numpy_nodate}} enthaltenen Funktion $numpy.linalg.norm$ möglich, welche eine schnellere Distanzberechnung auf Grundlage der euklidischen Distanz ermöglicht. Zudem muss nur noch einmal pro Schleifenschritt $neighbors$ berechnet werden, was die Berechnungsgeschwindigkeit erneut erhöht.
 
 Die Funktion $linkNeigbors$ wird verwendet, um die Nachbarn von $v_{new}$ mit $v_{new}$ zu verbinden. Sie fügt alle $neighbor \in neighbors$ in  $v_{new}.neighbors$ hinzu, sofern eine valide Verbindung von $v_{new}$ zu $neighbor$ existiert. Um den Knoten $v_{new}$ auch erreichen zu können, werden auch alle Verbindungen von $neighbor$ zu $v_{new}$ überprüft und entsprechend $v_{new}$ in $neighbor.neighbors$ eingefügt. Die Überprüfung einer Verbindung auf Validität geschieht hierbei durch die Funktion $validLink(v_{from}, v_{to})$.
 
-Die Überprüfung der Verbindung durch die Funktion $validLink$ erfolgt dabei wie folgt und ist in Abbildung \ref{fig:kin_update_example} beispielhaft dargestellt. 
+Die Überprüfung der Verbindung durch die Funktion $validLink$ erfolgt dabei wie folgt und ist in Abbildung \ref{fig:kin_update_example} beispielhaft dargestellt:
 
 % Abbildung: kin_update_example
 \begin{figure} [h]
    \centering
    \includegraphics[width=0.8\textwidth]{Bilder/kin_update_example.png}
-   \caption{Simulierte Bewegung von $v_1 = (-1.0, 1.0, -1.57)$ zu $v_2 = (0.0, 0.0, 0.0)$. \\ Hierbei ist $v_1$ in gelb, $v_2$ in rot und die simulieren Schritte von $v_1$ auf dem Weg zu $v_2$ in blau dargestellt. Die Konstanten der Gleichung \ref{eq:regelung_omega} wurden hierbei mit $v = 0.22$, $k_{\phi} = 1.2$ und $k_{\delta} = 10$ gewählt.}
+   \caption{Simulierte Bewegung von $v_1 = (-1.0, 1.0, -1.57)$ zu $v_2 = (0.0, 0.0, 0.0)$. \\ Hierbei ist $v_1$ in Gelb, $v_2$ in Rot und die simulieren Schritte von $v_1$ auf dem Weg zu $v_2$ in Blau dargestellt. Die Konstanten der Gleichung (\ref{eq:regelung_omega}) wurden hierbei mit $v = 0.22$, $k_{\phi} = 1.2$ und $k_{\delta} = 10$ gewählt.}
    \label{fig:kin_update_example}
 \end{figure}
 
-Der Startknoten $v_1$ und der Zielknoten $v_2$ der zu überprüfenden Verbindung werden mithilfe der Funktion (\ref{eq:xyp_to_rpd}) in das Polarkoordinatensystem $(r, \phi, \delta)$ aus Abbildung \ref{fig:egozentrische_polarkoordinaten} überführt. Nehmen wir nun eine konstant positive Lineargeschwindigkeit $v$ größer null an, so kann mithilfe der Gleichung \ref{eq:regelung_omega} die Rotationsgeschwindigkeit $\omega$ berechnet werden. Unter Verwendung dieser beiden Geschwindigkeiten und der Updatefunktion (\ref{eq:polar_update}) kann durch wiederholte Berechnung von $\omega$ eine simulierte Bewegung von $v_1$ in Richtung $v_2$ durchgeführt werden. Nach jedem Schritt in Richtung $v_2$ wird die Position von $v_1$ auf Kollisionen mit Objekten der Karte überprüft. Ist jede simulierte Position von $v_1$ auf dem Weg zu $v_2$ kollisionsfrei, so wird die Verbindung von $v_1$ zu $v_2$ als kollisionsfrei und somit valide angesehen. Die Schrittweite bei jedem Simulationsschritt wurde in der gesamten Arbeit als konstant angesehen.
+Der Startknoten $v_1$ und der Zielknoten $v_2$ der zu überprüfenden Verbindung werden mithilfe der Funktion (\ref{eq:xyp_to_rpd}) in das Polarkoordinatensystem $(r, \phi, \delta)$ aus Abbildung \ref{fig:egozentrische_polarkoordinaten} überführt. Nehmen wir nun eine konstant positive Lineargeschwindigkeit $v$ größer null an, so kann mithilfe der Gleichung (\ref{eq:regelung_omega}) die Rotationsgeschwindigkeit $\omega$ berechnet werden. Unter Verwendung dieser beiden Geschwindigkeiten und der Updatefunktion (\ref{eq:polar_update}) kann durch wiederholte Berechnung von $\omega$ eine simulierte Bewegung von $v_1$ in Richtung $v_2$ durchgeführt werden. Nach jedem Schritt in Richtung $v_2$ wird die Position von $v_1$ auf Kollisionen mit Objekten der Karte überprüft. Ist jede simulierte Position von $v_1$ auf dem Weg zu $v_2$ kollisionsfrei, so wird die Verbindung von $v_1$ zu $v_2$ als kollisionsfrei und somit valide angesehen. Die Schrittweite bei jedem Simulationsschritt wurde in der gesamten Arbeit als konstant angesehen.
 
 Nachdem der Graph erfolgreich aufgebaut wurde, kann dieser verwendet werden, um auf ihm mit dem A* Algorithmus ein Weg von einer beliebigen Startposition zu ein beliebigen Zielposition zu finden.
 
@@ -783,8 +785,8 @@ Eine schnelle und genaue Distanzberechnung von einer Startposition zu einer Ziel
 % Abbildung: world4_analyse_trace_r_s_40
 \begin{figure} [h]
    \centering
-   \includegraphics[width=1\textwidth]{Bilder/world4_analyse_trace_r_s_40.png}
-   \caption{Analyse der in Abbildung \ref{fig:world4_map_with_goals} beschriebenen Wege. Die Konstanten der Gleichung \ref{eq:regelung_omega} wurden hierbei mit $k_{\phi} = 1.2$ und $k_{\delta} = 10$ gewählt. \\ \textbf{Unten:} Größe des Graphen gegenüber den Kosten des Weges von der Startposition zur entsprechenden Zielposition. Ab einer Größe des Graphen von ungefähr 1000 Knoten schwanken die Kosten nur noch minimal. Die weiter entfernten Ziele (Ziel 4 und 5) brauchen zum Konvergieren gegen den optimalen Wert etwas länger als die näher gelegenen Ziele (Ziel 0 und 1). \\ \textbf{Oben:} Größe des Graphen gegenüber der Berechnungszeit des Weges bei unterschiedlichen Entfernungen zwischen Start-und Zielposition. Zu erkennen ist, dass die Berechnungszeit mit der Größe des Graphen und der Länge des Weges zunimmt.}
+   \includegraphics[width=0.8\textwidth]{Bilder/world4_analyse_trace_r_s_40.png}
+   \caption{Analyse der in Abbildung \ref{fig:world4_map_with_goals} beschriebenen Wege. Die Konstanten der Gleichung (\ref{eq:regelung_omega}) wurden hierbei mit $k_{\phi} = 1.2$ und $k_{\delta} = 10$ gewählt. Für die Funktionen (\ref{eq:nearTo}) und (\ref{eq:nearFrom}) (nearTo und nearfrom) wurde ein Suchradius von vier Metern gewählt. \\ \textbf{Unten:} Größe des Graphen gegenüber den Kosten des Weges von der Startposition zur entsprechenden Zielposition. Ab einer Größe des Graphen von ungefähr 1000 Knoten schwanken die Kosten nur noch minimal. Die weiter entfernten Ziele (Ziel 4 und 5) brauchen zum Konvergieren gegen den optimalen Wert etwas länger als die näher gelegenen Ziele (Ziel 0 und 1). \\ \textbf{Oben:} Größe des Graphen gegenüber der Berechnungszeit des Weges bei unterschiedlichen Entfernungen zwischen Start-und Zielposition. Zu erkennen ist, dass die Berechnungszeit mit der Größe des Graphen und der Länge des Weges zunimmt.}
    \label{fig:world4_analyse_trace}
 \end{figure}
 
@@ -795,8 +797,8 @@ Die Berechnungszeiten des A* Algorithmus für verschiedene Graphen bei unterschie
 % Abbildung: world4_map_with_goals
 \begin{figure} [h]
    \centering
-   \includegraphics[width=1\textwidth]{Bilder/world4_map_with_goals.png}
-   \caption{Abbildung \ref{fig:world4_map} mit einer Startposition und verschiedenen Zielpositionen. Die Startposition ist in schwarz bei $(0, 0, 0)$ eingezeichnet. Die Zielpositionen sind in regelmäßigen Abständen den Flur entlang platziert. Die berechneten Wege von der Startposition zu den entsprechenden Zielpositionen werden in Abbildung \ref{fig:world4_analyse_trace} analysiert.}
+   \includegraphics[width=0.8\textwidth]{Bilder/world4_map_with_goals.png}
+   \caption{Abbildung \ref{fig:world4_map} mit einer Startposition und verschiedenen Zielpositionen. Die Startposition ist bei $(0, 0, 0)$ eingezeichnet. Die Zielpositionen sind in regelmäßigen Abständen den Flur entlang platziert. Die berechneten Wege von der Startposition zu den entsprechenden Zielpositionen werden in Abbildung \ref{fig:world4_analyse_trace} analysiert.}
    \label{fig:world4_map_with_goals}
 \end{figure}
 
@@ -838,18 +840,15 @@ Die Gewichtung $\theta \in [0, 1]$ soll auf der Teilstrecke zwischen dem zuletzt
 \label{eq:theta}
 \end{align}
 
-Durch die Gleichung \ref{eq:theta} entsteht beim Abfahren des direkten Weges zwischen zwei Zwischenzielen eine Kurve entsprechend Abbildung \ref{fig:theta_kurve}. Beim Erreichen eines Zwischenziels fällt $\theta$ nach der Steigung bis zu $\theta = 1$ wieder auf $\theta = 0$ zurück und beginnt mit einem neuen Anstieg.
+Durch die Gleichung (\ref{eq:theta}) entsteht beim Abfahren des direkten Weges zwischen zwei Zwischenzielen eine Kurve entsprechend Abbildung \ref{fig:theta_kurve}. Beim Erreichen eines Zwischenziels fällt $\theta$ nach der Steigung bis zu $\theta = 1$ wieder auf $\theta = 0$ zurück und beginnt mit einem neuen Anstieg.
 
 % Abbildung: theta
 \begin{figure} [h]
    \centering
    \includegraphics[width=0.7\textwidth]{Bilder/theta.png}
-   \caption{Beispielhafter Anstieg und Abfall von $\theta$ während des Abfahrens eines Weges zwischen zwei Zwischenzielen. Der Abfall von $\theta$ ist dabei durch das Erreichen des nächsten Zwischenziels bedingt.}
+   \caption{Beispielhafter Anstieg von $\theta$ und Abfall von $(1 - \theta)$ während des Abfahrens eines Weges zwischen zwei Zwischenzielen.}
    \label{fig:theta_kurve}
 \end{figure}
-
-Da der Fahrer jedoch nicht immer auf dem direkten Weg zwischen den beiden Punkten fährt, muss die Position des Fahrers auf diesen Weg projiziert werde. Veranschaulicht wird dies in Abbildung \ref{fig:dreieck_theta}.
-
 
 % Abbildung: dreieck_theta
 \begin{figure} [h]
@@ -859,7 +858,7 @@ Da der Fahrer jedoch nicht immer auf dem direkten Weg zwischen den beiden Punkte
    \label{fig:dreieck_theta}
 \end{figure}
 
-Es wird zunächst die Höhe $h_c$ des Dreiecks, von $c$ aus betrachtet, berechnet. Die Länge von $c_1$ kann dann mit dem Satz des Pythagoras und $c_2$ mit $c_1$ und $c$ berechnet werden. Die genaue Berechnung von $c_1$ und $c_2$ ist in den Gleichungen \ref{eq:calc_s} bis \ref{eq:calc_c_2} beschrieben. Die Längen von $c_1$ und $c_2$ entsprechen dann $euclDist(ig_{previous}, p)$ und $euclDist(p, ig_{next})$ aus Gleichung \ref{eq:theta}.
+Da der Fahrer jedoch nicht immer auf dem direkten Weg zwischen den beiden Punkten fährt, muss die Position des Fahrers auf diesen Weg projiziert werde. Veranschaulicht wird dies in Abbildung \ref{fig:dreieck_theta}. Es wird zunächst die Höhe $h_c$ des Dreiecks, von $c$ aus betrachtet, berechnet. Die Länge von $c_1$ kann dann mit dem Satz des Pythagoras und $c_2$ mit $c_1$ und $c$ berechnet werden. Die genaue Berechnung von $c_1$ und $c_2$ ist in den Gleichungen (\ref{eq:calc_s}) bis (\ref{eq:calc_c_2}) beschrieben. Die Längen von $c_1$ und $c_2$ entsprechen dann $euclDist(ig_{previous}, p)$ und $euclDist(p, ig_{next})$ aus Gleichung (\ref{eq:theta}).
 
 \begin{align}
 s = \frac{1}{2}(a+b+c) 
@@ -870,7 +869,7 @@ c_2 = c - c_1
 \label{eq:calc_c_2}
 \end{align}
 
-Für die Anwendung von $\theta$ in Gleichung (\ref{eq:gesamtdistanz}) muss $\theta \in [0, 1]$ sein. Dies ist mit der zuvor beschriebenen Methode der Projektion nur gegeben, wenn die Winkel $\alpha, \beta \leq \frac{\pi}{2}$ sind. Es bietet sich demnach beim Erreichen von $\alpha = \frac{\pi}{2}$ an, auf das nächste Zwischenziel umzuschalten, wodurch das Verfehlen eines Zwischenziels nahezu unmöglich wird.
+Für die Anwendung von $\theta$ in Gleichung (\ref{eq:gesamtdistanz}) muss $\theta \in [0, 1]$ sein. Dies ist mit der zuvor beschriebenen Methode der Projektion nur gegeben, wenn die Winkel $\alpha, \beta \leq \frac{\pi}{2}$ sind. Es bietet sich demnach beim Erreichen von $\alpha = \frac{\pi}{2}$ an, auf das nächste Zwischenziel umzuschalten, wodurch das Verfehlen eines Zwischenziels nahezu unmöglich wird. Falls des Fahrer nach dem Erreichen eines Zwischenziels umdrehen sollte und dadurch $\beta > \frac{\pi}{2}$ wird, wird $\theta = 0$ gesetzt.
 
 Es existiert ein Übergangsbereich in der Nähe der Zwischenziele, was einen glatteres Umschalten zum nächsten Zwischenziel ermöglicht. Hierfür werden die Zwischenziele $ig_{previous}$ und $ig_{next}$ um eine Distanz der Länge $r$ in Richtung des entsprechend anderen Zwischenziels verschoben.
 
@@ -928,7 +927,7 @@ In diesem Kapitel wird gezeigt, wie das Bewertungsverfahren an einem ferngesteue
    \label{fig:world5_map}
 \end{figure}
 
-Mit Hilfe dieser Darstellung einer Karte kann eine Position auf Validität überprüft werden, indem die Distanz zu allen Objekten überprüft wird. Ist die Distanz zu allen Objekten der Karte größer als der gewählte Radius, so gilt eine Position als valide. Dieser Radius wurde im Folgenden dauerhaft auf 0.25 Meter gesetzt.
+Mit Hilfe dieser Darstellung einer Karte kann eine Position auf Validität überprüft werden, indem die Distanz zu allen Objekten überprüft wird. Ist die Distanz zu allen Objekten der Karte größer als ein gewählte Radius, so gilt eine Position als valide. Dieser Radius wurde im Folgenden dauerhaft auf 0.25 Meter gesetzt.
 
 Nach dem Erfassen der Karte wurde auf dieser ein Graph mit 2000 Knoten generiert. Bei der Generierung wurden die Konstanten $k_{\phi} = 1.2$, $k_{\delta} = 10$ und für Funktion (\ref{eq:getNeighbors}) der $Suchradius = 4m$ gewählt. 
 
@@ -938,7 +937,7 @@ Die Aufgabe des Fahrers wurde so definiert, dass er an der Position $(0,0,0)$ st
 \begin{figure} [h]
    \centering
    \includegraphics[width=0.8\textwidth]{Bilder/world5_trace_2000_4_k_delta_1.png}
-   \caption{Der vom Fahrer gefahrene Weg beim Abfahren aller Wegpunkte. Auf schwarz markierten Streckenabschnitten wurde so gefahren, dass sich die Distanz zum Ziel erhöhte. Eine genauere Analyse ist in Abbildung \ref{fig:world5_dist_2000_4_k_delta_1} zu betrachten.}
+   \caption{Der vom Fahrer gefahrene Weg beim Abfahren aller Wegpunkte. Auf Schwarz markierten Streckenabschnitten wurde so gefahren, dass sich die Distanz zum Ziel erhöhte. Eine genauere Analyse ist in Abbildung \ref{fig:world5_dist_2000_4_k_delta_1} zu betrachten.}
    \label{fig:world5_trace_2000_4_k_delta_1}
 \end{figure}
 
@@ -952,7 +951,7 @@ Während der Fahrt wurde das Steuerverhalten des Fahrers fortlaufend analysiert, 
    \label{fig:world5_dist_2000_4_k_delta_1}
 \end{figure}
 
-Inadäquat gefahrene Streckenabschnitte wurden in beiden Abbildungen schwarz markiert. Als inadäquat gefahren wird ein Streckenabschnitt dann bezeichnet, wenn sich die Distanz zum Ziel über mehr als 0.5 Sekunden erhöht hat. Andernfalls wird eine positive Bewertung vorgenommen. Je schneller die Distanz in Abbildung \ref{fig:world5_dist_2000_4_k_delta_1} abfällt, desto besser wurde der entsprechende Streckenabschnitt abgefahren.
+Inadäquat gefahrene Streckenabschnitte wurden in beiden Abbildungen Schwarz markiert. Als inadäquat gefahren wird ein Streckenabschnitt dann bezeichnet, wenn sich die Distanz zum Ziel über mehr als 0.5 Sekunden erhöht hat. Andernfalls wird eine positive Bewertung vorgenommen. Je schneller die Distanz in Abbildung \ref{fig:world5_dist_2000_4_k_delta_1} abfällt, desto besser wurde der entsprechende Streckenabschnitt abgefahren.
 
 Das Analyseprogramm wurde beendet, nachdem der Fahrer dem Ziel näher als 0.5 Meter gekommen ist. Eine weitere Analyse auf solch kurze Distanz wäre für den Fahrer nicht mehr hilfreich, da die Distanz sich nur noch weiter verringert, wenn die Zielposition exakt angesteuert wird. Sobald der Fahrer neben oder über das Ziel hinausfahren würde, würde die Distanz zum Ziel wieder ansteigen. Verbildlicht wurde dies zuvor in Abbildung \ref{fig:vektorfelder_l_minus}.
 
@@ -978,7 +977,7 @@ In diesem Kapitel wird beschrieben, wie das Bewertungsverfahren während der Fahr
    \label{fig:world6_map}
 \end{figure}
 
-Für diese Karte wurde ein Graph mit 5000 Knoten generiert. Hierbei wurden die wählbaren Konstanten mit $k_{\phi} = 1.2$, $k_{\delta} = 10$ und für Funktion \ref{eq:getNeighbors} der $Suchradius = 6m$ gewählt.
+Für diese Karte wurde ein Graph mit 5000 Knoten generiert. Hierbei wurden die wählbaren Konstanten mit $k_{\phi} = 1.2$, $k_{\delta} = 10$ und für Funktion (\ref{eq:getNeighbors}) der $Suchradius = 6m$ gewählt.
 
 Die Aufgabe des Fahrers für diese Karte änderte sich dahingehend, dass die Wegpunkte $(9.3,9.8,1.17)$, $(17.2,5.8,-1.97)$, $(8.6,-10.8,-1.97)$ und $(0.5,-6.5,1.17)$ abgefahren werden mussten und der Startpunkt bei der Position $(0.0,0.0,-0.4)$ lag.
 
@@ -1004,11 +1003,11 @@ Die Analyse der Distanz ist in Abbildung \ref{fig:world6_2_1round_newnewTheta_50
 \begin{figure}
    \centering
    \includegraphics[width=0.8\textwidth]{Bilder/world6_2_1round_newnewTheta_5000_6_k_delta_1_map.png}
-   \caption{Der vom Fahrer gefahrene Weg beim Abfahren aller Wegpunkte. Auf schwarz markierten Streckenabschnitten wurden so gefahren, dass sich die Distanz zum Ziel erhöhte. Eine genauere Analyse ist in Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_dist} zu betrachten.}
+   \caption{Der vom Fahrer gefahrene Weg beim Abfahren aller Wegpunkte. Auf Schwarz markierten Streckenabschnitten wurden so gefahren, dass sich die Distanz zum Ziel erhöhte. Eine genauere Analyse ist in Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_dist} zu betrachten.}
    \label{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_map}
 \end{figure}
 
-Inadäquat gefahrene Streckenabschnitte wurden in beiden Abbildungen schwarz markiert und folgen dabei der Definition aus Kapitel \ref{sec:evaluation_ferngesteuerter_roboter}. 
+Inadäquat gefahrene Streckenabschnitte wurden in beiden Abbildungen Schwarz markiert und folgen dabei der Definition aus Kapitel \ref{sec:evaluation_ferngesteuerter_roboter}. 
 
 Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_map} zeigt, dass der Fahrer gut gefahren ist. Dies spiegelt sich auch größtenteils in der Abbildung \ref{fig:world6_2_1round_newnewTheta_5000_6_k_delta_1_dist} durch einen konstanten Abfall der Distanz wider, jedoch nicht am Anfang der Fahrt. Die Markierungen bis kurz vor dem ersten Zwischenziel sind hierbei jedoch zu ignorieren, da der Rollstuhl in dieser Zeit stillstand, was auch an der konstanten Distanz in diesem Abschnitt zu erkennen ist. Nachdem der Fahrer losgefahren ist, sind jedoch zwei Streckenabschnitte inadäquat abgefahren worden. 
 

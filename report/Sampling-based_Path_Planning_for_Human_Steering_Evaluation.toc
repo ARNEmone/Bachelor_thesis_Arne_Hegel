@@ -5,22 +5,22 @@
 \contentsline {section}{\numberline {1.3}Problemstellung}{2}{section.7}%
 \contentsline {section}{\numberline {1.4}L\"osungsansatz}{3}{section.11}%
 \contentsline {section}{\numberline {1.5}Aufbau der Arbeit}{4}{section.13}%
-\contentsline {chapter}{\numberline {2}Grundlagen und verwandte Arbeiten}{6}{chapter.14}%
-\contentsline {section}{\numberline {2.1}Wegfindungsalgorithmen}{6}{section.15}%
-\contentsline {subsection}{\numberline {2.1.1}Wegfindung auf einem gegebenen Graphen}{7}{subsection.16}%
-\contentsline {subsection}{\numberline {2.1.2}Nicht-holonome stichprobenbasierte Wegfindung}{9}{subsection.56}%
-\contentsline {section}{\numberline {2.2}Positionsregelung}{12}{section.84}%
-\contentsline {section}{\numberline {2.3}Distanzberechnung unter kinematischen Zwangsbeschr\"ankungen}{16}{section.93}%
-\contentsline {chapter}{\numberline {3}Implementierung}{19}{chapter.101}%
-\contentsline {section}{\numberline {3.1}Nicht-holonomer RRT*}{19}{section.102}%
-\contentsline {subsection}{\numberline {3.1.1}Generierung des Graphens}{22}{subsection.106}%
-\contentsline {subsection}{\numberline {3.1.2}Anwendung des A* Algorithmus}{24}{subsection.127}%
-\contentsline {section}{\numberline {3.2}Bewertung menschlichen Steuerverhaltens}{25}{section.130}%
-\contentsline {chapter}{\numberline {4}Experimentelle Evaluation}{30}{chapter.142}%
-\contentsline {section}{\numberline {4.1}Evaluation eines ferngesteuerten Roboters}{30}{section.143}%
-\contentsline {section}{\numberline {4.2}Evaluation einer Rollstuhlfahrt}{33}{section.147}%
-\contentsline {chapter}{\numberline {5}Ausblick}{38}{chapter.152}%
-\contentsline {section}{\numberline {5.1}Fazit}{38}{section.153}%
-\contentsline {section}{\numberline {5.2}Weitere Arbeiten}{38}{section.154}%
-\contentsline {chapter}{\numberline {6}Anh\"ange}{40}{chapter.155}%
+\contentsline {chapter}{\numberline {2}Grundlagen und verwandte Arbeiten}{7}{chapter.14}%
+\contentsline {section}{\numberline {2.1}Wegfindungsalgorithmen}{7}{section.15}%
+\contentsline {subsection}{\numberline {2.1.1}Wegfindung auf einem gegebenen Graphen}{8}{subsection.16}%
+\contentsline {subsection}{\numberline {2.1.2}Nicht-holonome stichprobenbasierte Wegfindung}{10}{subsection.56}%
+\contentsline {section}{\numberline {2.2}Positionsregelung}{13}{section.84}%
+\contentsline {section}{\numberline {2.3}Distanzberechnung unter kinematischen Zwangsbeschr\"ankungen}{17}{section.93}%
+\contentsline {chapter}{\numberline {3}Implementierung}{21}{chapter.101}%
+\contentsline {section}{\numberline {3.1}Nicht-holonomer RRT*}{21}{section.102}%
+\contentsline {subsection}{\numberline {3.1.1}Generierung des Graphens}{24}{subsection.106}%
+\contentsline {subsection}{\numberline {3.1.2}Anwendung des A* Algorithmus}{26}{subsection.127}%
+\contentsline {section}{\numberline {3.2}Bewertung menschlichen Steuerverhaltens}{28}{section.130}%
+\contentsline {chapter}{\numberline {4}Experimentelle Evaluation}{33}{chapter.142}%
+\contentsline {section}{\numberline {4.1}Evaluation eines ferngesteuerten Roboters}{33}{section.143}%
+\contentsline {section}{\numberline {4.2}Evaluation einer Rollstuhlfahrt}{36}{section.147}%
+\contentsline {chapter}{\numberline {5}Ausblick}{41}{chapter.152}%
+\contentsline {section}{\numberline {5.1}Fazit}{41}{section.153}%
+\contentsline {section}{\numberline {5.2}Weitere Arbeiten}{41}{section.154}%
+\contentsline {chapter}{\numberline {6}Anh\"ange}{43}{chapter.155}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

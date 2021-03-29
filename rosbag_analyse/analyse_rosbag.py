@@ -22,7 +22,7 @@ shift_x = 200 #map param to load pgm
 shift_y = 200 #map param to load pgm
 
 world = 'world7' #world of the rosbag i want to analyse (only needed for obs in odom)
-to_analyse = 'rosbags/world7_3rounds_k_delta_2.bag' #rosbag i want to analyse
+to_analyse = 'rosbags/world5.bag' #rosbag i want to analyse
 
 
 
@@ -187,7 +187,7 @@ bag.close()
 #           cut
 ##############################################################
 
-
+"""
 
 pg_start = (0.5,-6.5,1.17)
 pg_stop = (0.5,-6.5,1.17)
@@ -218,8 +218,8 @@ def near_to(xyp1, xyp2, rad):
 #time_start = 1616859502
 #time_stop = 1616859631
 #3 round
-time_start = 1616859631
-time_stop = 1616859742
+#time_start = 1616859631
+#time_stop = 1616859742
 
 #world7_3rounds_k_delta_3
 #1 round
@@ -281,7 +281,7 @@ for i in range(len(odom_time)):
         odom_y = odom_y[:i]
         odom_time = odom_time[:i]
         break
-
+"""
 
 print("start: ", i_goal_time[0], "stop: ", i_goal_time[len(i_goal_time)-1])
 
